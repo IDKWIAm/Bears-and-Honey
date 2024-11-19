@@ -1190,8 +1190,8 @@ GameObject:
   - component: {fileID: 851059854}
   - component: {fileID: 851059853}
   m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
+  m_Name: WindowHoney
+  m_TagString: HONEY
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
