@@ -17,6 +17,8 @@ public class BuildingPlacement : MonoBehaviour
             {
                 if (hit.collider.gameObject.TryGetComponent<BuildingSpot>(out BuildingSpot buildingSpot))
                 {
+                    if (buildingSpot.IsBusy()) return;
+
                     buildingSpot.Build(chosenBuildingPrefab);
                     chosenBuildingPrefab = null;
                 }
