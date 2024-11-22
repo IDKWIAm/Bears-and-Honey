@@ -8,6 +8,11 @@ public class Building : MonoBehaviour
         spot = gameObject.GetComponent<BuildingSpot>();
     }
 
+    public void ConfirmBuild()
+    {
+        spot.Build();
+    }
+
     public void SelfDestoy()
     {
         spot.ClearSpot();

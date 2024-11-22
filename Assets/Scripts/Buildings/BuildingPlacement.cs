@@ -3,8 +3,12 @@ using UnityEngine;
 public class BuildingPlacement : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
+
+    [SerializeField] GameObject buildingButtons;
+    [SerializeField] private BuildingSpot[] buildingSpots;
     
-    private GameObject chosenBuildingPrefab;
+    [HideInInspector] public GameObject chosenBuildingPrefab;
+    private BuildingSpot prevBuildingSpot;
     
     void Update()
     {
@@ -19,8 +23,10 @@ public class BuildingPlacement : MonoBehaviour
                 {
                     if (buildingSpot.IsBusy()) return;
 
-                    buildingSpot.Build(chosenBuildingPrefab);
-                    chosenBuildingPrefab = null;
+                    prevBuildingSpot.ClearSpot(true);
+
+                    buildingSpot.Place(chosenBuildingPrefab);
+                    prevBuildingSpot = buildingSpot;
                 }
             }
         }
@@ -29,5 +35,18 @@ public class BuildingPlacement : MonoBehaviour
     public void ChooseBuilding(GameObject building)
     {
         chosenBuildingPrefab = building;
+
+        for (int i = 0; i < buildingSpots.Length; i++)
+        {
+            if (buildingSpots[i].IsBusy() == false)
+            {
+                buildingSpots[i].Place(chosenBuildingPrefab);
+                prevBuildingSpot = buildingSpots[i];
+                return;
+            }
+        }
+        
+        chosenBuildingPrefab = null;
+        buildingButtons.SetActive(true);
     }
 }
