@@ -1,34 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SweetScript : MonoBehaviour
+public class SweetScript : MonoBehaviour, IPointerDownHandler
 {
-    public float longPressTime = 2.0f;
-    public float pressTimer = 0f;
-    public bool isPressed = false;
+    public float startPosX;
+    public float startPosY;
+    public bool isBeingHeld = false;
 
-    private void Update()
+    void FixedUpdate()
+    {
+        if (isBeingHeld == true)
+        {
+
+            Vector3 mousePos;
+            mousePos = Input.mousePosition;
+            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+            this.gameObject.transform.localPosition = new Vector3(0, mousePos.y, 0);
+        }
+    }
+    
+    
+    
+    
+    public void OnPointerDown(PointerEventData eventData)
     {
         if (Input.GetMouseButtonDown(0))
         {
-            isPressed = true;
-            pressTimer = 0f;
-        }
-        if (isPressed)
-        {
-            pressTimer += Time.deltaTime;
 
-            if (pressTimer >= longPressTime)
-            {
-                Destroy(gameObject);
-                isPressed = false; 
-            }
-        }
 
-        if (Input.GetMouseButtonUp(0)) 
-        {
-            isPressed = false;
+            Vector3 mousePos;
+            mousePos = Input.mousePosition;
+            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+            isBeingHeld = true;
         }
+    }
+    public void OnPointerUP(PointerEventData eventData)
+    {
+            isBeingHeld = false;
+        
     }
 }
