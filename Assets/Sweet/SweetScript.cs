@@ -3,44 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SweetScript : MonoBehaviour, IPointerDownHandler
+public class SweetScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public float startPosX;
-    public float startPosY;
-    public bool isBeingHeld = false;
+    public float targetY;       
+    public float destroyY;      
+    public float dragSpeed = 5f; 
+    private RectTransform rectTransform;
+    private Vector2 startPosition;
+    private bool dragging;
 
-    void FixedUpdate()
+    void Start()
     {
-        if (isBeingHeld == true)
+        rectTransform = GetComponent<RectTransform>();
+        if (rectTransform == null)
         {
+            Debug.LogError("PreciseVerticalDragAndDestroy requires a RectTransform!");
+            enabled = false;
+        }
+        startPosition = rectTransform.anchoredPosition;
+    }
 
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        dragging = true;
+    }
 
-            this.gameObject.transform.localPosition = new Vector3(0, mousePos.y, 0);
+    public void OnDrag(PointerEventData eventData)
+    {
+        if (dragging)
+        {
+            float deltaY = eventData.delta.y * dragSpeed * Time.deltaTime;
+            Vector2 newPos = rectTransform.anchoredPosition;
+            newPos.y = Mathf.Max(targetY, newPos.y + deltaY); 
+            rectTransform.anchoredPosition = newPos;
         }
     }
-    
-    
-    
-    
-    public void OnPointerDown(PointerEventData eventData)
+
+    public void OnEndDrag(PointerEventData eventData)
     {
-        if (Input.GetMouseButtonDown(0))
+        dragging = false;
+        float currentY = rectTransform.anchoredPosition.y;
+
+        if (currentY <= destroyY)
         {
-
-
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            isBeingHeld = true;
+            Destroy(gameObject);
+        }
+        else
+        {
+            StartCoroutine(SmoothReturnToStart());
         }
     }
-    public void OnPointerUP(PointerEventData eventData)
+
+    System.Collections.IEnumerator SmoothReturnToStart()
     {
-            isBeingHeld = false;
-        
+        float elapsedTime = 0;
+        float returnDuration = 0.2f;
+        Vector2 targetPos = startPosition;
+        Vector2 startPos = rectTransform.anchoredPosition;
+
+        while (elapsedTime < returnDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / returnDuration;
+            rectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, t);
+            yield return null;
+        }
     }
 }

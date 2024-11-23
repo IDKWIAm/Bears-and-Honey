@@ -2461,6 +2461,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1742798785}
+  - {fileID: 8894360784326359427}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2498,7 +2499,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 327593141}
-  - {fileID: 8894360784326359427}
   m_Father: {fileID: 1726426736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1816283802
@@ -3013,7 +3013,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1742798785}
+    m_TransformParent: {fileID: 1726426736}
     m_Modifications:
     - target: {fileID: 8558943656010627566, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
@@ -3089,12 +3089,12 @@ PrefabInstance:
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 40.915474
+      value: 4.1030045
       objectReference: {fileID: 0}
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 51.19113
+      value: 4.6844177
       objectReference: {fileID: 0}
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
@@ -3109,7 +3109,7 @@ PrefabInstance:
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0977564
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
@@ -3134,12 +3134,12 @@ PrefabInstance:
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -330.8
+      value: -212.94159
       objectReference: {fileID: 0}
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -44.9
+      value: -30.707764
       objectReference: {fileID: 0}
     - target: {fileID: 8743509588542155492, guid: 0154c7634e809fd46955bf7f40b57a25,
         type: 3}
@@ -3191,9 +3191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b45412e7ba4fa4f9c0167216c1038e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosX: 0
-  startPosY: 0
-  isBeingHeld: 0
+  targetY: -200
+  destroyY: -100
+  dragSpeed: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
