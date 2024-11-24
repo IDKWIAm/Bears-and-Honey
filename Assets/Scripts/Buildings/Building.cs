@@ -9,7 +9,7 @@ public class Building : MonoBehaviour
     {
         spot = gameObject.GetComponent<BuildingSpot>();
 
-        if (PlayerPrefs.HasKey(spot.gameObject.name + "Building " + PlayerPrefs.GetString("Loaded Save")))
+        if (PlayerPrefs.HasKey(PlayerPrefs.GetString("Loaded Save") + " " + spot.gameObject.name + "Building"))
             ConfirmBuild();
     }
 

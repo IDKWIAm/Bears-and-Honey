@@ -21,11 +21,11 @@ public class BuildingSpot : MonoBehaviour
         }
         else return;
 
-        if (PlayerPrefs.HasKey(gameObject.name + "Building " + loadedSlotName))
+        if (PlayerPrefs.HasKey(loadedSlotName + " " + gameObject.name + "Building"))
         {
             foreach (GameObject building in buildingPrefabs)
             {
-                if (building.name + "(Clone)" == PlayerPrefs.GetString(gameObject.name + "Building " + loadedSlotName))
+                if (building.name + "(Clone)" == PlayerPrefs.GetString(loadedSlotName + " " + gameObject.name + "Building"))
                 {
                     Place(building);
                 }
@@ -45,8 +45,8 @@ public class BuildingSpot : MonoBehaviour
         buildingPlacement.chosenBuildingPrefab = null;
         buildingButtons.SetActive(true);
 
-        if (!PlayerPrefs.HasKey(gameObject.name + "Building " + loadedSlotName))
-            PlayerPrefs.SetString(gameObject.name + "Building " + loadedSlotName, currentBuilding.name);
+        if (!PlayerPrefs.HasKey(loadedSlotName + " " + gameObject.name + "Building"))
+            PlayerPrefs.SetString(loadedSlotName + " " + gameObject.name + "Building", currentBuilding.name);
     }
 
     public void ClearSpot(bool isMoving = false)
@@ -62,7 +62,7 @@ public class BuildingSpot : MonoBehaviour
             buildingPlacement.chosenBuildingPrefab = null;
         }
 
-        PlayerPrefs.DeleteKey(gameObject.name + "Building " + loadedSlotName);
+        PlayerPrefs.DeleteKey(loadedSlotName + " " + gameObject.name + "Building");
     }
 
     public bool IsBusy()

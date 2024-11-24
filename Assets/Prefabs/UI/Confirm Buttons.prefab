@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 2525412180958322648}
   - component: {fileID: 1195477063895110129}
   m_Layer: 0
-  m_Name: Buttons
+  m_Name: Confirm Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
