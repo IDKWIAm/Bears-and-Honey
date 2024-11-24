@@ -15,6 +15,10 @@
             <e p="PlayersDataStruct.cs" t="Include" />
             <e p="Resources.cs" t="Include" />
             <e p="Response.cs" t="Include" />
+            <e p="WebRequestManager.cs" t="Include" />
+          </e>
+          <e p="BearAI" t="Include">
+            <e p="BearBlackAI.cs" t="Include" />
           </e>
           <e p="Buildings" t="Include">
             <e p="Building.cs" t="Include" />
@@ -22,6 +26,8 @@
             <e p="BuildingSpot.cs" t="Include" />
             <e p="LookAtCamera.cs" t="Include" />
           </e>
+          <e p="SaveSlot.cs" t="Include" />
+          <e p="SceneLoader.cs" t="Include" />
         </e>
         <e p="SimpleToon" t="Include">
           <e p="Model" t="Include">
