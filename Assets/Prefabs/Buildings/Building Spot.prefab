@@ -120,3 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449b5157bf716254fb19c96faebd03a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingPlacement: {fileID: 0}
+  buildingButtons: {fileID: 0}
+  buildingPrefabs:
+  - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
+  - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}
