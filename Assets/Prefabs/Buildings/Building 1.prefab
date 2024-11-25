@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3796ccf494694b46b89c9e61e1402a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  confirmButtons: {fileID: 2699051989233429581}
 --- !u!1 &6655351688277969363
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,13 +571,23 @@ PrefabInstance:
     - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8209239746517022058}
     - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -589,8 +600,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConfirmBuild
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ConfirmBuild
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Building, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
@@ -607,6 +628,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc50def8ff56d140a78e805e481c1c9, type: 3}
+--- !u!1 &2699051989233429581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6117909502355577017, guid: acc50def8ff56d140a78e805e481c1c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8184126002221675764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5953701271893633836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2525412180958322648, guid: acc50def8ff56d140a78e805e481c1c9,

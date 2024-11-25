@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 736946135833302866}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.34, y: 0, z: 2.66}
-  m_LocalScale: {x: 1.6171136, y: 0.02, z: 1.6171136}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.65, y: 0.02, z: 1.65}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: e262d486b2c6e0843b5de7906a7c5e8b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,10 +104,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.5
+  m_Height: 0
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5285999851334152599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,3 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449b5157bf716254fb19c96faebd03a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingPlacement: {fileID: 0}
+  buildingButtons: {fileID: 0}
+  buildingPrefabs:
+  - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
+  - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\asus\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\asus\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Bears-and-Honey.116754618.00" t="ExcludeRecursive" />
+    <e p="D:\Work\Unity Projects\Bears-and-Honey" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Honey" t="Include">
+          <e p="ScriptForHoney.cs" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="API" t="Include">
+            <e p="API testing.cs" t="Include" />
+            <e p="PlayersDataStruct.cs" t="Include" />
+            <e p="Resources.cs" t="Include" />
+            <e p="Response.cs" t="Include" />
+            <e p="WebRequestManager.cs" t="Include" />
+          </e>
+          <e p="BearAI" t="Include">
+            <e p="BearBlackAI.cs" t="Include" />
+          </e>
+          <e p="Buildings" t="Include">
+            <e p="Building.cs" t="Include" />
+            <e p="BuildingPlacement.cs" t="Include" />
+            <e p="BuildingSpot.cs" t="Include" />
+            <e p="LookAtCamera.cs" t="Include" />
+          </e>
+          <e p="SaveSlot.cs" t="Include" />
+          <e p="SceneLoader.cs" t="Include" />
+        </e>
+        <e p="SimpleToon" t="Include">
+          <e p="Model" t="Include">
+            <e p="Kawaii Slimes" t="Include">
+              <e p="Cameras" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="AbstractTargetFollower.cs" t="Include" />
+                  <e p="FreeLookCam.cs" t="Include" />
+                  <e p="PivotBasedCameraRig.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="SelfRotation.cs" t="Include" />
+          </e>
+          <e p="Shader" t="Include">
+            <e p="ToonLightBase.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Sweet" t="Include">
+          <e p="SweetScript.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="EmojiOne.json" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Bears-and-Honey.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
