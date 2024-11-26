@@ -1,11 +1,16 @@
+using JetBrains.Annotations;
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class circlescript : MonoBehaviour
 {
     public Image progressBar; // Изображение прогресс-бара
     public float progressSpeed = 1f; // Скорость уменьшения прогресса
-    private float currentProgress = 0f;
+    [NonSerialized] public float currentProgress = 0f;
+    
 
     void Start()
     {
@@ -15,19 +20,16 @@ public class circlescript : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
+        
         if (Input.GetMouseButton(0)) // Проверяем, удерживается ли кнопка мыши
         {
-            
             progressBar.enabled = true;
-           
-            currentProgress += 1f * Time.deltaTime; // Увеличиваем прогресс
-            currentProgress = Mathf.Clamp(currentProgress, 0, 1); // Ограничиваем значение
         }
         else // Если кнопка мыши отпущена
         {
-            currentProgress -= 0.5f * Time.deltaTime; // Уменьшаем прогресс
+            currentProgress -= 1f * Time.deltaTime; // Уменьшаем прогресс
             currentProgress = Mathf.Clamp(currentProgress, 0, 1); // Ограничиваем значение
         }
 
@@ -38,11 +40,15 @@ public class circlescript : MonoBehaviour
         {
             progressBar.enabled = false;
         }
-        if (currentProgress >= 1)
+        if (currentProgress >= 0.99f)
         {
             progressBar.gameObject.SetActive(false);
             progressBar.fillAmount = 0;
         }
     }
-    
+    public void clickbutton()
+    {
+        currentProgress += 2f * Time.deltaTime * progressSpeed;
+        currentProgress = Mathf.Clamp(currentProgress, 0, 1);
+    }
 }
