@@ -19,13 +19,13 @@ public class CircleScriptABAYOUDNENKO : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(selectKey))
+        if (Input.GetMouseButtonDown(0))
         {
             shouldUpdate = false;
-            indicatorTimer -= 1.0f ;
+            indicatorTimer -= 1.0f;
             circle.enabled = true;
             circle.fillAmount = indicatorTimer;
-            
+
             if (indicatorTimer <= 0)
             {
                 indicatorTimer = maxIndicatorTimer;
@@ -55,4 +55,5 @@ public class CircleScriptABAYOUDNENKO : MonoBehaviour
             shouldUpdate = true;
         }
     }
+   
 }
