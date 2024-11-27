@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -24,19 +25,29 @@ public class WebRequestManager : MonoBehaviour
         for (int i = 0; i < response.playersData.Length; i++)
         {
             Debug.Log("name: " + response.playersData[i].name);
-            Debug.Log("honey: " + response.playersData[i].resources.honey);
+            Debug.Log("energy: " + response.playersData[i].resources.energy);
+            Debug.Log("crystals: " + response.playersData[i].resources.crystals);
+            Debug.Log("hats: " + response.playersData[i].resources.hats);
+            Debug.Log("dishes: " + response.playersData[i].resources.dishes);
+            Debug.Log("spots: " + response.playersData[i].resources.spotsData);
         }
     }
 
-    public IEnumerator SendPostRequest(string url, string username, Resources resources)
+    public IEnumerator SendPostRequest(string url, string username, int energy, int crystals, List<string> hats, Dishes dishes, BuildingSpotData spotData)
     {
         WWWForm formData = new WWWForm();
 
         PlayersDataStruct playerData = new PlayersDataStruct
         {
             name = username,
-
-            resources = resources
+            resources =
+            {
+                energy = energy,
+                crystals = crystals,
+                hats = hats,
+                dishes = dishes,
+                spotsData = spotData
+            }
         };
 
         string json = JsonUtility.ToJson(playerData);
@@ -61,16 +72,27 @@ public class WebRequestManager : MonoBehaviour
         PlayersDataStruct playersDataFromServer = JsonUtility.FromJson<PlayersDataStruct>(request.downloadHandler.text);
 
         Debug.Log("name: " + playersDataFromServer.name);
-        Debug.Log("honey: " + playersDataFromServer.resources.honey);
+        Debug.Log("energy: " + playersDataFromServer.resources.energy);
+        Debug.Log("crystals: " + playersDataFromServer.resources.crystals);
+        Debug.Log("hats: " + playersDataFromServer.resources.hats);
+        Debug.Log("dishes: " + playersDataFromServer.resources.dishes);
+        Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
+
     }
 
-    public IEnumerator SendPutRequest(string url, string username, Resources newResources)
+    public IEnumerator SendPutRequest(string url, string username, int newEnergy, int newCrystals, List<string> newHats, Dishes newDishes, BuildingSpotData newSpotData)
     {
         PlayersDataStruct playerData = new PlayersDataStruct
         {
             name = username,
-
-            resources = newResources
+            resources =
+            {
+                energy = newEnergy,
+                crystals = newCrystals,
+                hats = newHats,
+                dishes = newDishes,
+                spotsData = newSpotData
+            }
         };
 
         string json = JsonUtility.ToJson(playerData);
@@ -88,7 +110,12 @@ public class WebRequestManager : MonoBehaviour
 
         PlayersDataStruct playersDataFromServer = JsonUtility.FromJson<PlayersDataStruct>(request.downloadHandler.text);
 
-        Debug.Log("updated honey: " + playersDataFromServer.resources.honey);
+        Debug.Log("name: " + playersDataFromServer.name);
+        Debug.Log("energy: " + playersDataFromServer.resources.energy);
+        Debug.Log("crystals: " + playersDataFromServer.resources.crystals);
+        Debug.Log("hats: " + playersDataFromServer.resources.hats);
+        Debug.Log("dishes: " + playersDataFromServer.resources.dishes);
+        Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
     }
 
     public IEnumerator SendDeleteRequest(string url)
