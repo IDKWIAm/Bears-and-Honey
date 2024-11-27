@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class safezone : MonoBehaviour
 {
-    public RectTransform RectTransform;
+    public RectTransform Rect_Transform;
     public GameObject gameobj;
+    
     void Start()
     {
-        RectTransform.anchoredPosition = new Vector2(Random.Range(-284, 284), 0);
+        Rect_Transform.anchoredPosition = new Vector2(Random.Range(-284, 284), 0);
     }
 
     // Update is called once per frame

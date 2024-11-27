@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,7 @@ public class circlescript : MonoBehaviour
     public Image progressBar; // Изображение прогресс-бара
     public float progressSpeed = 1f; // Скорость уменьшения прогресса
     [NonSerialized] public float currentProgress = 0f;
-    
+    public GameObject canvas;
 
     void Start()
     {
@@ -40,15 +41,17 @@ public class circlescript : MonoBehaviour
         {
             progressBar.enabled = false;
         }
-        if (currentProgress >= 0.99f)
+        if (currentProgress >= 0.98f)
         {
-            progressBar.gameObject.SetActive(false);
             progressBar.fillAmount = 0;
+            currentProgress = 0;
+            canvas.SetActive(false);
         }
     }
     public void clickbutton()
     {
-        currentProgress += 2f * Time.deltaTime * progressSpeed;
+        currentProgress += 4f * Time.deltaTime * progressSpeed;
         currentProgress = Mathf.Clamp(currentProgress, 0, 1);
     }
+
 }

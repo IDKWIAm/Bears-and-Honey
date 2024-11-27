@@ -11,12 +11,16 @@ public class Fish : MonoBehaviour
     public float moveSpeed = 0; 
     private RectTransform pointerTransform;
     private Vector3 targetPosition;
+    public GameObject canvas;
+    public GameObject canvasAnother;
+
 
     void Start()
     {
         pointerTransform = GetComponent<RectTransform>();
         targetPosition = pointB.position;
         moveSpeed = Random.Range(400, 1000);
+
     }
 
     void Update()
@@ -48,12 +52,18 @@ public class Fish : MonoBehaviour
         
         if (RectTransformUtility.RectangleContainsScreenPoint(safeZone, pointerTransform.position, null))
         {
-            Debug.Log("Красавчик саня, красавчик");
+            canvas.SetActive(false);
+            canvasAnother.SetActive(true);
         }
         else
         {
-            Debug.Log("Фууууу, саня, ты лох");
+            canvas.SetActive(false);
         }
+    }
+    void OnEnable()
+    {
+        moveSpeed = Random.Range(400, 1000);
+        safeZone.anchoredPosition = new Vector2(Random.Range(-284, 284), 0);
     }
 }
 
