@@ -68,7 +68,7 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
         {
             persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
         }
-        else Debug.Log("Loaded slot number not found");
+        else Debug.Log("Loaded slot number not found. Save is skipped.");
     }
 
     public void ClearSpot(bool isMoving = false)
