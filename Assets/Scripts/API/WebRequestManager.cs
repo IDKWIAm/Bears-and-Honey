@@ -4,12 +4,16 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using Newtonsoft.Json;
 
 public class WebRequestManager : MonoBehaviour
 {
-    public IEnumerator SendGetRequest(string url)
+    private string gameURL = "https://2025.nti-gamedev.ru/api/games/de781ac2-27da-479a-b5f1-f572f8c9aacb/";
+
+    public IEnumerator SendGetRequest(string saveName = null)
     {
-        UnityWebRequest request = UnityWebRequest.Get(url);
+        UnityWebRequest request = UnityWebRequest.Get(gameURL);
+        if (saveName != null) request = UnityWebRequest.Get(gameURL + "players/" + saveName + "/");
 
         yield return request.SendWebRequest();
 
@@ -33,13 +37,13 @@ public class WebRequestManager : MonoBehaviour
         }
     }
 
-    public IEnumerator SendPostRequest(string url, string username, int energy, int crystals, List<string> hats, Dishes dishes, BuildingSpotData spotData)
+    public IEnumerator SendPostRequest(string saveName, int energy, int crystals, List<string> hats, Dictionary<string, int> dishes, Dictionary<string, string> spotData)
     {
         WWWForm formData = new WWWForm();
 
         PlayersDataStruct playerData = new PlayersDataStruct
         {
-            name = username,
+            name = saveName,
             resources =
             {
                 energy = energy,
@@ -50,9 +54,9 @@ public class WebRequestManager : MonoBehaviour
             }
         };
 
-        string json = JsonUtility.ToJson(playerData);
+        string json = JsonConvert.SerializeObject(playerData);
 
-        UnityWebRequest request = UnityWebRequest.PostWwwForm(url, json);
+        UnityWebRequest request = UnityWebRequest.PostWwwForm(gameURL + "players/", json);
 
         byte[] playerDataBytes = Encoding.UTF8.GetBytes(json);
 
@@ -69,7 +73,7 @@ public class WebRequestManager : MonoBehaviour
             throw new Exception("No internet connection (" + request.error + ")");
         }
 
-        PlayersDataStruct playersDataFromServer = JsonUtility.FromJson<PlayersDataStruct>(request.downloadHandler.text);
+        PlayersDataStruct playersDataFromServer = JsonConvert.DeserializeObject<PlayersDataStruct>(request.downloadHandler.text);
 
         Debug.Log("name: " + playersDataFromServer.name);
         Debug.Log("energy: " + playersDataFromServer.resources.energy);
@@ -80,11 +84,11 @@ public class WebRequestManager : MonoBehaviour
 
     }
 
-    public IEnumerator SendPutRequest(string url, string username, int newEnergy, int newCrystals, List<string> newHats, Dishes newDishes, BuildingSpotData newSpotData)
+    public IEnumerator SendPutRequest(string saveName, int newEnergy, int newCrystals, List<string> newHats, Dictionary<string, int> newDishes, Dictionary<string, string> newSpotData)
     {
         PlayersDataStruct playerData = new PlayersDataStruct
         {
-            name = username,
+            name = saveName,
             resources =
             {
                 energy = newEnergy,
@@ -95,9 +99,9 @@ public class WebRequestManager : MonoBehaviour
             }
         };
 
-        string json = JsonUtility.ToJson(playerData);
+        string json = JsonConvert.SerializeObject(playerData);
 
-        UnityWebRequest request = UnityWebRequest.Put(url, json);
+        UnityWebRequest request = UnityWebRequest.Put(gameURL + "players/" + saveName + "/", json);
 
         request.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
 
@@ -108,7 +112,7 @@ public class WebRequestManager : MonoBehaviour
             throw new Exception("No internet connection (" + request.error + ")");
         }
 
-        PlayersDataStruct playersDataFromServer = JsonUtility.FromJson<PlayersDataStruct>(request.downloadHandler.text);
+        PlayersDataStruct playersDataFromServer = JsonConvert.DeserializeObject<PlayersDataStruct>(request.downloadHandler.text);
 
         Debug.Log("name: " + playersDataFromServer.name);
         Debug.Log("energy: " + playersDataFromServer.resources.energy);
@@ -118,9 +122,9 @@ public class WebRequestManager : MonoBehaviour
         Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
     }
 
-    public IEnumerator SendDeleteRequest(string url)
+    public IEnumerator SendDeleteRequest(string saveName)
     {
-        UnityWebRequest request = UnityWebRequest.Delete(url);
+        UnityWebRequest request = UnityWebRequest.Delete(gameURL + "players/" + saveName + "/");
 
         yield return request.SendWebRequest();
 

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - HONEY
+  - BuildingSpot
+  - Request Manager
   layers:
   - Default
   - TransparentFX

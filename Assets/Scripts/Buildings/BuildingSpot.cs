@@ -6,6 +6,8 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private BuildingPlacement buildingPlacement;
     [SerializeField] private GameObject buildingButtons;
+
+    [SerializeField] private WebRequestManager requestManager;
     [SerializeField] private DataPersistenceManager persistenceManager;
 
     [SerializeField] private GameObject[] buildingPrefabs;
@@ -13,45 +15,21 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
     private GameObject currentBuilding;
     private bool isBusy;
 
-    private string loadedSlotName;
-
-    private void Start()
-    {
-        /*  TODO - make this part of code works without errors
-        if (PlayerPrefs.HasKey("Loaded slot number"))
-            persistenceManager.LoadGame(PlayerPrefs.GetInt("Loaded slot number"));
-        */
-
-        if (PlayerPrefs.HasKey("Loaded Save"))
-        {
-            loadedSlotName = PlayerPrefs.GetString("Loaded Save");
-        }
-        else return;
-
-        if (PlayerPrefs.HasKey(loadedSlotName + " " + gameObject.name + "Building"))
-        {
-            foreach (GameObject building in buildingPrefabs)
-            {
-                if (building.name + "(Clone)" == PlayerPrefs.GetString(loadedSlotName + " " + gameObject.name + "Building"))
-                {
-                    Place(building);
-                }
-            }
-        }
-        
-    }
-
     public void LoadData(GameData data)
     {
-        foreach (KeyValuePair<string, string> spotData in data.resources.spotsData.spotData)
+        if (data.resources.spotsData != null)
         {
-            if (spotData.Value == gameObject.name)
+            foreach (KeyValuePair<string, string> spotData in data.resources.spotsData)
             {
-                foreach (GameObject building in buildingPrefabs)
+                if (spotData.Key == gameObject.name)
                 {
-                    if (building.name + "(Clone)" == spotData.Key)
+                    foreach (GameObject building in buildingPrefabs)
                     {
-                        Place(building);
+                        if (building.name == spotData.Value)
+                        {
+                            Place(building);
+                            currentBuilding.GetComponent<Building>().ConfirmBuild();
+                        }
                     }
                 }
             }
@@ -65,9 +43,11 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
 
         foreach (GameObject building in buildingPrefabs)
         {
-            if (building == currentBuilding)
+            if (building.name + "(Clone)" == currentBuilding.name)
             {
-                data.resources.spotsData.spotData.Add(currentBuilding.name, building.name);
+                if (data.resources.spotsData == null) data.resources.spotsData = new Dictionary<string, string>() { };
+                if (!data.resources.spotsData.ContainsKey(gameObject.name))
+                    data.resources.spotsData.Add(gameObject.name, building.name);
             }
         }
     }
@@ -85,7 +65,9 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
         buildingButtons.SetActive(true);
 
         if (PlayerPrefs.HasKey("Loaded slot number"))
-            persistenceManager.SaveGame(PlayerPrefs.GetInt("Loaded slot number"));
+        {
+            persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
+        }
         else Debug.Log("Loaded slot number not found");
     }
 
@@ -101,8 +83,6 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
             buildingButtons.SetActive(true);
             buildingPlacement.chosenBuildingPrefab = null;
         }
-
-        PlayerPrefs.DeleteKey(loadedSlotName + " " + gameObject.name + "Building");
     }
 
     public bool IsBusy()

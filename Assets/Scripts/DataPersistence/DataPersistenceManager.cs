@@ -2,11 +2,12 @@ using UnityEngine;
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class DataPersistenceManager : MonoBehaviour
 {
     [SerializeField] private bool saveOnQuit = true;
+
+    [SerializeField] private WebRequestManager requestManager;
 
     private string slot1Name = "Slot1Data";
     private string slot2Name = "Slot2Data";
@@ -37,6 +38,13 @@ public class DataPersistenceManager : MonoBehaviour
         dataPersistenceObjects = FindAllDataPersistenceObjects();
     }
 
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("Loaded slot number"))
+            LoadGame(PlayerPrefs.GetInt("Loaded slot number"));
+        else Debug.Log("Key 'Loaded slot number' is not found. Load is skipped.");
+    }
+
     public void NewGame(string saveName, int slotNumber)
     {
         gameData = new GameData(saveName);
@@ -44,6 +52,10 @@ public class DataPersistenceManager : MonoBehaviour
         else if (slotNumber == 2 && slot2DataHandler != null) slot2DataHandler.Create(gameData);
         else if (slotNumber == 3 && slot3DataHandler != null) slot3DataHandler.Create(gameData);
         else Debug.Log("Cannon create a new file. Slot is not found.");
+
+        if (requestManager != null)
+            StartCoroutine(requestManager.SendPostRequest(Environment.MachineName + " " + saveName, 0, 0, new List<string>(), new Dictionary<string, int>(), new Dictionary<string, string>()));
+        else Debug.Log("Request manager is null");
     }
 
     public void LoadGame(int slotNumber)
@@ -65,7 +77,7 @@ public class DataPersistenceManager : MonoBehaviour
         }
     }
 
-    public void SaveGame(int slotNumber)
+    public void SaveGame(string saveName, int slotNumber)
     {
         if (gameData == null)
         {
@@ -93,31 +105,42 @@ public class DataPersistenceManager : MonoBehaviour
             slot3DataHandler.Delete(slot3Name + saveFormat);
             slot3DataHandler.Create(gameData);
         }
+
+        StartCoroutine(requestManager.SendPutRequest(Environment.MachineName + " " + saveName, gameData.resources.energy, gameData.resources.crystals, gameData.resources.hats, gameData.resources.dishes, gameData.resources.spotsData));
     }
 
-    public void DeleteGame(int slotNumber)
+    public void DeleteGame(string saveName, int slotNumber)
     {
         if (slotNumber == 1 && slot1DataHandler != null) slot1DataHandler.Delete(slot1Name + saveFormat);
         else if (slotNumber == 2 && slot2DataHandler != null) slot2DataHandler.Delete(slot2Name + saveFormat);
         else if (slotNumber == 3 && slot3DataHandler != null) slot3DataHandler.Delete(slot3Name + saveFormat);
+        if (requestManager != null) StartCoroutine(requestManager.SendDeleteRequest(Environment.MachineName + " " + saveName));
+        else Debug.Log("Request manager is null");
     }
 
     private void OnApplicationQuit()
     {
         if (saveOnQuit)
         {
-            try 
+            if (PlayerPrefs.HasKey("Loaded slot name"))
             {
-                for (int i = 1; i < 4; i++)
+                try
                 {
-                    SaveGame(i);
+                    for (int i = 1; i < 4; i++)
+                    {
+                        SaveGame(PlayerPrefs.GetString("Loaded slot name"), i);
+                        PlayerPrefs.DeleteAll();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError("Failed to save the game" + "\n" + e);
                 }
             }
-            catch (Exception e)
+            else
             {
-                Debug.LogError("Failed to save the game" + "\n" + e);
+                Debug.Log("'Loaded slot name' is not found. Save is skipped.");
             }
-
         }
     }
 

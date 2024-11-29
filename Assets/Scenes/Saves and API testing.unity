@@ -885,6 +885,11 @@ PrefabInstance:
       propertyPath: saveOnQuit
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2102851449245803265, guid: a7b4567b923bc5448b991851f3fc24da,
+        type: 3}
+      propertyPath: requestManager
+      value: 
+      objectReference: {fileID: 1777743396}
     - target: {fileID: 5150208541253816058, guid: a7b4567b923bc5448b991851f3fc24da,
         type: 3}
       propertyPath: m_Name

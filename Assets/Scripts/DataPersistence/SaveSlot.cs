@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
-using System.Collections.Generic;
 
 public class SaveSlot : MonoBehaviour, IDataPersistence
 {
@@ -11,10 +10,7 @@ public class SaveSlot : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject loadButton;
     [SerializeField] private GameObject deleteButton;
 
-    [SerializeField] private WebRequestManager requestManager;
     [SerializeField] private DataPersistenceManager persistenceManager;
-
-    private string gameURL = "https://2025.nti-gamedev.ru/api/games/de781ac2-27da-479a-b5f1-f572f8c9aacb/";
 
     private string savedTitle;
     private int slotNum;
@@ -53,8 +49,6 @@ public class SaveSlot : MonoBehaviour, IDataPersistence
 
     public void CreateSave()
     {
-        if (requestManager != null) StartCoroutine(requestManager.SendPostRequest(gameURL + "players/", Environment.MachineName + " " + title.text, 0, 0, new List<string>(), new Dishes(), new BuildingSpotData()));
-        else Debug.Log("Request manager is null");
         persistenceManager.NewGame(title.text, slotNum);
         loadButton.SetActive(true);
         deleteButton.SetActive(true);
@@ -70,9 +64,7 @@ public class SaveSlot : MonoBehaviour, IDataPersistence
 
     public void DeleteSave()
     {
-        if (requestManager != null) StartCoroutine(requestManager.SendDeleteRequest(gameURL + "players/" + Environment.MachineName + " " + title.text + "/"));
-        else Debug.Log("Request manager is null");
-        persistenceManager.DeleteGame(slotNum);
+        persistenceManager.DeleteGame(title.text, slotNum);
         PlayerPrefs.DeleteKey("Loaded slot name");
         PlayerPrefs.DeleteKey("Loaded slot number");
         loadButton.SetActive(false);

@@ -425,7 +425,12 @@ PrefabInstance:
     - target: {fileID: 6117909502355577017, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
       propertyPath: m_Name
-      value: Buttons
+      value: Confirm Buttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117909502355577017, guid: acc50def8ff56d140a78e805e481c1c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6129609956720266828, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
@@ -487,6 +492,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: -8592983691407653792}
+    - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7099558598695178413, guid: acc50def8ff56d140a78e805e481c1c9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState

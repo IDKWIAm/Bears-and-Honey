@@ -8,15 +8,12 @@ public class Building : MonoBehaviour
     public void SetSpot(GameObject gameObject)
     {
         spot = gameObject.GetComponent<BuildingSpot>();
-
-        if (PlayerPrefs.HasKey(PlayerPrefs.GetString("Loaded Save") + " " + spot.gameObject.name + "Building"))
-            ConfirmBuild();
     }
 
     public void ConfirmBuild()
     {
-        confirmButtons.SetActive(false);
         spot.Build();
+        confirmButtons.SetActive(false);
     }
 
     public void SelfDestoy()
