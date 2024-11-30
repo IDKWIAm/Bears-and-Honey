@@ -7,6 +7,7 @@ TagManager:
   - HONEY
   - BuildingSpot
   - Request Manager
+  - honey
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - RenderTexture
   - 
   - 
   - 
