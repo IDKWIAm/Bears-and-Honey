@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fb2b7a53abdd14ea9ec6ea88bd307f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dishesGapMult: 1.25
   currencyText: {fileID: 0}
-  dishesGap: 125
   dishDefaultPos: {fileID: 0}
   parent: {fileID: 0}
   dishes:

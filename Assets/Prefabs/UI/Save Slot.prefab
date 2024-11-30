@@ -32,10 +32,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2965302589410762083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000061095, y: 146}
-  m_SizeDelta: {x: 290.2761, y: 103.7357}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.0000061095, y: -73.8919}
+  m_SizeDelta: {x: 290.2761, y: 103.66646}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7020923973024613586
 CanvasRenderer:
@@ -302,9 +302,9 @@ RectTransform:
   - {fileID: 4518914987986954064}
   m_Father: {fileID: 2965302589410762083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2875, y: -65.597}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.2875, y: 154.21858}
   m_SizeDelta: {x: 306.1613, y: 234.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9100442158321954084
@@ -569,10 +569,10 @@ RectTransform:
   - {fileID: 4731787605703053308}
   m_Father: {fileID: 2965302589410762083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2875, y: -131.19543}
-  m_SizeDelta: {x: 306.1613, y: 103.0806}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.2599976, y: 88.67618}
+  m_SizeDelta: {x: 306.09488, y: 103.13878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5404384509728911619
 CanvasRenderer:
@@ -702,10 +702,10 @@ RectTransform:
   - {fileID: 140112718028633861}
   m_Father: {fileID: 2965302589410762083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2875, y: -0.0000095367}
-  m_SizeDelta: {x: 306.1613, y: 103.0806}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.2875, y: 219.8978}
+  m_SizeDelta: {x: 306.1613, y: 103.10843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &728866028993849378
 CanvasRenderer:
@@ -1031,5 +1031,4 @@ MonoBehaviour:
   "\u0441reateButton": {fileID: 1831421734981241217}
   loadButton: {fileID: 4168067932631704026}
   deleteButton: {fileID: 3161745630624225183}
-  requestManager: {fileID: 0}
   persistenceManager: {fileID: 0}

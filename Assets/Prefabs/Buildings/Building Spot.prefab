@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6870097440731982615}
-  - component: {fileID: 5513505010705232669}
   - component: {fileID: 734637992650164702}
   - component: {fileID: 9009385823879373578}
   - component: {fileID: 5285999851334152599}
@@ -30,19 +29,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.65, y: 0.02, z: 1.65}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_LocalScale: {x: 1.3, y: 0.015757574, z: 1.3}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 2217190563881735740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5513505010705232669
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736946135833302866}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &734637992650164702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -122,6 +114,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPlacement: {fileID: 0}
   buildingButtons: {fileID: 0}
+  requestManager: {fileID: 0}
+  persistenceManager: {fileID: 0}
   buildingPrefabs:
   - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
   - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}
+--- !u!1001 &1823872565684842967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6870097440731982615}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cca6e6e32d88af343bb9299d32476029,
+        type: 3}
+      propertyPath: m_Name
+      value: Prisma_for_bee 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cca6e6e32d88af343bb9299d32476029, type: 3}
+--- !u!4 &2217190563881735740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cca6e6e32d88af343bb9299d32476029,
+    type: 3}
+  m_PrefabInstance: {fileID: 1823872565684842967}
+  m_PrefabAsset: {fileID: 0}
