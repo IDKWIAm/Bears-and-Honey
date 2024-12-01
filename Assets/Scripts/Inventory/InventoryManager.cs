@@ -2,8 +2,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private GameObject shop;
+    [SerializeField] private DataPersistenceManager persistenceManager;
+
     [SerializeField] private float dishesGapMult = 1;
 
     [SerializeField] private TextMeshProUGUI currencyText;
@@ -20,6 +23,53 @@ public class InventoryManager : MonoBehaviour
     public int currency { get; private set; }
 
     private List<GameObject> storedDishes = new List<GameObject>();
+
+    private bool loading;
+
+    public void LoadData(GameData data)
+    {
+        loading = true;
+
+        currency = data.resources.energyHoney;
+        UpdateCurrencyText();
+
+        if (data.resources.dishes != null)
+        {
+            foreach (string dish in data.resources.dishes)
+            {
+                for (int d = 0; d < dishes.Length; d++)
+                {
+                    if (dish == dishes[d].name)
+                        MakeDish(d + 1);
+                }
+            }
+        }
+        loading = false;
+    }
+    
+    public void SaveData(ref GameData data)
+    {
+        data.resources.energyHoney = currency;
+
+        if (data.resources.dishes == null) data.resources.dishes = new List<string>() { };
+        else data.resources.dishes.Clear();
+
+        for (int i = 0; i < storedDishes.Count; i++)
+        {
+            foreach (GameObject dish in dishes)
+            {
+                if (dish.name + "(Clone)" == storedDishes[i].name)
+                {
+                    data.resources.dishes.Add(dish.name);
+                }
+            }
+        }
+    }
+
+    private void Start()
+    {
+        shop.SetActive(false);
+    }
 
     private void UpdateCurrencyText()
     {
@@ -40,6 +90,15 @@ public class InventoryManager : MonoBehaviour
         currencyText.text = value.ToString() + valueReductionSymbol;
     }
 
+    private void Save()
+    {
+        if (PlayerPrefs.HasKey("Loaded slot number"))
+        {
+            persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
+        }
+        else Debug.Log("Loaded slot number not found. Save is skipped.");
+    }
+
     public void MakeDish(int dishNum)
     {
         dishNum = Mathf.Clamp(dishNum, 0, dishes.Length);
@@ -53,15 +112,15 @@ public class InventoryManager : MonoBehaviour
         storedDishes.Add(dish);
         dish.GetComponent<Dish>().SetOrderNumber(storedDishes.Count - 1);
         storedDishesAmount += 1;
-    }
 
-    public void MakeCherryDish()
-    {
-        gap = new Vector3(dishesGapMult, 0, 0);
-        GameObject dish = Instantiate(dishes[0], dishDefaultPos.position + gap * storedDishesAmount, Quaternion.identity, parent);
-        storedDishes.Add(dish);
-        dish.GetComponent<Dish>().SetOrderNumber(storedDishes.Count - 1);
-        storedDishesAmount += 1;
+        if (!loading)
+        {
+            if (PlayerPrefs.HasKey("Loaded slot number"))
+            {
+                persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
+            }
+            else Debug.Log("Loaded slot number not found. Save is skipped.");
+        }
     }
 
     public void SellDish(int price, int num)
@@ -88,11 +147,13 @@ public class InventoryManager : MonoBehaviour
     {
         currency += price;
         UpdateCurrencyText();
+        Save();
     }
 
     public void SubtractCurrency(int price)
     {
         currency -= price;
         UpdateCurrencyText();
+        Save();
     }
 }

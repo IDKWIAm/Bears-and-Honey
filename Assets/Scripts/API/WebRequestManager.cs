@@ -29,15 +29,16 @@ public class WebRequestManager : MonoBehaviour
         for (int i = 0; i < response.playersData.Length; i++)
         {
             Debug.Log("name: " + response.playersData[i].name);
-            Debug.Log("energy: " + response.playersData[i].resources.energy);
-            Debug.Log("crystals: " + response.playersData[i].resources.crystals);
+            Debug.Log("energyHoney: " + response.playersData[i].resources.energyHoney);
+            //Debug.Log("crystals: " + response.playersData[i].resources.crystals);
             Debug.Log("hats: " + response.playersData[i].resources.hats);
             Debug.Log("dishes: " + response.playersData[i].resources.dishes);
             Debug.Log("spots: " + response.playersData[i].resources.spotsData);
+            Debug.Log("Responce Code: " + request.responseCode);
         }
     }
 
-    public IEnumerator SendPostRequest(string saveName, int energy, int crystals, List<string> hats, Dictionary<string, int> dishes, Dictionary<string, string> spotData)
+    public IEnumerator SendPostRequest(string saveName, int energy, /*int crystals,*/ List<string> hats, List<string> dishes, Dictionary<string, string> spotData)
     {
         WWWForm formData = new WWWForm();
 
@@ -46,8 +47,8 @@ public class WebRequestManager : MonoBehaviour
             name = saveName,
             resources =
             {
-                energy = energy,
-                crystals = crystals,
+                energyHoney = energy,
+                //crystals = crystals,
                 hats = hats,
                 dishes = dishes,
                 spotsData = spotData
@@ -72,27 +73,28 @@ public class WebRequestManager : MonoBehaviour
         {
             throw new Exception("No internet connection (" + request.error + ")");
         }
-
+        /*
         PlayersDataStruct playersDataFromServer = JsonConvert.DeserializeObject<PlayersDataStruct>(request.downloadHandler.text);
-
+        
         Debug.Log("name: " + playersDataFromServer.name);
         Debug.Log("energy: " + playersDataFromServer.resources.energy);
         Debug.Log("crystals: " + playersDataFromServer.resources.crystals);
         Debug.Log("hats: " + playersDataFromServer.resources.hats);
         Debug.Log("dishes: " + playersDataFromServer.resources.dishes);
         Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
-
+        */
+        Debug.Log("Responce Code: " + request.responseCode);
     }
 
-    public IEnumerator SendPutRequest(string saveName, int newEnergy, int newCrystals, List<string> newHats, Dictionary<string, int> newDishes, Dictionary<string, string> newSpotData)
+    public IEnumerator SendPutRequest(string saveName, int newEnergy, /*int newCrystals,*/ List<string> newHats, List<string> newDishes, Dictionary<string, string> newSpotData)
     {
         PlayersDataStruct playerData = new PlayersDataStruct
         {
             name = saveName,
             resources =
             {
-                energy = newEnergy,
-                crystals = newCrystals,
+                energyHoney = newEnergy,
+                //crystals = newCrystals,
                 hats = newHats,
                 dishes = newDishes,
                 spotsData = newSpotData
@@ -111,7 +113,7 @@ public class WebRequestManager : MonoBehaviour
         {
             throw new Exception("No internet connection (" + request.error + ")");
         }
-
+        /*
         PlayersDataStruct playersDataFromServer = JsonConvert.DeserializeObject<PlayersDataStruct>(request.downloadHandler.text);
 
         Debug.Log("name: " + playersDataFromServer.name);
@@ -120,6 +122,8 @@ public class WebRequestManager : MonoBehaviour
         Debug.Log("hats: " + playersDataFromServer.resources.hats);
         Debug.Log("dishes: " + playersDataFromServer.resources.dishes);
         Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
+        */
+        Debug.Log("Responce Code: " + request.responseCode);
     }
 
     public IEnumerator SendDeleteRequest(string saveName)

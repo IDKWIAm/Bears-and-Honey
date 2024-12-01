@@ -5,16 +5,16 @@ public struct Resources
 {
     public Resources(int newEnergy = 0, int newCrystals = 0)
     {
-        energy = newEnergy;
-        crystals = newCrystals;
+        energyHoney = newEnergy;
+        //crystals = newCrystals;
         hats = new List<string>();
-        dishes = new Dictionary<string, int>();
+        dishes = new List<string>();
         spotsData = new Dictionary<string, string>();
     }
 
-    public int energy;
-    public int crystals;
+    public int energyHoney;
+    //public int crystals;
     public List<string> hats;
-    public Dictionary<string, int> dishes;
+    public List<string> dishes;
     public Dictionary<string, string> spotsData;
 }

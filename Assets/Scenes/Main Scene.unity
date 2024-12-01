@@ -940,17 +940,17 @@ PrefabInstance:
     - target: {fileID: 5453310449827326818, guid: a7b4567b923bc5448b991851f3fc24da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 700.6963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5453310449827326818, guid: a7b4567b923bc5448b991851f3fc24da,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 388.07825
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5453310449827326818, guid: a7b4567b923bc5448b991851f3fc24da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.658257
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5453310449827326818, guid: a7b4567b923bc5448b991851f3fc24da,
         type: 3}
@@ -3071,9 +3071,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f717b7df367f438a6f79e57d0693c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatName: Hat 3
+  shop: {fileID: 705548983}
   button: {fileID: 31699511}
   priceText: {fileID: 831728499}
   inventoryManager: {fileID: 737353869}
+  persistenceManager: {fileID: 903167272}
 --- !u!114 &587264687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,7 +4065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &705548984
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4229,6 +4232,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 182277502201816980, guid: b4f35f9f765922b4d8adb9628f0a8d12,
         type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 705548983}
+    - target: {fileID: 182277502201816980, guid: b4f35f9f765922b4d8adb9628f0a8d12,
+        type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 1798565136}
@@ -4242,6 +4250,11 @@ PrefabInstance:
       propertyPath: dishDefaultPos
       value: 
       objectReference: {fileID: 1072518464}
+    - target: {fileID: 182277502201816980, guid: b4f35f9f765922b4d8adb9628f0a8d12,
+        type: 3}
+      propertyPath: persistenceManager
+      value: 
+      objectReference: {fileID: 903167272}
     - target: {fileID: 6215227139639836591, guid: b4f35f9f765922b4d8adb9628f0a8d12,
         type: 3}
       propertyPath: m_Name
@@ -6161,9 +6174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f717b7df367f438a6f79e57d0693c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatName: Hat 1
+  shop: {fileID: 705548983}
   button: {fileID: 1538038699}
   priceText: {fileID: 2130377363}
   inventoryManager: {fileID: 737353869}
+  persistenceManager: {fileID: 903167272}
 --- !u!114 &972418211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8367,9 +8383,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f717b7df367f438a6f79e57d0693c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatName: Hat 2
+  shop: {fileID: 705548983}
   button: {fileID: 1019295907}
   priceText: {fileID: 1544360931}
   inventoryManager: {fileID: 737353869}
+  persistenceManager: {fileID: 903167272}
 --- !u!114 &1378448667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12831,7 +12850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1250
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

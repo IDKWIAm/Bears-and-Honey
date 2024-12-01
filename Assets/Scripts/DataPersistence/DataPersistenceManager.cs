@@ -54,7 +54,7 @@ public class DataPersistenceManager : MonoBehaviour
         else Debug.Log("Cannon create a new file. Slot is not found.");
 
         if (requestManager != null)
-            StartCoroutine(requestManager.SendPostRequest(Environment.MachineName + " " + saveName, 0, 0, new List<string>(), new Dictionary<string, int>(), new Dictionary<string, string>()));
+            StartCoroutine(requestManager.SendPostRequest(Environment.MachineName + " " + saveName, 0, new List<string>(), new List<string>(), new Dictionary<string, string>()));
         else Debug.Log("Request manager is null");
     }
 
@@ -106,7 +106,7 @@ public class DataPersistenceManager : MonoBehaviour
             slot3DataHandler.Create(gameData);
         }
 
-        StartCoroutine(requestManager.SendPutRequest(Environment.MachineName + " " + saveName, gameData.resources.energy, gameData.resources.crystals, gameData.resources.hats, gameData.resources.dishes, gameData.resources.spotsData));
+        StartCoroutine(requestManager.SendPutRequest(Environment.MachineName + " " + saveName, gameData.resources.energyHoney, gameData.resources.hats, gameData.resources.dishes, gameData.resources.spotsData));
     }
 
     public void DeleteGame(string saveName, int slotNumber)
