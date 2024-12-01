@@ -182,6 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8471ccb6ef6996547b8b86ad572996c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.45
+  speed: 1
   xBorders: {x: -Infinity, y: Infinity}
-  yBorders: {x: -Infinity, y: Infinity}
+  zBorders: {x: -Infinity, y: Infinity}

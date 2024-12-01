@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Saves and API testing.unity
     guid: ab422efa0325d02439f46073b981853c
   - enabled: 1
-    path: Assets/Scenes/Building Placement.unity
-    guid: dc50bb365eceeba43a1f859d8758e132
+    path: Assets/Scenes/Main Scene.unity
+    guid: 12c8dfb5ac76c4a4fa9d7eb9786bca2d
   m_configObjects: {}
