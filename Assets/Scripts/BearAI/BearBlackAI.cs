@@ -5,13 +5,14 @@ namespace BearAI
 {
     public class BearBlackAI : MonoBehaviour
     {
-        public Transform fruitPoint;
-        public Transform cookingPoint;
+        [SerializeField] private Transform fruitPoint;
+        [SerializeField] private Transform cookingPoint;
         private Transform _currentTarget;
         private NavMeshAgent _navMeshAgent;
         private Animator _animator;
         private bool isStanding = false;
         private bool isRunning = false;
+        private bool switched;
 
         void Start()
         {
@@ -24,15 +25,20 @@ namespace BearAI
         {
             if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
             {
-                SwitchTarget();
-                TriggerAnimation();
-                SwitchState();
-                MoveToCurrentTarget();
+                if (!switched)
+                {
+                    switched = true;
+                    SwitchState();
+                    TriggerAnimation();
+                    SwitchTarget();
+                }
             }
             else
             {
+                switched = false;
                 isRunning = true;
                 _animator.SetBool("isRunning", isRunning);
+                MoveToCurrentTarget();
             }
         }
 
