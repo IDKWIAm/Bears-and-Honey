@@ -9,6 +9,8 @@ TagManager:
   - Request Manager
   - honey
   - twocamera
+  - secondcamera
+  - honey_minigame
   layers:
   - Default
   - TransparentFX

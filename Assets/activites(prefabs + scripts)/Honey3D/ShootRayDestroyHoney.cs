@@ -1,21 +1,30 @@
 using UnityEngine;
 
-public class ShootRayDestroyHoney : MonoBehaviour
+public class ShootRayFromSecondCamera : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Проверяем нажатие левой кнопки мыши
+        if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); // Создаем луч из позиции мыши
+            // Находим камеру с тегом "secondcamera"
+            Camera secondCamera = GameObject.FindGameObjectWithTag("secondcamera").GetComponent<Camera>();
+
+            // Проверка на наличие камеры
+            if (secondCamera == null)
+            {
+                Debug.LogError("Камера с тегом \"secondcamera\" не найдена!");
+                return;
+            }
+
+            Ray ray = secondCamera.ScreenPointToRay(Input.mousePosition); // Создаем луч из позиции мыши
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit)) // Проверяем пересечение с коллайдером
+            if (Physics.Raycast(ray, out hit)) // Проверяем пересечение луча с коллайдером
             {
                 // Проверяем тег объекта
                 if (hit.collider.CompareTag("honey"))
                 {
-                    Destroy(hit.collider.gameObject);
-                    Debug.Log("aaaaa");
+                    Destroy(hit.collider.gameObject); // Удаляем объект
                 }
             }
         }

@@ -33,7 +33,7 @@ public class SinglePrefabPlacement : MonoBehaviour
                 Transform selectedPoint = availablePoints[randomIndex];
 
                 // Создание объекта
-                GameObject newObject = Instantiate(prefab, selectedPoint.position, Quaternion.Euler(-90f, 0f, 31.496f));
+                GameObject newObject = Instantiate(prefab, selectedPoint.position, Quaternion.Euler(0.322f, 0f, -30.21f));
 
                 // Удаление точки из списка доступных
                 availablePoints.RemoveAt(randomIndex);
