@@ -8,6 +8,7 @@ TagManager:
   - BuildingSpot
   - Request Manager
   - honey
+  - twocamera
   layers:
   - Default
   - TransparentFX
