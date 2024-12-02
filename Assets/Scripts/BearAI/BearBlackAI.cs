@@ -7,9 +7,13 @@ namespace BearAI
     {
         [SerializeField] private Transform fruitPoint;
         [SerializeField] private Transform cookingPoint;
+
         private Transform _currentTarget;
         private NavMeshAgent _navMeshAgent;
         private Animator _animator;
+
+        private float _remainingDistance;
+
         private bool isStanding = false;
         private bool isRunning = false;
         private bool switched;
@@ -23,14 +27,14 @@ namespace BearAI
         }
         void Update()
         {
-            if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+            CanculateRemainingDistance();
+            if (_remainingDistance <= _navMeshAgent.stoppingDistance)
             {
                 if (!switched)
                 {
                     switched = true;
                     SwitchState();
                     TriggerAnimation();
-                    SwitchTarget();
                 }
             }
             else
@@ -38,7 +42,6 @@ namespace BearAI
                 switched = false;
                 isRunning = true;
                 _animator.SetBool("isRunning", isRunning);
-                MoveToCurrentTarget();
             }
         }
 
@@ -68,6 +71,11 @@ namespace BearAI
                 _animator.SetTrigger("Give");
                 isRunning = false;
             }
+        }
+
+        private void CanculateRemainingDistance()
+        {
+            _remainingDistance = Vector3.Distance(transform.position, _currentTarget.position);
         }
     }
 }
