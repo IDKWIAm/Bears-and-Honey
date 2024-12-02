@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private InventoryManager inventoryManager;
     [SerializeField] private DataPersistenceManager persistenceManager;
+    [SerializeField] private WebRequestManager requestManager;
 
     private bool bought;
 
@@ -65,6 +67,8 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
             inventoryManager.SubtractCurrency(price);
             button.SetActive(false);
             Save();
+            StartCoroutine(requestManager.SendLog("Bought new hat", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
+                new Dictionary<string, string>() { { "Hat added", hatName }, { "Energy Honey", "-" + priceText.text } }));
         }
     }
 }

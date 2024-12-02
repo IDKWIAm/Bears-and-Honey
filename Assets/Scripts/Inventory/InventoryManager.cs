@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private GameObject shop;
     [SerializeField] private DataPersistenceManager persistenceManager;
+    [SerializeField] private WebRequestManager requestManager;
 
     [SerializeField] private float dishesGapMult = 1;
 
@@ -105,7 +107,7 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         gap = new Vector3(dishes[0].GetComponent<RectTransform>().rect.width * dishesGapMult, 0, 0);
         GameObject dish;
         if (dishNum == 0)
-            dish = Instantiate(dishes[Random.Range(0, dishes.Length)], dishDefaultPos.position + gap * storedDishesAmount, Quaternion.identity, parent);
+            dish = Instantiate(dishes[UnityEngine.Random.Range(0, dishes.Length)], dishDefaultPos.position + gap * storedDishesAmount, Quaternion.identity, parent);
         else 
             dish = Instantiate(dishes[dishNum-1], dishDefaultPos.position + gap * storedDishesAmount, Quaternion.identity, parent);
 
@@ -113,18 +115,28 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         dish.GetComponent<Dish>().SetOrderNumber(storedDishes.Count - 1);
         storedDishesAmount += 1;
 
+        for (int i = 0; i < dishes.Length; i++)
+        {
+            if (dishes[i].name + "(Clone)" == dish.name)
+            {
+                dishNum = i + 1;
+            }
+        }
+
         if (!loading)
         {
-            if (PlayerPrefs.HasKey("Loaded slot number"))
-            {
-                persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
-            }
-            else Debug.Log("Loaded slot number not found. Save is skipped.");
+            Save();
+            StartCoroutine(requestManager.SendLog("Made new dish", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
+                new Dictionary<string, string>() { { "Dish added", dishes[dishNum-1].name } }));
         }
     }
 
     public void SellDish(int price, int num)
     {
+        string dishName = storedDishes[num].name.Substring(0, storedDishes[num].name.Length - 7);
+        StartCoroutine(requestManager.SendLog("Sold dish", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
+            new Dictionary<string, string>() { { "Energy Honey", "+" + price.ToString() }, { "Dish removed", dishName } }));
+
         AddCurrency(price);
         storedDishesAmount -= 1;
         storedDishes.Remove(storedDishes[num]);

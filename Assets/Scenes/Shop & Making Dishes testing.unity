@@ -1031,9 +1031,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f717b7df367f438a6f79e57d0693c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatName: 
+  shop: {fileID: 816674070}
   button: {fileID: 645080431}
   priceText: {fileID: 263093083}
   inventoryManager: {fileID: 1766058219}
+  persistenceManager: {fileID: 0}
 --- !u!1 &457486123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,9 +1608,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f717b7df367f438a6f79e57d0693c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatName: 
+  shop: {fileID: 816674070}
   button: {fileID: 2096273229}
   priceText: {fileID: 2039038028}
   inventoryManager: {fileID: 1766058219}
+  persistenceManager: {fileID: 0}
 --- !u!1 &645080431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,9 +2380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb9f717b7df367f438a6f79e57d0693c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatName: 
+  shop: {fileID: 816674070}
   button: {fileID: 468761988}
   priceText: {fileID: 72751117}
   inventoryManager: {fileID: 1766058219}
+  persistenceManager: {fileID: 0}
 --- !u!1 &1041898252
 GameObject:
   m_ObjectHideFlags: 0

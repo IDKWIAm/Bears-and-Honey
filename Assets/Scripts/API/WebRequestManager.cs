@@ -34,7 +34,7 @@ public class WebRequestManager : MonoBehaviour
             Debug.Log("hats: " + response.playersData[i].resources.hats);
             Debug.Log("dishes: " + response.playersData[i].resources.dishes);
             Debug.Log("spots: " + response.playersData[i].resources.spotsData);
-            Debug.Log("Responce Code: " + request.responseCode);
+            Debug.Log("Get Responce Code: " + request.responseCode);
         }
     }
 
@@ -83,7 +83,7 @@ public class WebRequestManager : MonoBehaviour
         Debug.Log("dishes: " + playersDataFromServer.resources.dishes);
         Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
         */
-        Debug.Log("Responce Code: " + request.responseCode);
+        Debug.Log("Post Responce Code: " + request.responseCode);
     }
 
     public IEnumerator SendPutRequest(string saveName, int newEnergy, /*int newCrystals,*/ List<string> newHats, List<string> newDishes, Dictionary<string, string> newSpotData)
@@ -123,7 +123,7 @@ public class WebRequestManager : MonoBehaviour
         Debug.Log("dishes: " + playersDataFromServer.resources.dishes);
         Debug.Log("spots: " + playersDataFromServer.resources.spotsData);
         */
-        Debug.Log("Responce Code: " + request.responseCode);
+        Debug.Log("Put Responce Code: " + request.responseCode);
     }
 
     public IEnumerator SendDeleteRequest(string saveName)
@@ -137,6 +137,39 @@ public class WebRequestManager : MonoBehaviour
             throw new Exception("No internet connection (" + request.error + ")");
         }
 
-        Debug.Log("Responce Code: " + request.responseCode);
+        Debug.Log("Delete Responce Code: " + request.responseCode);
+    }
+
+    public IEnumerator SendLog(string comment, string username, Dictionary<string, string> resourcesChanged)
+    {
+        WWWForm formData = new WWWForm();
+
+        LogStruct log = new LogStruct
+        {
+            comment = comment,
+            player_name = username,
+            resources_changed = resourcesChanged
+        };
+
+        string json = JsonConvert.SerializeObject(log);
+
+        UnityWebRequest request = UnityWebRequest.PostWwwForm(gameURL + "logs/", json);
+
+        byte[] logBytes = Encoding.UTF8.GetBytes(json);
+
+        UploadHandler uploadHandler = new UploadHandlerRaw(logBytes);
+
+        request.uploadHandler = uploadHandler;
+
+        request.SetRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.ConnectionError)
+        {
+            throw new Exception("No internet connection (" + request.error + ")");
+        }
+
+        Debug.Log("Log Responce Code: " + request.responseCode);
     }
 }

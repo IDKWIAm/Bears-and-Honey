@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -15,8 +16,12 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
     private GameObject currentBuilding;
     private bool isBusy;
 
+    private bool loading;
+
     public void LoadData(GameData data)
     {
+        loading = true;
+
         if (data.resources.spotsData != null)
         {
             foreach (KeyValuePair<string, string> spotData in data.resources.spotsData)
@@ -34,6 +39,7 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
                 }
             }
         }
+        loading = false;
     }
 
 
@@ -61,14 +67,19 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
 
     public void Build()
     {
+        if (!loading)
+        {
+            if (PlayerPrefs.HasKey("Loaded slot number"))
+            {
+                persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
+                StartCoroutine(requestManager.SendLog("Built new structure on " + gameObject.name, Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
+                    new Dictionary<string, string>() { { "Structure added", currentBuilding.name.Substring(0, currentBuilding.name.Length - 7) } }));
+            }
+            else Debug.Log("Loaded slot number not found. Save is skipped.");
+        }
+
         buildingPlacement.chosenBuildingPrefab = null;
         buildingButtons.SetActive(true);
-
-        if (PlayerPrefs.HasKey("Loaded slot number"))
-        {
-            persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
-        }
-        else Debug.Log("Loaded slot number not found. Save is skipped.");
     }
 
     public void ClearSpot(bool isMoving = false)
