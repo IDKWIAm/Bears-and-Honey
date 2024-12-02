@@ -119,6 +119,7 @@ MonoBehaviour:
   buildingPrefabs:
   - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
   - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}
+  - {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c, type: 3}
 --- !u!1001 &126594668327465672
 PrefabInstance:
   m_ObjectHideFlags: 0

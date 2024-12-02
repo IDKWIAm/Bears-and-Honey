@@ -98,6 +98,16 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         {
             persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
         }
+        else Debug.Log("Loaded slot number not found. Log not sent.");
+    }
+
+    private void SendLog(Dictionary<string, string> resourcesChanged)
+    {
+        if (PlayerPrefs.HasKey("Loaded slot number"))
+        {
+            StartCoroutine(requestManager.SendLog("Made new dish", 
+                Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"), resourcesChanged));
+        }
         else Debug.Log("Loaded slot number not found. Save is skipped.");
     }
 
@@ -126,16 +136,14 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         if (!loading)
         {
             Save();
-            StartCoroutine(requestManager.SendLog("Made new dish", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
-                new Dictionary<string, string>() { { "Dish added", dishes[dishNum-1].name } }));
+            SendLog(new Dictionary<string, string>() { { "Dish added", dishes[dishNum-1].name } });
         }
     }
 
     public void SellDish(int price, int num)
     {
         string dishName = storedDishes[num].name.Substring(0, storedDishes[num].name.Length - 7);
-        StartCoroutine(requestManager.SendLog("Sold dish", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
-            new Dictionary<string, string>() { { "Energy Honey", "+" + price.ToString() }, { "Dish removed", dishName } }));
+        SendLog(new Dictionary<string, string>() { { "Energy Honey", "+" + price.ToString() }, { "Dish removed", dishName } });
 
         AddCurrency(price);
         storedDishesAmount -= 1;

@@ -67,8 +67,12 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
             inventoryManager.SubtractCurrency(price);
             button.SetActive(false);
             Save();
-            StartCoroutine(requestManager.SendLog("Bought new hat", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
+            if (PlayerPrefs.HasKey("Loaded slot number"))
+            {
+                StartCoroutine(requestManager.SendLog("Bought new hat", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
                 new Dictionary<string, string>() { { "Hat added", hatName }, { "Energy Honey", "-" + priceText.text } }));
+            }
+            else Debug.Log("Loaded slot number not found. Log not sent.");
         }
     }
 }

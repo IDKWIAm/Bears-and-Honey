@@ -6,13 +6,14 @@ using UnityEngine;
 public class BuildingSpot : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private BuildingPlacement buildingPlacement;
-    [SerializeField] private GameObject buildingButtons;
+    [SerializeField] private GameObject buildingsMenu;
 
     [SerializeField] private WebRequestManager requestManager;
     [SerializeField] private DataPersistenceManager persistenceManager;
 
     [SerializeField] private GameObject[] buildingPrefabs;
 
+    private GameObject buyButton;
     private GameObject currentBuilding;
     private bool isBusy;
 
@@ -79,7 +80,8 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
         }
 
         buildingPlacement.chosenBuildingPrefab = null;
-        buildingButtons.SetActive(true);
+        buildingsMenu.SetActive(true);
+        buyButton?.SetActive(false);
     }
 
     public void ClearSpot(bool isMoving = false)
@@ -91,7 +93,7 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
         }
         if (!isMoving)
         {
-            buildingButtons.SetActive(true);
+            buildingsMenu.SetActive(true);
             buildingPlacement.chosenBuildingPrefab = null;
         }
     }
@@ -99,5 +101,10 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
     public bool IsBusy()
     {
         return isBusy;
+    }
+
+    public void SetBuyButton(GameObject button)
+    {
+        buyButton = button;
     }
 }

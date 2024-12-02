@@ -9,7 +9,9 @@ public class BuildingPlacement : MonoBehaviour
     
     [HideInInspector] public GameObject chosenBuildingPrefab;
     private BuildingSpot prevBuildingSpot;
-    
+
+    private GameObject buyButton;
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1") && chosenBuildingPrefab != null)
@@ -26,6 +28,7 @@ public class BuildingPlacement : MonoBehaviour
                     prevBuildingSpot.ClearSpot(true);
 
                     buildingSpot.Place(chosenBuildingPrefab);
+                    buildingSpot.SetBuyButton(buyButton);
                     prevBuildingSpot = buildingSpot;
                 }
             }
@@ -41,6 +44,7 @@ public class BuildingPlacement : MonoBehaviour
             if (buildingSpots[i].IsBusy() == false)
             {
                 buildingSpots[i].Place(chosenBuildingPrefab);
+                buildingSpots[i].SetBuyButton(buyButton);
                 prevBuildingSpot = buildingSpots[i];
                 return;
             }
@@ -48,5 +52,10 @@ public class BuildingPlacement : MonoBehaviour
         
         chosenBuildingPrefab = null;
         buildingButtons.SetActive(true);
+    }
+
+    public void SetBuyButton(GameObject button)
+    {
+        buyButton = button;
     }
 }
