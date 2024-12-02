@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: cca6e6e32d88af343bb9299d32476029
+guid: 91678b1bfd122e74e91ceeb71e26632a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HexaMat
+    second: {fileID: 2100000, guid: 05d0b5e6c9b6039429c4304bf3c7d249, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

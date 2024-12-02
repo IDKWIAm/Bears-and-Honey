@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: d348745f20015b449af5e02d89743728
+guid: f82c14d070100e744866db1943983fa9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Comb
+    second: {fileID: 2100000, guid: 79b4642553740c343a3ae6f93f337d01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shell
+    second: {fileID: 2100000, guid: 3f5abca4656af8543b65de5b2363806c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
