@@ -8,52 +8,57 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Aluminum
-    second: {fileID: 2100000, guid: ffee108769862524d913d9d7ed2aead7, type: 2}
+    second: {fileID: 2100000, guid: 0eee03341e6a2204eb471b48a1d3d86c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cladding_Siding_Tan
-    second: {fileID: 2100000, guid: 97a308d84c3727e43a5d3af481960fbc, type: 2}
+    second: {fileID: 2100000, guid: 74679608cda14664e901ce1494c6edb2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Color_D05
-    second: {fileID: 2100000, guid: 05d0b5e6c9b6039429c4304bf3c7d249, type: 2}
+    second: {fileID: 2100000, guid: 7757a7568e6472949b2b85778010b730, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Color_D06
-    second: {fileID: 2100000, guid: 7810a7f124ac0d24eaa7d48894ab3db3, type: 2}
+    second: {fileID: 2100000, guid: 7757a7568e6472949b2b85778010b730, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Color_G08
-    second: {fileID: 2100000, guid: 9f040f5a43e1f9f4199f5ddd4be45940, type: 2}
+    second: {fileID: 2100000, guid: 91cf4626ecd0d624a9c95db20fb46527, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Color_M09
-    second: {fileID: 2100000, guid: 9012f30f97fc4bc42879150fa394980a, type: 2}
+    second: {fileID: 2100000, guid: 027f492bf164347449d06cd2ec51cd40, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Concrete_Scored_Jointless
-    second: {fileID: 2100000, guid: 745b5af44a2cbfb4e959c24d7b3e6891, type: 2}
+    second: {fileID: 2100000, guid: 74679608cda14664e901ce1494c6edb2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wax_01
-    second: {fileID: 2100000, guid: 0157aa1c234a8f74db8eb1f6eaffeb34, type: 2}
+    second: {fileID: 2100000, guid: 3f5abca4656af8543b65de5b2363806c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_Bamboo
+    second: {fileID: 2100000, guid: 3f5abca4656af8543b65de5b2363806c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Wood_Veneer_01
-    second: {fileID: 2100000, guid: 745b5af44a2cbfb4e959c24d7b3e6891, type: 2}
+    second: {fileID: 2100000, guid: ffee108769862524d913d9d7ed2aead7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: material
-    second: {fileID: 2100000, guid: 39d2e3c840b653549aafefdad958298b, type: 2}
+    second: {fileID: 2100000, guid: 91cf4626ecd0d624a9c95db20fb46527, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

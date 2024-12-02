@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.012121212, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 344299604544839991}
+  - {fileID: 453588487013176611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &734637992650164702
@@ -119,7 +119,7 @@ MonoBehaviour:
   buildingPrefabs:
   - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
   - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}
---- !u!1001 &238000115008046812
+--- !u!1001 &126594668327465672
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
@@ -145,12 +145,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
@@ -160,7 +160,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
@@ -180,16 +180,16 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
       propertyPath: m_Name
-      value: Prisma_for_bee
+      value: Prisma_for_bee (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4e6222cc4968ca46886f1d8acb37003, type: 3}
---- !u!4 &344299604544839991 stripped
+--- !u!4 &453588487013176611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b4e6222cc4968ca46886f1d8acb37003,
     type: 3}
-  m_PrefabInstance: {fileID: 238000115008046812}
+  m_PrefabInstance: {fileID: 126594668327465672}
   m_PrefabAsset: {fileID: 0}
