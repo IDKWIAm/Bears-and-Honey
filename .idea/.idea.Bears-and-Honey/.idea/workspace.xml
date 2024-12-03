@@ -3,97 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2da480aa-d5c1-49f1-a3ac-cc05414aa7ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color001.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color001.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0010.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0010.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0011.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0011.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0012.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0012.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0013.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0013.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0014.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0014.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0015.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0015.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0016.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0016.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0017.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0017.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0018.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0018.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0019.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0019.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color002.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color002.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0020.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0020.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0021.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0021.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0022.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0022.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0023.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0023.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0024.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0024.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0025.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0025.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0026.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0026.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0027.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0027.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0028.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0028.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0029.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0029.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color003.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color003.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0030.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0030.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0031.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0031.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0032.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color0032.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color004.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color004.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color005.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color005.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color006.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color006.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color007.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color007.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color008.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color008.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color009.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Materials/Color009.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Plants/Tree005_V1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Forest Pack/Models/Plants/Tree005_V1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone001.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone001.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone002.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone002.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone003.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone003.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone004.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone004.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone005.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone005.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone006.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone006.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone007.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone007.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone008.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone008.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone009.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone009.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone010.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone010.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone011.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone011.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone012.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Forest Pack/Models/Stones/Stone012.fbx.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +15,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundTest.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -114,6 +25,8 @@
         <option value="$PROJECT_DIR$/Assets/Sweet/SweetScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BearAI/BearBlackAI.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.10/Shaders/Lit.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Sounds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundTest.cs" />
       </list>
     </option>
   </component>
@@ -160,6 +73,7 @@
       <workItem from="1732446569181" duration="3973000" />
       <workItem from="1732451497738" duration="3754000" />
       <workItem from="1732556800887" duration="1042000" />
+      <workItem from="1733265000167" duration="1379000" />
     </task>
     <servers />
   </component>

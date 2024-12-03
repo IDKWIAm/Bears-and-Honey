@@ -13,19 +13,26 @@
               <e p="safezone.cs" t="Include" />
             </e>
             <e p="2" t="Include">
-              <e p="CircleScriptABAYOUDNENKO.cs" t="Include" />
+              <e p="circlescript.cs" t="Include" />
+              <e p="TEXTMESHPRO.cs" t="Include" />
             </e>
           </e>
-          <e p="Honey" t="Include">
-            <e p="ScriptForHoney.cs" t="Include" />
+          <e p="Honey3D" t="Include">
+            <e p="close.cs" t="Include" />
+            <e p="ShootRayDestroyHoney.cs" t="Include" />
+            <e p="SinglePrefabPlacement.cs" t="Include" />
           </e>
           <e p="Sweet" t="Include">
-            <e p="SweetScript.cs" t="Include" />
+            <e p="cumera.cs" t="Include" />
+            <e p="Sweet.cs" t="Include" />
           </e>
+        </e>
+        <e p="AGWYN's Low Poly Destructible Vegetation" t="Include">
+          <e p="README.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="API" t="Include">
-            <e p="API testing.cs" t="Include" />
+            <e p="LogStruct.cs" t="Include" />
             <e p="PlayersDataStruct.cs" t="Include" />
             <e p="Resources.cs" t="Include" />
             <e p="Response.cs" t="Include" />
@@ -37,16 +44,33 @@
           <e p="Buildings" t="Include">
             <e p="Building.cs" t="Include" />
             <e p="BuildingPlacement.cs" t="Include" />
+            <e p="BuildingSlot.cs" t="Include" />
             <e p="BuildingSpot.cs" t="Include" />
             <e p="LookAtCamera.cs" t="Include" />
+          </e>
+          <e p="DataPersistence" t="Include">
+            <e p="Data" t="Include">
+              <e p="GameData.cs" t="Include" />
+            </e>
+            <e p="DataPersistenceManager.cs" t="Include" />
+            <e p="FileDataHandler.cs" t="Include" />
+            <e p="IDataPersistence.cs" t="Include" />
+            <e p="SaveSlot.cs" t="Include" />
           </e>
           <e p="DayNight" t="Include">
             <e p="WorldLight.cs" t="Include" />
             <e p="WorldTime.cs" t="Include" />
             <e p="WorldTimeConstants.cs" t="Include" />
           </e>
-          <e p="SaveSlot.cs" t="Include" />
+          <e p="DraggableCamera.cs" t="Include" />
+          <e p="Inventory" t="Include">
+            <e p="Dish.cs" t="Include" />
+            <e p="InventoryManager.cs" t="Include" />
+            <e p="ShopSlot.cs" t="Include" />
+          </e>
           <e p="SceneLoader.cs" t="Include" />
+          <e p="Sounds.cs" t="Include" />
+          <e p="SoundTest.cs" t="Include" />
         </e>
         <e p="SimpleToon" t="Include">
           <e p="Model" t="Include">
