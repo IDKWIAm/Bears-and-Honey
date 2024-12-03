@@ -11,6 +11,7 @@ TagManager:
   - twocamera
   - secondcamera
   - honey_minigame
+  - sweet_cust
   layers:
   - Default
   - TransparentFX
