@@ -58,8 +58,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1269165634004740895}
   - {fileID: 6553780725751697240}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3796ccf494694b46b89c9e61e1402a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dishNum: 2
+  dishNum: 1
   confirmButtons: {fileID: 7191077514275961475}
   bear: {fileID: 1934062702658597285}
 --- !u!1 &7587994336373197729
@@ -973,8 +973,33 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 51456995410253722, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
+      propertyPath: m_Speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 51456995410253722, guid: e35343bb52aa0764d80797400e944c06,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 51456995410253722, guid: e35343bb52aa0764d80797400e944c06,
+        type: 3}
       propertyPath: m_StoppingDistance
-      value: 0.2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
@@ -1025,6 +1050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
