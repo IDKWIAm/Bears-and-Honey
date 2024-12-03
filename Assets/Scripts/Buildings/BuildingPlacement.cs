@@ -10,7 +10,7 @@ public class BuildingPlacement : MonoBehaviour
     [HideInInspector] public GameObject chosenBuildingPrefab;
     private BuildingSpot prevBuildingSpot;
 
-    private GameObject buyButton;
+    private BuildingSlot buildingSlot;
 
     void Update()
     {
@@ -28,7 +28,7 @@ public class BuildingPlacement : MonoBehaviour
                     prevBuildingSpot.ClearSpot(true);
 
                     buildingSpot.Place(chosenBuildingPrefab);
-                    buildingSpot.SetBuyButton(buyButton);
+                    buildingSpot.SetBuildingSlot(buildingSlot);
                     prevBuildingSpot = buildingSpot;
                 }
             }
@@ -44,7 +44,7 @@ public class BuildingPlacement : MonoBehaviour
             if (buildingSpots[i].IsBusy() == false)
             {
                 buildingSpots[i].Place(chosenBuildingPrefab);
-                buildingSpots[i].SetBuyButton(buyButton);
+                buildingSpots[i].SetBuildingSlot(buildingSlot);
                 prevBuildingSpot = buildingSpots[i];
                 return;
             }
@@ -54,8 +54,8 @@ public class BuildingPlacement : MonoBehaviour
         buildingButtons.SetActive(true);
     }
 
-    public void SetBuyButton(GameObject button)
+    public void SetBuildingSlot(BuildingSlot button)
     {
-        buyButton = button;
+        buildingSlot = button;
     }
 }

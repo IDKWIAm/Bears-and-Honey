@@ -4231,6 +4231,11 @@ PrefabInstance:
       objectReference: {fileID: 737353869}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
+      propertyPath: maxBuiltStructures
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
       propertyPath: persistenceManager
       value: 
       objectReference: {fileID: 903167272}
@@ -6130,13 +6135,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
+      propertyPath: dragSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
+        type: 3}
       propertyPath: xBorders.x
-      value: -28
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: xBorders.y
-      value: 28
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
@@ -6151,12 +6161,27 @@ PrefabInstance:
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: zBorders.x
-      value: -42
+      value: -34
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: zBorders.y
-      value: 15
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
+        type: 3}
+      propertyPath: zoomStrength
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
+        type: 3}
+      propertyPath: zoomBorders.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
+        type: 3}
+      propertyPath: zoomBorders.y
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8097,6 +8122,11 @@ PrefabInstance:
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 737353869}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: maxBuiltStructures
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: persistenceManager
@@ -12958,6 +12988,11 @@ PrefabInstance:
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 737353869}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: maxBuiltStructures
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: persistenceManager

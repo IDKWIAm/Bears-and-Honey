@@ -13,7 +13,7 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
 
     [SerializeField] private GameObject[] buildingPrefabs;
 
-    private GameObject buyButton;
+    private BuildingSlot buildingSlot;
     private GameObject currentBuilding;
     private bool isBusy;
 
@@ -81,7 +81,7 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
 
         buildingPlacement.chosenBuildingPrefab = null;
         buildingsMenu.SetActive(true);
-        buyButton?.SetActive(false);
+        buildingSlot?.AddBuiltStructure();
     }
 
     public void ClearSpot(bool isMoving = false)
@@ -103,8 +103,8 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
         return isBusy;
     }
 
-    public void SetBuyButton(GameObject button)
+    public void SetBuildingSlot(BuildingSlot button)
     {
-        buyButton = button;
+        buildingSlot = button;
     }
 }
