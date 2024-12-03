@@ -4,7 +4,7 @@ public class ShootRayFromSecondCamera : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             // Находим камеру с тегом "secondcamera"
             Camera secondCamera = GameObject.FindGameObjectWithTag("secondcamera").GetComponent<Camera>();
