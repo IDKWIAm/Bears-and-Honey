@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 
@@ -57,7 +58,6 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
         int price = int.Parse(priceText.text);
         if (price <= inventoryManager.currency && builtStructures < maxBuiltStructures)
         {
-            inventoryManager.SubtractCurrency(price);
             buildingPlacementManager.SetBuildingSlot(gameObject.GetComponent<BuildingSlot>());
             buildingPlacementManager.ChooseBuilding(buildingPrefab);
             buildingsMenu.SetActive(false);
@@ -68,5 +68,6 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
     {
         builtStructures++;
         UpdateAmountText();
+        inventoryManager.SubtractCurrency(int.Parse(priceText.text));
     }
 }
