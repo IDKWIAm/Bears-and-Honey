@@ -1,8 +1,11 @@
+using BearAI;
 using UnityEngine;
 
 public class Building : MonoBehaviour
 {
+    [SerializeField] int dishNum;
     [SerializeField] GameObject confirmButtons;
+    [SerializeField] GameObject bear;
 
     private BuildingSpot spot;
     public void SetSpot(GameObject gameObject)
@@ -14,6 +17,11 @@ public class Building : MonoBehaviour
     {
         spot.Build();
         confirmButtons.SetActive(false);
+        if (bear != null)
+        {
+            bear.SetActive(true);
+            bear.GetComponent<BearBlackAI>().SetDish(dishNum);
+        }
     }
 
     public void SelfDestoy()

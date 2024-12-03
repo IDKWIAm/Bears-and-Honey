@@ -11,7 +11,11 @@ TagManager:
   - twocamera
   - secondcamera
   - honey_minigame
+<<<<<<< HEAD
   - sweet_cust
+=======
+  - Cooking Point
+>>>>>>> e6ef24599167a9c83c2ce2eb0023aec60a799610
   layers:
   - Default
   - TransparentFX
