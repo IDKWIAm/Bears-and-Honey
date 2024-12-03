@@ -16,32 +16,54 @@ public class SinglePrefabPlacement : MonoBehaviour
             Debug.LogError("Необходимо указать префаб и точки в инспекторе!");
             return;
         }
+ 
+    }
+    private void Update()
+    {
+        GameObject[] honeyObjects = GameObject.FindGameObjectsWithTag("honey");
 
-        // Количество объектов (15-25)
-        int numObjects = Random.Range(15, 26); // 26 - чтобы включить 25
-
-        // Список доступных точек
-        List<Transform> availablePoints = points.ToList();
-
-        // Создание объектов
-        for (int i = 0; i < numObjects; i++)
+        if (honeyObjects.Length == 0)
         {
-            if (availablePoints.Count > 0)
+            // Количество объектов (15-25)
+            int numObjects = Random.Range(15, 26); // 26 - чтобы включить 25
+
+            // Список доступных точек
+            List<Transform> availablePoints = points.ToList();
+
+            // Создание объектов
+            for (int i = 0; i < numObjects; i++)
             {
-                // Случайный выбор точки
-                int randomIndex = Random.Range(0, availablePoints.Count);
-                Transform selectedPoint = availablePoints[randomIndex];
+                if (availablePoints.Count > 0)
+                {
+                    // Случайный выбор точки
+                    int randomIndex = Random.Range(0, availablePoints.Count);
+                    Transform selectedPoint = availablePoints[randomIndex];
 
-                // Создание объекта
-                GameObject newObject = Instantiate(prefab, selectedPoint.position, Quaternion.Euler(0.322f, 0f, -30.21f));
+                    // Создание объекта
+                    GameObject newObject = Instantiate(prefab, selectedPoint.position, Quaternion.Euler(0.322f, 0f, -30.21f));
 
-                // Удаление точки из списка доступных
-                availablePoints.RemoveAt(randomIndex);
+                    // Удаление точки из списка доступных
+                    availablePoints.RemoveAt(randomIndex);
+                }
+                else
+                {
+                    Debug.LogWarning("Недостаточно точек для размещения всех объектов.");
+                    break; // Прерываем цикл, если точек не осталось
+                }
             }
-            else
+        }
+       
+    }
+    private void LateUpdate()
+    {
+        GameObject[] honeyObjects = GameObject.FindGameObjectsWithTag("honey");
+        if (honeyObjects.Length == 0)
+        {
+            GameObject honeyMinigame = GameObject.FindGameObjectWithTag("honey_minigame");
+
+            if (honeyMinigame != null)
             {
-                Debug.LogWarning("Недостаточно точек для размещения всех объектов.");
-                break; // Прерываем цикл, если точек не осталось
+                honeyMinigame.SetActive(false);
             }
         }
     }
