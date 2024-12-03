@@ -57,24 +57,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.91686463
-        functionName: SwitchState
-        data: 
-        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       - time: 0.92392117
         functionName: SwitchTarget
-        data: 
-        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.9316432
-        functionName: MoveToCurrentTarget
         data: 
         objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
           type: 3}

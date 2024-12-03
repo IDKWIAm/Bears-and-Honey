@@ -8,9 +8,13 @@ namespace BearAI
         [SerializeField] private Transform fruitPoint;
         [SerializeField] private Transform cookingPoint;
 
+        [SerializeField] private bool findCookingPoint;
+
         private Transform _currentTarget;
         private NavMeshAgent _navMeshAgent;
         private Animator _animator;
+
+        private InventoryManager _inventoryManager;
 
         private float _remainingDistance;
 
@@ -18,10 +22,15 @@ namespace BearAI
         private bool isRunning = false;
         private bool switched;
 
+        private int dish;
+
         void Start()
         {
             _navMeshAgent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
+            if (findCookingPoint)
+                cookingPoint = GameObject.FindGameObjectWithTag("Cooking Point").transform;
+            _inventoryManager = GameObject.FindObjectOfType<InventoryManager>();
             _currentTarget = fruitPoint;
             MoveToCurrentTarget();
         }
@@ -51,8 +60,19 @@ namespace BearAI
         }
         private void SwitchTarget()
         {
-            if (_currentTarget == fruitPoint) _currentTarget = cookingPoint;
-            else _currentTarget = fruitPoint;
+            SwitchState();
+
+            if (_currentTarget == fruitPoint)
+            {
+                _currentTarget = cookingPoint;
+            }
+            else
+            {
+                _inventoryManager?.MakeDish(dish);
+                _currentTarget = fruitPoint;
+            }
+
+            MoveToCurrentTarget();
         }
         public void SwitchState()
         {
@@ -76,6 +96,11 @@ namespace BearAI
         private void CanculateRemainingDistance()
         {
             _remainingDistance = Vector3.Distance(transform.position, _currentTarget.position);
+        }
+
+        public void SetDish(int dishNum)
+        {
+            dish = dishNum;
         }
     }
 }

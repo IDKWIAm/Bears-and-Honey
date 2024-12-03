@@ -516,8 +516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 250
-  expirationTime: 15
-  onDiscountTime: 6
+  expirationTime: 25
+  onDiscountTime: 7
   discount: 25
   expirationAdditionalDiscont: 10
   priceText: {fileID: 1348079271743266618}
