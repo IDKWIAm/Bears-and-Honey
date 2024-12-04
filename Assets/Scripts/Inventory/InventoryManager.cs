@@ -78,12 +78,12 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         int value = currency;
         string valueReductionSymbol = "";
 
-        if (currency > 999999)
+        if (currency > 9999999)
         {
             value = currency / 100000;
             valueReductionSymbol = "B";
         }
-        else if (currency > 999)
+        else if (currency > 9999)
         {
             value = currency / 1000;
             valueReductionSymbol = "k";

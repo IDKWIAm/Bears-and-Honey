@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 
 public class BuildingSlot : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private int price;
     [SerializeField] private int maxBuiltStructures;
+    [SerializeField] private float riseInPriceMult = 1f;
 
     [SerializeField] private GameObject buyButton;
     [SerializeField] private TextMeshProUGUI buildingNameText;
@@ -42,6 +43,7 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+        UpdatePriceText();
         UpdateAmountText();
     }
 
@@ -53,9 +55,27 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
             buyButton.SetActive(false);
     }
 
+    private void UpdatePriceText()
+    {
+        int value = price;
+        string valueReductionSymbol = "";
+
+        if (price > 9999999)
+        {
+            value = price / 100000;
+            valueReductionSymbol = "B";
+        }
+        else if (price > 9999)
+        {
+            value = price / 1000;
+            valueReductionSymbol = "k";
+        }
+
+        priceText.text = value.ToString() + valueReductionSymbol;
+    }
+
     public void Buy()
     {
-        int price = int.Parse(priceText.text);
         if (price <= inventoryManager.currency && builtStructures < maxBuiltStructures)
         {
             buildingPlacementManager.SetBuildingSlot(gameObject.GetComponent<BuildingSlot>());
@@ -69,5 +89,7 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
         builtStructures++;
         UpdateAmountText();
         inventoryManager.SubtractCurrency(int.Parse(priceText.text));
+        price = (int)((float)price * riseInPriceMult);
+        UpdatePriceText();
     }
 }
