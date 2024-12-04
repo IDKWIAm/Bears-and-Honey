@@ -52,6 +52,13 @@ namespace BearAI
                 isRunning = true;
                 _animator.SetBool("isRunning", isRunning);
             }
+
+            /* TODO - fix bugging when pushing out of point in the middle of animation
+            if (isStanding == isRunning)
+            {
+                isRunning = _animator.GetBool("isRunning");
+                isStanding = !isRunning;
+            }*/
         }
 
         private void MoveToCurrentTarget()
