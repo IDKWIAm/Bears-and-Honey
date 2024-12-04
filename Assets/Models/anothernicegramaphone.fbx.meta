@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d21aedf96f53b994daee8ffe87d5be81
+guid: 009ae3c2b2db0f14bbb1bca9b373f08f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bark
+      name: base
     second: {fileID: 2100000, guid: 3f5abca4656af8543b65de5b2363806c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Berry
-    second: {fileID: 2100000, guid: ec2f6987104a31647b0b6662c16b5657, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leaves
-    second: {fileID: 2100000, guid: 669a9af253a872f4eab79d083b5dc524, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RawBark
-    second: {fileID: 2100000, guid: 745b5af44a2cbfb4e959c24d7b3e6891, type: 2}
+      name: topo
+    second: {fileID: 2100000, guid: 05d0b5e6c9b6039429c4304bf3c7d249, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +24,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    removeConstantScaleCurves: 1
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -121,8 +111,8 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
-  remapMaterialsIfMaterialImportModeIsNone: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
