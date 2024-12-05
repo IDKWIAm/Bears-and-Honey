@@ -55,4 +55,8 @@ MonoBehaviour:
   - {fileID: 3852298879976357031, guid: 4f3d264bf68778c4f9cb3d82572c27d2, type: 3}
   - {fileID: 3510720474267103806, guid: 811393de75192b246a3a78f25a586e33, type: 3}
   - {fileID: 1668265806636323459, guid: bac4313fcbd45c44da0f34b153374d63, type: 3}
+  bearsCountText: {fileID: 0}
+  bearSlotPrefab: {fileID: 548618127593753655, guid: 81d232808bfe0b248b0c5898e5dcd5a6,
+    type: 3}
+  container: {fileID: 0}
   bears: []
