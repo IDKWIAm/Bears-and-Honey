@@ -14,9 +14,7 @@ TagManager:
   - sweet_cust
   - Cooking Point
   - berry
-=======
   - Inventory Manager
->>>>>>> e68d903fc056e1d666d97cd5d6a15ec22e0a7e89
   layers:
   - Default
   - TransparentFX
