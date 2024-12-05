@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShopSlot : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private string hatName;
+    [SerializeField] private int price;
 
     [SerializeField] private GameObject shop;
 
@@ -48,6 +49,11 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
         data.resources.hats.Add(hatName);
     }
 
+    private void Start()
+    {
+        priceText.text = price.ToString();
+    }
+
     private void Save()
     {
         if (PlayerPrefs.HasKey("Loaded slot number"))
@@ -60,11 +66,11 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
 
     public void Buy()
     {
-        int price = int.Parse(priceText.text);
         if (price <= inventoryManager.currency)
         {
             bought = true;
             inventoryManager.SubtractCurrency(price);
+            inventoryManager.AddHat(hatName);
             button.SetActive(false);
             Save();
             if (PlayerPrefs.HasKey("Loaded slot number"))

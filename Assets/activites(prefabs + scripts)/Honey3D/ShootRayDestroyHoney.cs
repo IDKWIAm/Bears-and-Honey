@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class ShootRayFromSecondCamera : MonoBehaviour
 {
+
+    private newscriptspawnhoney newscriptspawnhoney;
+    private void Start()
+    {
+        newscriptspawnhoney = GetComponent<newscriptspawnhoney>();
+    }
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -25,8 +31,10 @@ public class ShootRayFromSecondCamera : MonoBehaviour
                 if (hit.collider.CompareTag("honey"))
                 {
                     Destroy(hit.collider.gameObject); // ׃האכÿול מבתוךע
+                    newscriptspawnhoney.count--;
                 }
             }
         }
     }
 }
+

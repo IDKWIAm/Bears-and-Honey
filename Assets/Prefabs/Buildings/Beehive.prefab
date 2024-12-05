@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3796ccf494694b46b89c9e61e1402a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dishNum: 2
+  dishNum: 3
   confirmButtons: {fileID: 3367603293174522877}
   bear: {fileID: 5646986857030643818}
 --- !u!1 &5830824728896071463

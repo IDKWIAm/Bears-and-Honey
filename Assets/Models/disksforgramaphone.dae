@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.3.1 commit date:2022-10-04, commit time:18:35, hash:b292cfe5a936</authoring_tool>
+    </contributor>
+    <created>2024-12-04T21:39:27</created>
+    <modified>2024-12-04T21:39:27</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_effects>
+    <effect id="FloppyYellow-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="FloppyBlue-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="FloppyRed-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <reflectivity>
+              <float sid="specular">0.5</float>
+            </reflectivity>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="FloppyYellow-material" name="FloppyYellow">
+      <instance_effect url="#FloppyYellow-effect"/>
+    </material>
+    <material id="FloppyBlue-material" name="FloppyBlue">
+      <instance_effect url="#FloppyBlue-effect"/>
+    </material>
+    <material id="FloppyRed-material" name="FloppyRed">
+      <instance_effect url="#FloppyRed-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Object_12-mesh" name="Object_12">
+      <mesh>
+        <source id="Object_12-mesh-positions">
+          <float_array id="Object_12-mesh-positions-array" count="90">-0.284615 -0.3382533 0.2388203 -0.284615 -0.3382533 0.2388203 -0.284615 -0.3382533 0.2388203 -0.284615 0.3382532 0.2388204 -0.284615 0.3382532 0.2388204 -0.284615 0.3382532 0.2388204 0.2852081 0.3382533 -0.239318 0.2852081 0.3382533 -0.239318 0.2852081 0.3382533 -0.239318 0.2852081 -0.2871746 -0.239318 0.2852081 -0.2871746 -0.239318 0.2852081 -0.2871746 -0.239318 0.2465916 -0.3382532 -0.206915 0.2465916 -0.3382532 -0.206915 0.2465916 -0.3382532 -0.206915 -0.258696 0.3382532 0.2697095 -0.258696 0.3382532 0.2697095 -0.258696 0.3382532 0.2697095 -0.258696 -0.3382533 0.2697095 -0.258696 -0.3382533 0.2697095 -0.258696 -0.3382533 0.2697095 0.3111271 0.3382533 -0.2084289 0.3111271 0.3382533 -0.2084289 0.3111271 0.3382533 -0.2084289 0.2725107 -0.3382532 -0.1760259 0.2725107 -0.3382532 -0.1760259 0.2725107 -0.3382532 -0.1760259 0.3111271 -0.2871746 -0.2084289 0.3111271 -0.2871746 -0.2084289 0.3111271 -0.2871746 -0.2084289</float_array>
+          <technique_common>
+            <accessor source="#Object_12-mesh-positions-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object_12-mesh-normals">
+          <float_array id="Object_12-mesh-normals-array" count="48">-0.766045 0 0.642787 -0.7660446 0 0.6427875 0.545231 -0.7024342 -0.4575034 0.5452307 -0.7024352 -0.4575024 0 1 -3.10501e-7 0 1 0 0.7660442 0 -0.6427879 0.7660447 0 -0.6427874 0 -1 1.39891e-6 0 -1 -1.06583e-6 -0.6427876 0 -0.7660445 -0.6427876 0 -0.7660446 -0.6427871 2.10349e-7 -0.7660449 0.6427876 0 0.7660445 0.6427876 0 0.7660445 0.6427872 -2.23496e-7 0.7660448</float_array>
+          <technique_common>
+            <accessor source="#Object_12-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object_12-mesh-map-0">
+          <float_array id="Object_12-mesh-map-0-array" count="96">0.5282186 0.02860665 0.9998953 0.02860659 0.9998953 4.92454e-4 0.5282186 0.02860665 0.9998953 4.92454e-4 0.5282186 4.9299e-4 1.04507e-4 0.4839767 1.04569e-4 0.534013 0.02821868 0.534013 1.04507e-4 0.4839767 0.02821868 0.534013 0.02821856 0.4839767 0.5280095 0.5191239 0.5280095 4.92632e-4 0.4998954 4.92632e-4 0.5280095 0.5191239 0.4998954 4.92632e-4 0.4998955 0.5191239 0.06383192 0.5472382 0.4998955 0.547238 0.4998955 0.5191239 0.06383192 0.5472382 0.4998955 0.5191239 0.06383186 0.5191239 1.04882e-4 4.92632e-4 1.04507e-4 0.4839767 0.02821856 0.4839767 1.04882e-4 4.92632e-4 0.02821856 0.4839767 0.0282185 4.92692e-4 0.9642819 0.5472382 0.5282186 0.02860665 0.5282186 0.547238 0.5282186 0.02860665 0.9642819 0.5472382 0.9998953 0.02860659 0.9998953 0.02860659 0.9642819 0.5472382 0.9998954 0.5120907 0.4998954 4.92632e-4 0.06383186 0.5191239 0.4998955 0.5191239 0.06383186 0.5191239 0.4998954 4.92632e-4 0.0282185 4.92692e-4 0.06383186 0.5191239 0.0282185 4.92692e-4 0.02821856 0.4839767</float_array>
+          <technique_common>
+            <accessor source="#Object_12-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Object_12-mesh-vertices">
+          <input semantic="POSITION" source="#Object_12-mesh-positions"/>
+        </vertices>
+        <triangles material="FloppyYellow-material" count="16">
+          <input semantic="VERTEX" source="#Object_12-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Object_12-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Object_12-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 0 0 1 18 0 2 3 1 3 18 1 4 15 1 5 14 2 6 10 2 7 27 2 8 14 3 9 27 3 10 25 3 11 7 4 12 5 4 13 16 4 14 7 5 15 16 5 16 21 5 17 11 6 18 8 6 19 23 6 20 11 7 21 23 7 22 29 7 23 2 8 24 13 8 25 24 8 26 2 9 27 24 9 28 19 9 29 9 10 30 4 10 31 6 10 32 4 11 33 9 11 34 1 11 35 1 12 36 9 12 37 12 12 38 17 13 39 28 13 40 22 13 41 28 14 42 17 14 43 20 14 44 28 15 45 20 15 46 26 15 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Object_11-mesh" name="Object_11">
+      <mesh>
+        <source id="Object_11-mesh-positions">
+          <float_array id="Object_11-mesh-positions-array" count="90">-0.284615 -0.3382533 0.2388203 -0.284615 -0.3382533 0.2388203 -0.284615 -0.3382533 0.2388203 -0.284615 0.3382532 0.2388204 -0.284615 0.3382532 0.2388204 -0.284615 0.3382532 0.2388204 0.2852081 0.3382533 -0.239318 0.2852081 0.3382533 -0.239318 0.2852081 0.3382533 -0.239318 0.2852081 -0.2871746 -0.239318 0.2852081 -0.2871746 -0.239318 0.2852081 -0.2871746 -0.239318 0.2465916 -0.3382532 -0.206915 0.2465916 -0.3382532 -0.206915 0.2465916 -0.3382532 -0.206915 -0.258696 0.3382532 0.2697095 -0.258696 0.3382532 0.2697095 -0.258696 0.3382532 0.2697095 -0.258696 -0.3382533 0.2697095 -0.258696 -0.3382533 0.2697095 -0.258696 -0.3382533 0.2697095 0.3111271 0.3382533 -0.2084289 0.3111271 0.3382533 -0.2084289 0.3111271 0.3382533 -0.2084289 0.2725107 -0.3382532 -0.1760259 0.2725107 -0.3382532 -0.1760259 0.2725107 -0.3382532 -0.1760259 0.3111271 -0.2871746 -0.2084289 0.3111271 -0.2871746 -0.2084289 0.3111271 -0.2871746 -0.2084289</float_array>
+          <technique_common>
+            <accessor source="#Object_11-mesh-positions-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object_11-mesh-normals">
+          <float_array id="Object_11-mesh-normals-array" count="48">-0.766045 0 0.642787 -0.7660446 0 0.6427875 0.545231 -0.7024342 -0.4575034 0.5452307 -0.7024352 -0.4575024 0 1 -3.10501e-7 0 1 0 0.7660442 0 -0.6427879 0.7660447 0 -0.6427874 0 -1 1.39891e-6 0 -1 -1.06583e-6 -0.6427876 0 -0.7660445 -0.6427876 0 -0.7660446 -0.6427871 2.10349e-7 -0.7660449 0.6427876 0 0.7660445 0.6427876 0 0.7660445 0.6427872 -2.23496e-7 0.7660448</float_array>
+          <technique_common>
+            <accessor source="#Object_11-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object_11-mesh-map-0">
+          <float_array id="Object_11-mesh-map-0-array" count="96">0.5282186 0.02860665 0.9998953 0.02860659 0.9998953 4.92454e-4 0.5282186 0.02860665 0.9998953 4.92454e-4 0.5282186 4.9299e-4 1.04507e-4 0.4839767 1.04569e-4 0.534013 0.02821868 0.534013 1.04507e-4 0.4839767 0.02821868 0.534013 0.02821856 0.4839767 0.5280095 0.5191239 0.5280095 4.92632e-4 0.4998954 4.92632e-4 0.5280095 0.5191239 0.4998954 4.92632e-4 0.4998955 0.5191239 0.06383192 0.5472382 0.4998955 0.547238 0.4998955 0.5191239 0.06383192 0.5472382 0.4998955 0.5191239 0.06383186 0.5191239 1.04882e-4 4.92632e-4 1.04507e-4 0.4839767 0.02821856 0.4839767 1.04882e-4 4.92632e-4 0.02821856 0.4839767 0.0282185 4.92692e-4 0.9642819 0.5472382 0.5282186 0.02860665 0.5282186 0.547238 0.5282186 0.02860665 0.9642819 0.5472382 0.9998953 0.02860659 0.9998953 0.02860659 0.9642819 0.5472382 0.9998954 0.5120907 0.4998954 4.92632e-4 0.06383186 0.5191239 0.4998955 0.5191239 0.06383186 0.5191239 0.4998954 4.92632e-4 0.0282185 4.92692e-4 0.06383186 0.5191239 0.0282185 4.92692e-4 0.02821856 0.4839767</float_array>
+          <technique_common>
+            <accessor source="#Object_11-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Object_11-mesh-vertices">
+          <input semantic="POSITION" source="#Object_11-mesh-positions"/>
+        </vertices>
+        <triangles material="FloppyBlue-material" count="16">
+          <input semantic="VERTEX" source="#Object_11-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Object_11-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Object_11-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 0 0 1 18 0 2 3 1 3 18 1 4 15 1 5 14 2 6 10 2 7 27 2 8 14 3 9 27 3 10 25 3 11 7 4 12 5 4 13 16 4 14 7 5 15 16 5 16 21 5 17 11 6 18 8 6 19 23 6 20 11 7 21 23 7 22 29 7 23 2 8 24 13 8 25 24 8 26 2 9 27 24 9 28 19 9 29 9 10 30 4 10 31 6 10 32 4 11 33 9 11 34 1 11 35 1 12 36 9 12 37 12 12 38 17 13 39 28 13 40 22 13 41 28 14 42 17 14 43 20 14 44 28 15 45 20 15 46 26 15 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Object_5-mesh" name="Object_5">
+      <mesh>
+        <source id="Object_5-mesh-positions">
+          <float_array id="Object_5-mesh-positions-array" count="90">-0.284615 -0.3382533 0.2388203 -0.284615 -0.3382533 0.2388203 -0.284615 -0.3382533 0.2388203 -0.284615 0.3382532 0.2388204 -0.284615 0.3382532 0.2388204 -0.284615 0.3382532 0.2388204 0.2852081 0.3382533 -0.239318 0.2852081 0.3382533 -0.239318 0.2852081 0.3382533 -0.239318 0.2852081 -0.2871746 -0.239318 0.2852081 -0.2871746 -0.239318 0.2852081 -0.2871746 -0.239318 0.2465916 -0.3382532 -0.206915 0.2465916 -0.3382532 -0.206915 0.2465916 -0.3382532 -0.206915 -0.258696 0.3382532 0.2697095 -0.258696 0.3382532 0.2697095 -0.258696 0.3382532 0.2697095 -0.258696 -0.3382533 0.2697095 -0.258696 -0.3382533 0.2697095 -0.258696 -0.3382533 0.2697095 0.3111271 0.3382533 -0.2084289 0.3111271 0.3382533 -0.2084289 0.3111271 0.3382533 -0.2084289 0.2725107 -0.3382532 -0.1760259 0.2725107 -0.3382532 -0.1760259 0.2725107 -0.3382532 -0.1760259 0.3111271 -0.2871746 -0.2084289 0.3111271 -0.2871746 -0.2084289 0.3111271 -0.2871746 -0.2084289</float_array>
+          <technique_common>
+            <accessor source="#Object_5-mesh-positions-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object_5-mesh-normals">
+          <float_array id="Object_5-mesh-normals-array" count="48">-0.766045 0 0.642787 -0.7660446 0 0.6427875 0.545231 -0.7024342 -0.4575034 0.5452307 -0.7024352 -0.4575024 0 1 -3.10501e-7 0 1 0 0.7660442 0 -0.6427879 0.7660447 0 -0.6427874 0 -1 1.39891e-6 0 -1 -1.06583e-6 -0.6427876 0 -0.7660445 -0.6427876 0 -0.7660446 -0.6427871 2.10349e-7 -0.7660449 0.6427876 0 0.7660445 0.6427876 0 0.7660445 0.6427872 -2.23496e-7 0.7660448</float_array>
+          <technique_common>
+            <accessor source="#Object_5-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Object_5-mesh-map-0">
+          <float_array id="Object_5-mesh-map-0-array" count="96">0.5282186 0.02860665 0.9998953 0.02860659 0.9998953 4.92454e-4 0.5282186 0.02860665 0.9998953 4.92454e-4 0.5282186 4.9299e-4 1.04507e-4 0.4839767 1.04569e-4 0.534013 0.02821868 0.534013 1.04507e-4 0.4839767 0.02821868 0.534013 0.02821856 0.4839767 0.5280095 0.5191239 0.5280095 4.92632e-4 0.4998954 4.92632e-4 0.5280095 0.5191239 0.4998954 4.92632e-4 0.4998955 0.5191239 0.06383192 0.5472382 0.4998955 0.547238 0.4998955 0.5191239 0.06383192 0.5472382 0.4998955 0.5191239 0.06383186 0.5191239 1.04882e-4 4.92632e-4 1.04507e-4 0.4839767 0.02821856 0.4839767 1.04882e-4 4.92632e-4 0.02821856 0.4839767 0.0282185 4.92692e-4 0.9642819 0.5472382 0.5282186 0.02860665 0.5282186 0.547238 0.5282186 0.02860665 0.9642819 0.5472382 0.9998953 0.02860659 0.9998953 0.02860659 0.9642819 0.5472382 0.9998954 0.5120907 0.4998954 4.92632e-4 0.06383186 0.5191239 0.4998955 0.5191239 0.06383186 0.5191239 0.4998954 4.92632e-4 0.0282185 4.92692e-4 0.06383186 0.5191239 0.0282185 4.92692e-4 0.02821856 0.4839767</float_array>
+          <technique_common>
+            <accessor source="#Object_5-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Object_5-mesh-vertices">
+          <input semantic="POSITION" source="#Object_5-mesh-positions"/>
+        </vertices>
+        <triangles material="FloppyRed-material" count="16">
+          <input semantic="VERTEX" source="#Object_5-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Object_5-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Object_5-mesh-map-0" offset="2" set="0"/>
+          <p>3 0 0 0 0 1 18 0 2 3 1 3 18 1 4 15 1 5 14 2 6 10 2 7 27 2 8 14 3 9 27 3 10 25 3 11 7 4 12 5 4 13 16 4 14 7 5 15 16 5 16 21 5 17 11 6 18 8 6 19 23 6 20 11 7 21 23 7 22 29 7 23 2 8 24 13 8 25 24 8 26 2 9 27 24 9 28 19 9 29 9 10 30 4 10 31 6 10 32 4 11 33 9 11 34 1 11 35 1 12 36 9 12 37 12 12 38 17 13 39 28 13 40 22 13 41 28 14 42 17 14 43 20 14 44 28 15 45 20 15 46 26 15 47</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Sketchfab_Model" name="Sketchfab Model" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="GearLow_0" name="GearLow_0" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="Floppy_5" name="Floppy_5" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+          <node id="Object_14" name="Object_14" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -4.76837e-7 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#Object_5-mesh" name="Object_14">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="FloppyRed-material" target="#FloppyRed-material">
+                    <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="Floppy_001_11" name="Floppy.001_11" type="NODE">
+          <matrix sid="transform">1 0 0 0.7 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+          <node id="Object_26" name="Object_26" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -4.76837e-7 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#Object_11-mesh" name="Object_26">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="FloppyBlue-material" target="#FloppyBlue-material">
+                    <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+        <node id="Floppy_002_12" name="Floppy.002_12" type="NODE">
+          <matrix sid="transform">1 0 0 1.4 0 1 0 5 0 0 1 0 0 0 0 1</matrix>
+          <node id="Object_28" name="Object_28" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 -4.76837e-7 0 0 1 0 0 0 0 1</matrix>
+            <instance_geometry url="#Object_12-mesh" name="Object_28">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="FloppyYellow-material" target="#FloppyYellow-material">
+                    <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+          </node>
+        </node>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

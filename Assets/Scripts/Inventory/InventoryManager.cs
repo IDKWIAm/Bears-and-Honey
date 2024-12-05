@@ -18,6 +18,13 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 
     [SerializeField] private GameObject[] dishes;
 
+    [SerializeField] private TextMeshProUGUI bearsCountText;
+    [SerializeField] private GameObject bearSlotPrefab;
+    [SerializeField] private Transform container;
+    [SerializeField] private List<HatsManager> bears;
+
+    public List<string> hats { get; private set; }
+
     private int storedDishesAmount;
 
     private Vector3 gap;
@@ -70,7 +77,8 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
-        shop.SetActive(false);
+        if (shop != null) shop.SetActive(false);
+        UpdateBearsCountText();
     }
 
     private void UpdateCurrencyText()
@@ -78,12 +86,12 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         int value = currency;
         string valueReductionSymbol = "";
 
-        if (currency > 999999)
+        if (currency > 9999999)
         {
             value = currency / 100000;
             valueReductionSymbol = "B";
         }
-        else if (currency > 999)
+        else if (currency > 9999)
         {
             value = currency / 1000;
             valueReductionSymbol = "k";
@@ -163,6 +171,12 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         }
     }
 
+    private void UpdateBearsCountText()
+    {
+        if (bearsCountText != null)
+            bearsCountText.text = "Bears: " + bears.Count;
+    }
+
     public void AddCurrency(int price)
     {
         currency += price;
@@ -175,5 +189,24 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         currency -= price;
         UpdateCurrencyText();
         Save();
+    }
+
+    public void AddBear(HatsManager bear)
+    {
+        bears.Add(bear);
+        UpdateBearsCountText();
+        GameObject bearSlot = Instantiate(bearSlotPrefab, container);
+        bearSlot.GetComponent<BearSlot>().SetBearIdx(bears.Count - 1);
+    }
+
+    public void AddHat(string hat)
+    {
+        if (hats == null) hats = new List<string>();
+        hats.Add(hat);
+    }
+
+    public void ChangeHat(string chosenHat, int chosenBearIdx)
+    {
+        bears[chosenBearIdx].ChooseHat(chosenHat);
     }
 }
