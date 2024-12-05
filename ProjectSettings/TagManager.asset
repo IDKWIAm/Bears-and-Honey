@@ -13,6 +13,7 @@ TagManager:
   - honey_minigame
   - sweet_cust
   - Cooking Point
+  - Inventory Manager
   layers:
   - Default
   - TransparentFX

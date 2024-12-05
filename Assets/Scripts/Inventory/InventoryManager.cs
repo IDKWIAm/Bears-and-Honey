@@ -18,6 +18,10 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 
     [SerializeField] private GameObject[] dishes;
 
+    [SerializeField] private List<HatsManager> bears;
+
+    private int chosenBearIdx;
+
     private int storedDishesAmount;
 
     private Vector3 gap;
@@ -70,7 +74,7 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
-        shop.SetActive(false);
+        if (shop != null) shop.SetActive(false);
     }
 
     private void UpdateCurrencyText()
@@ -175,5 +179,20 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         currency -= price;
         UpdateCurrencyText();
         Save();
+    }
+
+    public void AddBear(HatsManager bear)
+    {
+        bears.Add(bear);
+    }
+
+    public void ChooseBear(int idx)
+    {
+        chosenBearIdx = idx;
+    }
+
+    public void ChangeHat(int hatNum)
+    {
+        bears[chosenBearIdx].ChooseHat(hatNum);
     }
 }
