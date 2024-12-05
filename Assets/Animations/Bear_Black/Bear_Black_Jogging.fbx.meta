@@ -56,7 +56,55 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.072992705
+        functionName: Sound()
+        data: 
+        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.23722628
+        functionName: Sound()
+        data: 
+        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.41240877
+        functionName: Sound()
+        data: 
+        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.580292
+        functionName: Sound()
+        data: 
+        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.75182486
+        functionName: Sound()
+        data: 
+        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.91240877
+        functionName: Sound()
+        data: 
+        objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

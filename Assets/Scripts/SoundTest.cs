@@ -1,20 +1,7 @@
-using UnityEngine;
-
 public class SoundTest : Sounds
 {
-    void Update()
+    public void Sound(int count)
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlaySound(sounds[0]);
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            PlaySound(sounds[1]);
-        }
-        if (Input.GetMouseButtonDown(2))
-        {
-            PlaySound(sounds[2]);
-        }
+        PlaySound(sounds[count]);
     }
 }

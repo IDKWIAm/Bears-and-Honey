@@ -3,8 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="2da480aa-d5c1-49f1-a3ac-cc05414aa7ac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bears-and-Honey/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bear_Black/Bear_Black_Give.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Bear_Black/Bear_Black_Give.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bear_Black/Bear_Black_Jogging.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Bear_Black/Bear_Black_Jogging.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/85603__jankoehl__walk-grass.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/85603__jankoehl__walk-grass.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/mixkit-stapling-paper-2995.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/mixkit-stapling-paper-2995.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/odd-time-jazz-groove-drums_80bpm.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/Sounds/odd-time-jazz-groove-drums_80bpm.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bears/Bear_Black.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bears/Bear_Black.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +83,7 @@
       <workItem from="1732451497738" duration="3754000" />
       <workItem from="1732556800887" duration="1042000" />
       <workItem from="1733265000167" duration="2119000" />
+      <workItem from="1733418416667" duration="1205000" />
     </task>
     <servers />
   </component>
