@@ -94,7 +94,7 @@ PrefabInstance:
     - target: {fileID: 7016558872828084557, guid: b80f9d09bc83fd04da3d0b81841d5347,
         type: 3}
       propertyPath: m_Name
-      value: Top hat
+      value: Top Hat
       objectReference: {fileID: 0}
     - target: {fileID: 7016558872828084557, guid: b80f9d09bc83fd04da3d0b81841d5347,
         type: 3}

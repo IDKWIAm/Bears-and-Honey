@@ -18,9 +18,12 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 
     [SerializeField] private GameObject[] dishes;
 
+    [SerializeField] private TextMeshProUGUI bearsCountText;
+    [SerializeField] private GameObject bearSlotPrefab;
+    [SerializeField] private Transform container;
     [SerializeField] private List<HatsManager> bears;
 
-    private int chosenBearIdx;
+    public List<string> hats { get; private set; }
 
     private int storedDishesAmount;
 
@@ -75,6 +78,7 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     private void Start()
     {
         if (shop != null) shop.SetActive(false);
+        UpdateBearsCountText();
     }
 
     private void UpdateCurrencyText()
@@ -167,6 +171,12 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         }
     }
 
+    private void UpdateBearsCountText()
+    {
+        if (bearsCountText != null)
+            bearsCountText.text = "Bears: " + bears.Count;
+    }
+
     public void AddCurrency(int price)
     {
         currency += price;
@@ -184,15 +194,19 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     public void AddBear(HatsManager bear)
     {
         bears.Add(bear);
+        UpdateBearsCountText();
+        GameObject bearSlot = Instantiate(bearSlotPrefab, container);
+        bearSlot.GetComponent<BearSlot>().SetBearIdx(bears.Count - 1);
     }
 
-    public void ChooseBear(int idx)
+    public void AddHat(string hat)
     {
-        chosenBearIdx = idx;
+        if (hats == null) hats = new List<string>();
+        hats.Add(hat);
     }
 
-    public void ChangeHat(int hatNum)
+    public void ChangeHat(string chosenHat, int chosenBearIdx)
     {
-        bears[chosenBearIdx].ChooseHat(hatNum);
+        bears[chosenBearIdx].ChooseHat(chosenHat);
     }
 }

@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class HatsManager : MonoBehaviour
@@ -15,17 +16,22 @@ public class HatsManager : MonoBehaviour
         inventoryManager.AddBear(gameObject.GetComponent<HatsManager>());
     }
 
-    public void ChooseHat(int hatNum)
+    public void ChooseHat(string hatName)
     {
         if (prevHat == null) prevHat = hats[0];
         
         prevHat.SetActive(false);
 
-        if (hatNum != 0) 
+        if (hatName != "None") 
         {
-            hats[hatNum-1].SetActive(true);
-
-            prevHat = hats[hatNum-1];
+            for (int i = 0; i < hats.Length; i++)
+            {
+                if (hats[i].name == hatName)
+                {
+                    hats[i].SetActive(true);
+                    prevHat = hats[i];
+                }
+            }
         }
     }
 }
