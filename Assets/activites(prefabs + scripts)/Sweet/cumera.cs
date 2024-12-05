@@ -8,9 +8,10 @@ public class cumera : MonoBehaviour
     public CinemachineVirtualCamera Virtual_cum_longdistance;
     public Canvas UI_MINIGAME;
     public int index_camera;
+    private CollectAndRespawn CAR;
     void Start()
     {
-        
+        CAR = GetComponent<CollectAndRespawn>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,8 @@ public class cumera : MonoBehaviour
             {
                 if (hit.collider.CompareTag("sweet_cust"))
                 {
+                    CAR.updateEnabled = 1;
+                    enabled = false;
                     SwitchCamera();
                 }
             }
