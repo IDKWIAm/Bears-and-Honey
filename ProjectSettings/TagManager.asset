@@ -15,6 +15,7 @@ TagManager:
   - Cooking Point
   - berry
   - Inventory Manager
+  - collectible
   layers:
   - Default
   - TransparentFX
