@@ -65,6 +65,7 @@
           <e p="DraggableCamera.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="Dish.cs" t="Include" />
+            <e p="HatsManager.cs" t="Include" />
             <e p="InventoryManager.cs" t="Include" />
             <e p="ShopSlot.cs" t="Include" />
           </e>

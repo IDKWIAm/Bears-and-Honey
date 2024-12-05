@@ -57,13 +57,13 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.92392117
-        functionName: SwitchTarget
+      - time: 0.45638868
+        functionName: Sound()
         data: 
         objectReferenceParameter: {fileID: 2980215379551359757, guid: e35343bb52aa0764d80797400e944c06,
           type: 3}
         floatParameter: 0
-        intParameter: 0
+        intParameter: 1
         messageOptions: 0
       transformMask: []
       maskType: 3
