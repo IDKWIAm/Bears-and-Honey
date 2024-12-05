@@ -3208,7 +3208,7 @@ PrefabInstance:
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: dragSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
@@ -3243,7 +3243,7 @@ PrefabInstance:
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: zoomStrength
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
@@ -6386,17 +6386,17 @@ PrefabInstance:
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 75
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 75
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 75
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
