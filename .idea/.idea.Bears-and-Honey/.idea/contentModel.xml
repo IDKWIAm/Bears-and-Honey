@@ -19,6 +19,8 @@
           </e>
           <e p="Honey3D" t="Include">
             <e p="close.cs" t="Include" />
+            <e p="dddd.cs" t="Include" />
+            <e p="newscriptspawnhoney.cs" t="Include" />
             <e p="ShootRayDestroyHoney.cs" t="Include" />
             <e p="SinglePrefabPlacement.cs" t="Include" />
           </e>
@@ -64,6 +66,7 @@
           </e>
           <e p="DraggableCamera.cs" t="Include" />
           <e p="Inventory" t="Include">
+            <e p="BearSlot.cs" t="Include" />
             <e p="Dish.cs" t="Include" />
             <e p="HatsManager.cs" t="Include" />
             <e p="InventoryManager.cs" t="Include" />

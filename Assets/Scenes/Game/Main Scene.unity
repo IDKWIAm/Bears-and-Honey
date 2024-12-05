@@ -248,6 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 705548983}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
+      propertyPath: price
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
       propertyPath: hatName
       value: Pirate Hat
       objectReference: {fileID: 0}
@@ -2443,6 +2448,11 @@ PrefabInstance:
       propertyPath: shop
       value: 
       objectReference: {fileID: 705548983}
+    - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
+      propertyPath: price
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: hatName
@@ -7493,6 +7503,11 @@ PrefabInstance:
       objectReference: {fileID: 705548983}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
+      propertyPath: price
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
       propertyPath: hatName
       value: Witch Hat
       objectReference: {fileID: 0}
@@ -8848,7 +8863,7 @@ PrefabInstance:
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: price
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -10790,6 +10805,11 @@ PrefabInstance:
       propertyPath: shop
       value: 
       objectReference: {fileID: 705548983}
+    - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
+      propertyPath: price
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: hatName
@@ -13223,6 +13243,11 @@ PrefabInstance:
       objectReference: {fileID: 705548983}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
+      propertyPath: price
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
       propertyPath: requestManager
       value: 
       objectReference: {fileID: 290565175}
@@ -13388,6 +13413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: price
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
