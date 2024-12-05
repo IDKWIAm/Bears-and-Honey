@@ -20,7 +20,7 @@ public class Building : MonoBehaviour
         if (bear != null)
         {
             bear.SetActive(true);
-            bear.GetComponent<BearBlackAI>().SetDish(dishNum);
+            bear.GetComponent<BearBlackAI>()?.SetDish(dishNum);
         }
     }
 
