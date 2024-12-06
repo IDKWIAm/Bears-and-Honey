@@ -7775,7 +7775,6 @@ MonoBehaviour:
   Virtual_cum_longdistance: {fileID: 1512098011}
   UI_MINIGAME: {fileID: 1557925838}
   time: 1
-  cumera: {fileID: 0}
 --- !u!4 &1737547134
 Transform:
   m_ObjectHideFlags: 0
@@ -8609,7 +8608,6 @@ MonoBehaviour:
   Virtual_cum_longdistance: {fileID: 1512098011}
   UI_MINIGAME: {fileID: 764251216}
   time: 1
-  cumera: {fileID: 0}
 --- !u!1 &1903127140
 GameObject:
   m_ObjectHideFlags: 0
@@ -9350,8 +9348,7 @@ MonoBehaviour:
   Virtual_cum_shortdistance: {fileID: 2029194093}
   Virtual_cum_longdistance: {fileID: 1512098011}
   UI_MINIGAME: {fileID: 764251216}
-  time: 1
-  cumera: {fileID: 0}
+  time: 120
 --- !u!1001 &2042194544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9984,8 +9981,7 @@ MonoBehaviour:
   Virtual_cum_shortdistance: {fileID: 2091506698}
   Virtual_cum_longdistance: {fileID: 1512098011}
   UI_MINIGAME: {fileID: 1557925838}
-  time: 1
-  cumera: {fileID: 0}
+  time: 120
 --- !u!114 &2126322992
 MonoBehaviour:
   m_ObjectHideFlags: 0
