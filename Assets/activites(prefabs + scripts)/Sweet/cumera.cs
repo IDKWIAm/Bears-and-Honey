@@ -9,30 +9,28 @@ public class cumera : MonoBehaviour
     public Canvas UI_MINIGAME;
     public int index_camera;
     private CollectAndRespawn CAR;
+
     void Start()
     {
         CAR = GetComponent<CollectAndRespawn>();
+        if (CAR == null)
+        {
+            Debug.LogError("Компонент CollectAndRespawn не найден на этом объекте!");
+            enabled = false; // Отключить скрипт, если компонент не найден
+            return;
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    
+    private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.collider.CompareTag("sweet_cust"))
-                {
-                    CAR.updateEnabled = 1;
-                    enabled = false;
-                    SwitchCamera();
-                }
-            }
-        }
+        CAR.updateEnabled = 1;
+        enabled = false;
+        SwitchCamera();
     }
+
+
     public void SwitchCamera()
     {
         Virtual_cum_shortdistance.gameObject.SetActive(true);

@@ -7,29 +7,34 @@ using System;
 
 public class CollectAndRespawn : MonoBehaviour
 {
-    public Transform[] spawnPoints; 
-    public GameObject prefab; 
+    public Transform[] spawnPoints;
+    public GameObject prefab;
     public string collectibleTag;
-    public Transform parentObject; 
+    public Transform parentObject;
     public CinemachineVirtualCamera Virtual_cum_shortdistance;
     public CinemachineVirtualCamera Virtual_cum_longdistance;
     public Canvas UI_MINIGAME;
     public float time = 0.0f;
     [NonSerialized] public int updateEnabled = 0;
-    public cumera cumera;
+    private cumera cumera;
+    private static Dictionary<int, int> collectedCounts = new Dictionary<int, int>();
 
-    private int collectedCount = 0;
     private List<GameObject> collectedObjects = new List<GameObject>();
 
 
     private void Start()
     {
         cumera = GetComponent<cumera>();
+        int instanceID = gameObject.GetInstanceID();
+        if (!collectedCounts.ContainsKey(instanceID))
+        {
+            collectedCounts[instanceID] = 0;
+        }
     }
 
     void Update()
     {
-        if (updateEnabled == 1) 
+        if (updateEnabled == 1)
         {
             HandleInput();
         }
@@ -55,11 +60,13 @@ public class CollectAndRespawn : MonoBehaviour
 
     void CollectObject(GameObject obj)
     {
+        int instanceID = gameObject.GetInstanceID();
+
         collectedObjects.Add(obj);
         Destroy(obj);
-        collectedCount++;
+        collectedCounts[instanceID]++;
 
-        if (collectedCount == 6)
+        if (collectedCounts[instanceID] == 6)
         {
             Virtual_cum_shortdistance.gameObject.SetActive(false);
             UI_MINIGAME.gameObject.SetActive(false);
@@ -74,7 +81,7 @@ public class CollectAndRespawn : MonoBehaviour
     IEnumerator RespawnObjects()
     {
         yield return new WaitForSeconds(2f);
-
+        int instanceID = gameObject.GetInstanceID();
         List<Transform> availableSpawnPoints = spawnPoints.ToList();
         foreach (GameObject obj in collectedObjects)
         {
@@ -83,7 +90,7 @@ public class CollectAndRespawn : MonoBehaviour
                 int randomIndex = UnityEngine.Random.Range(0, availableSpawnPoints.Count);
                 Transform spawnPoint = availableSpawnPoints[randomIndex];
                 GameObject newObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-                newObject.transform.parent = parentObject; 
+                newObject.transform.parent = parentObject;
                 availableSpawnPoints.RemoveAt(randomIndex);
             }
             else
@@ -93,7 +100,7 @@ public class CollectAndRespawn : MonoBehaviour
             }
         }
         collectedObjects.Clear();
-        collectedCount = 0;
+        collectedCounts[instanceID] = 0;
 
     }
 }
