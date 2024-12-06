@@ -22,8 +22,11 @@ public class BearSlot : MonoBehaviour
 
     private void OnEnable()
     {
+        int savedDropdownValue = dropdown.value;
         if (inventoryManager != null)
             UpdateHats();
+        dropdown.value = savedDropdownValue;
+        dropdown.RefreshShownValue();
     }
 
     private void UpdateHat(string hatName)

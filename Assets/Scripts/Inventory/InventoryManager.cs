@@ -6,6 +6,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private GameObject shop;
+    [SerializeField] private GameObject buildingsMenu;
     [SerializeField] private DataPersistenceManager persistenceManager;
     [SerializeField] private WebRequestManager requestManager;
 
@@ -78,6 +79,7 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     private void Start()
     {
         if (shop != null) shop.SetActive(false);
+        if (buildingsMenu != null) buildingsMenu.SetActive(false);
         UpdateBearsCountText();
     }
 
