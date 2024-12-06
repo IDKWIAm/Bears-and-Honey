@@ -80,7 +80,7 @@ public class CollectAndRespawn : MonoBehaviour
 
     IEnumerator RespawnObjects()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(120f);
         int instanceID = gameObject.GetInstanceID();
         List<Transform> availableSpawnPoints = spawnPoints.ToList();
         foreach (GameObject obj in collectedObjects)
