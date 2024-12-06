@@ -5,6 +5,7 @@ public class Building : MonoBehaviour
 {
     [SerializeField] int dishNum;
     [SerializeField] GameObject confirmButtons;
+    [SerializeField] GameObject minigameButton;
     [SerializeField] GameObject bear;
 
     private BuildingSpot spot;
@@ -27,5 +28,11 @@ public class Building : MonoBehaviour
     public void SelfDestoy()
     {
         spot.ClearSpot();
+    }
+
+    public void activateMinigameButton()
+    {
+        if (minigameButton != null && confirmButtons.activeSelf == false)
+            minigameButton.SetActive(true);
     }
 }

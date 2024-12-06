@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6870097440731982615}
   - component: {fileID: 734637992650164702}
-  - component: {fileID: 9009385823879373578}
   - component: {fileID: 5285999851334152599}
+  - component: {fileID: 8076456656469710002}
   m_Layer: 0
   m_Name: Building Spot
   m_TagString: BuildingSpot
@@ -77,8 +77,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &9009385823879373578
-CapsuleCollider:
+--- !u!114 &5285999851334152599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736946135833302866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449b5157bf716254fb19c96faebd03a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingPlacement: {fileID: 0}
+  buildingsMenu: {fileID: 0}
+  requestManager: {fileID: 0}
+  persistenceManager: {fileID: 0}
+  buildingPrefabs:
+  - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
+  - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}
+  - {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c, type: 3}
+--- !u!65 &8076456656469710002
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -95,31 +115,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 0
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1.35, y: 1.37, z: 1.26}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5285999851334152599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736946135833302866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 449b5157bf716254fb19c96faebd03a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingPlacement: {fileID: 0}
-  buildingButtons: {fileID: 0}
-  requestManager: {fileID: 0}
-  persistenceManager: {fileID: 0}
-  buildingPrefabs:
-  - {fileID: 4615286817374809157, guid: 4a171553ea396f249abfbba508a4cc51, type: 3}
-  - {fileID: 1133221863528369582, guid: 874157f2c89cc48498122375de43d0e8, type: 3}
-  - {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c, type: 3}
 --- !u!1001 &126594668327465672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,6 +176,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b4e6222cc4968ca46886f1d8acb37003,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e262d486b2c6e0843b5de7906a7c5e8b, type: 2}
     - target: {fileID: 919132149155446097, guid: b4e6222cc4968ca46886f1d8acb37003,
         type: 3}
       propertyPath: m_Name
