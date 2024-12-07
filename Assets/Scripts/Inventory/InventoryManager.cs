@@ -54,6 +54,15 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
                 }
             }
         }
+
+        if (data.resources.hats != null)
+        {
+            foreach (string hatName in data.resources.hats)
+            {
+                AddHat(hatName);
+            }
+        }
+
         loading = false;
     }
     

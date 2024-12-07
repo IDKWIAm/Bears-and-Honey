@@ -7,6 +7,11 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private BuildingPlacement buildingPlacement;
     [SerializeField] private GameObject buildingsMenu;
+    [SerializeField] private GameObject menuButton;
+    [SerializeField] private GameObject buildingsButton;
+    [SerializeField] private GameObject openShopButton;
+    [SerializeField] private GameObject bearsButton;
+    [SerializeField] private GameObject watchButton;
 
     [SerializeField] private WebRequestManager requestManager;
     [SerializeField] private DataPersistenceManager persistenceManager;
@@ -80,7 +85,13 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
         }
 
         buildingPlacement.chosenBuildingPrefab = null;
-        buildingsMenu.SetActive(true);
+        buildingsMenu.SetActive(false);
+        menuButton.SetActive(true);
+        buildingsButton.SetActive(true);
+        openShopButton.SetActive(true);
+        bearsButton.SetActive(true);
+        watchButton.SetActive(true);
+
         buildingSlot?.AddBuiltStructure();
     }
 

@@ -73,8 +73,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 111.63325, y: -29.5}
-  m_SizeDelta: {x: 220, y: 59}
+  m_AnchoredPosition: {x: 111.63324, y: -34.383667}
+  m_SizeDelta: {x: 220, y: 68.7674}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4724993386814181634
 CanvasRenderer:
@@ -569,7 +569,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -6.9158, y: 1.8736}
-  m_SizeDelta: {x: -37.1156, y: -13}
+  m_SizeDelta: {x: -37.1156, y: -25.538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5402112972996093426
 CanvasRenderer:
@@ -626,11 +626,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 17.9
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 4
+  m_fontSizeMin: 3
   m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -943,8 +943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.7461, y: 3.4359}
-  m_SizeDelta: {x: 104.6024, y: 36.7472}
+  m_AnchoredPosition: {x: 38.8, y: 3.4359}
+  m_SizeDelta: {x: 126.5791, y: 45.5378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5088109420292338053
 CanvasRenderer:
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bear's hat
+  m_text: Bear 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1148,8 +1148,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

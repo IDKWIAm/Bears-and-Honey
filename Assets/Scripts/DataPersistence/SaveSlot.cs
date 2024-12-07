@@ -15,6 +15,8 @@ public class SaveSlot : MonoBehaviour, IDataPersistence
     private string savedTitle;
     private int slotNum;
 
+    private bool startIsDone;
+
     public void LoadData(GameData data)
     {
         savedTitle = data.name;
@@ -27,6 +29,14 @@ public class SaveSlot : MonoBehaviour, IDataPersistence
 
     private void Start()
     {
+        gameObject.SetActive(false);
+        startIsDone = true;
+    }
+
+    private void OnEnable()
+    {
+        if (!startIsDone) return;
+
         if (gameObject.name == "Save Slot 1") slotNum = 1;
         else if (gameObject.name == "Save Slot 2") slotNum = 2;
         else if (gameObject.name == "Save Slot 3") slotNum = 3;

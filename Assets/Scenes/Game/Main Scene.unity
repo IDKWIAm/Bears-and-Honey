@@ -249,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: price
-      value: 100
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
@@ -837,6 +837,16 @@ PrefabInstance:
       objectReference: {fileID: 1013876027}
     - target: {fileID: 3863725410732157193, guid: e3e4ea4bfaab90d4d99f0b2f790990c4,
         type: 3}
+      propertyPath: buildingMenu
+      value: 
+      objectReference: {fileID: 777220246}
+    - target: {fileID: 3863725410732157193, guid: e3e4ea4bfaab90d4d99f0b2f790990c4,
+        type: 3}
+      propertyPath: buildingsMenu
+      value: 
+      objectReference: {fileID: 777220246}
+    - target: {fileID: 3863725410732157193, guid: e3e4ea4bfaab90d4d99f0b2f790990c4,
+        type: 3}
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
@@ -1128,7 +1138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &112833722
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1567,12 +1577,17 @@ PrefabInstance:
     - target: {fileID: 2366747886801692562, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_text
-      value: 500
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: page
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: price
-      value: 750
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -1620,16 +1635,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gramophone
       objectReference: {fileID: 0}
-    - target: {fileID: 5749014984382267765, guid: 4ffa51412f5186f45ba5e853b140caf6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 82.380035
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749014984382267765, guid: 4ffa51412f5186f45ba5e853b140caf6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.91238
-      objectReference: {fileID: 0}
     - target: {fileID: 6115244654614479516, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_Name
@@ -1644,6 +1649,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Gramophone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677853632212330998, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 22.9
       objectReference: {fileID: 0}
     - target: {fileID: 8353711760699048430, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -1693,9 +1703,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -1706,6 +1741,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -1719,7 +1759,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -1738,6 +1778,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -2402,7 +2448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -57, y: 207.32}
+  m_AnchoredPosition: {x: -57, y: 235}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269751973
@@ -2736,9 +2782,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -2749,6 +2820,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -2762,7 +2838,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -2781,6 +2857,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -2892,9 +2974,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59.5, y: 3.6}
+  m_AnchoredPosition: {x: 90, y: 3.5999756}
   m_SizeDelta: {x: 23.0503, y: 23.0503}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.4999995, y: 0.5}
 --- !u!114 &326338308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2908,14 +2990,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8773585, g: 0.79847986, b: 0.18623178, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e1a3f8a97dd69db4fbe24acac1f8c926, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dbd8e205b5e148241a94201a6c2e3bba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2948,9 +3030,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -2961,6 +3068,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -2974,7 +3086,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -2993,6 +3105,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -3377,7 +3495,7 @@ PrefabInstance:
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: price
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
@@ -3611,7 +3729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -57, y: 292}
+  m_AnchoredPosition: {x: -57, y: 320}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &470381378
@@ -3735,9 +3853,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -3748,6 +3891,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -3761,7 +3909,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -3780,6 +3928,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -4087,9 +4241,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -4100,6 +4279,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -4113,7 +4297,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -4132,6 +4316,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -4363,9 +4553,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -4376,6 +4591,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -4389,7 +4609,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -4408,6 +4628,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -4790,9 +5016,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -4803,6 +5054,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -4816,7 +5072,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -4835,6 +5091,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -5062,8 +5324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.00009918213, y: 0.000011444092}
+  m_SizeDelta: {x: -8.1403, y: -16.9542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682713339
 MonoBehaviour:
@@ -5115,9 +5377,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -6142,7 +6404,12 @@ PrefabInstance:
     - target: {fileID: 2366747886801692562, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_text
-      value: 500
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: page
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -6168,7 +6435,7 @@ PrefabInstance:
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: riseInPriceMult
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -6194,16 +6461,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Apiary
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749014984382267765, guid: 4ffa51412f5186f45ba5e853b140caf6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 82.380035
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749014984382267765, guid: 4ffa51412f5186f45ba5e853b140caf6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.91238
       objectReference: {fileID: 0}
     - target: {fileID: 6115244654614479516, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -7315,9 +7572,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -7328,6 +7610,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -7341,7 +7628,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -7360,6 +7647,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -7452,9 +7745,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -7465,6 +7783,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -7478,7 +7801,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -7497,6 +7820,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -8368,9 +8697,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -8381,6 +8735,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -8394,7 +8753,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -8413,6 +8772,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -8905,9 +9270,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -8918,6 +9308,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -8931,7 +9326,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -8950,6 +9345,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -9197,8 +9598,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 727119366}
-  - {fileID: 1306786349}
   - {fileID: 1066530855}
+  - {fileID: 1306786349}
   m_Father: {fileID: 777220247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9729,7 +10130,7 @@ PrefabInstance:
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: price
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
@@ -10198,9 +10599,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -10211,6 +10637,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -10224,7 +10655,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -10243,6 +10674,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -11212,7 +11649,7 @@ PrefabInstance:
     - target: {fileID: 693075923994899448, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11
+      value: -60.441
       objectReference: {fileID: 0}
     - target: {fileID: 693075923994899448, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -11273,7 +11710,12 @@ PrefabInstance:
     - target: {fileID: 2366747886801692562, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_text
-      value: 200
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: page
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -11308,6 +11750,11 @@ PrefabInstance:
       objectReference: {fileID: 737353869}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
+      propertyPath: riseInPriceIfZero
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
       propertyPath: maxBuiltStructures
       value: 3
       objectReference: {fileID: 0}
@@ -11326,16 +11773,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Berries Bush
       objectReference: {fileID: 0}
-    - target: {fileID: 5749014984382267765, guid: 4ffa51412f5186f45ba5e853b140caf6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 82.380035
-      objectReference: {fileID: 0}
-    - target: {fileID: 5749014984382267765, guid: 4ffa51412f5186f45ba5e853b140caf6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000005722
-      objectReference: {fileID: 0}
     - target: {fileID: 6115244654614479516, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_Name
@@ -11349,7 +11786,12 @@ PrefabInstance:
     - target: {fileID: 6677853632212330998, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_text
-      value: Berries Bush
+      value: Berry Bush
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677853632212330998, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 27.35
       objectReference: {fileID: 0}
     - target: {fileID: 8353711760699048430, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -11673,8 +12115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.21139908, y: 0.000011444092}
+  m_SizeDelta: {x: -9.3457, y: -14.2772}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1317803733
 MonoBehaviour:
@@ -11726,9 +12168,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -11959,7 +12401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1340035750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12289,9 +12731,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -12302,6 +12769,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -12315,7 +12787,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -12334,6 +12806,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -12572,9 +13050,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -12585,6 +13088,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -12598,7 +13106,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -12617,6 +13125,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -12721,9 +13235,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -12734,6 +13273,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -12747,7 +13291,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -12766,6 +13310,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -13744,7 +14294,7 @@ PrefabInstance:
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: price
-      value: 500
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
@@ -14494,9 +15044,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -14507,6 +15082,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -14520,7 +15100,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -14539,6 +15119,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -14719,9 +15305,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -14732,6 +15343,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -14745,7 +15361,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -14764,6 +15380,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -15683,9 +16305,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
+      propertyPath: menuButton
+      value: 
+      objectReference: {fileID: 436158304}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: bearsButton
+      value: 
+      objectReference: {fileID: 1305315668}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: watchButton
+      value: 
+      objectReference: {fileID: 1393004591}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
       propertyPath: buildingsMenu
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingButton
+      value: 
+      objectReference: {fileID: 269751971}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: openShopButton
+      value: 
+      objectReference: {fileID: 1241890760}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: requestManager
@@ -15696,6 +16343,11 @@ PrefabInstance:
       propertyPath: buildingButtons
       value: 
       objectReference: {fileID: 777220246}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingsButton
+      value: 
+      objectReference: {fileID: 269751971}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPlacement
@@ -15709,7 +16361,7 @@ PrefabInstance:
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
       propertyPath: buildingPrefabs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -15728,6 +16380,12 @@ PrefabInstance:
       propertyPath: buildingPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
+        type: 3}
+    - target: {fileID: 5285999851334152599, guid: 30164c78f0eab35448cdcd711050ca9a,
+        type: 3}
+      propertyPath: buildingPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2801483178005919821, guid: db3459929ad5bc54f9f6764176cbe1a8,
         type: 3}
     - target: {fileID: 6870097440731982615, guid: 30164c78f0eab35448cdcd711050ca9a,
         type: 3}
@@ -16333,6 +16991,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 705548984}
     m_Modifications:
+    - target: {fileID: 3933926321821174856, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
+      propertyPath: m_text
+      value: Farmer Hat
+      objectReference: {fileID: 0}
     - target: {fileID: 4706063446133233467, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
       propertyPath: m_Pivot.x
@@ -16447,6 +17110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: price
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
+        type: 3}
+      propertyPath: hatName
+      value: Farmer Hat
       objectReference: {fileID: 0}
     - target: {fileID: 5441103620157780501, guid: 703582d7b8b64a5478210a9fb33c6846,
         type: 3}
@@ -16580,7 +17248,7 @@ PrefabInstance:
     - target: {fileID: 693075923994899448, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 25
+      value: 98.2
       objectReference: {fileID: 0}
     - target: {fileID: 693075923994899448, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -16639,8 +17307,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
+      propertyPath: page
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
       propertyPath: price
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3906394448091423351, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}
@@ -16692,6 +17365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6677853632212330998, guid: 4ffa51412f5186f45ba5e853b140caf6,
+        type: 3}
+      propertyPath: m_text
+      value: Lake
       objectReference: {fileID: 0}
     - target: {fileID: 8353711760699048430, guid: 4ffa51412f5186f45ba5e853b140caf6,
         type: 3}

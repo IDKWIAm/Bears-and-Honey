@@ -4,7 +4,7 @@ public class BuildingPlacement : MonoBehaviour
 {
     [SerializeField] private Camera mainCamera;
 
-    [SerializeField] GameObject buildingButtons;
+    [SerializeField] GameObject buildingsMenu;
     [SerializeField] private BuildingSpot[] buildingSpots;
     
     [HideInInspector] public GameObject chosenBuildingPrefab;
@@ -51,7 +51,7 @@ public class BuildingPlacement : MonoBehaviour
         }
         
         chosenBuildingPrefab = null;
-        buildingButtons.SetActive(true);
+        buildingsMenu.SetActive(true);
     }
 
     public void SetBuildingSlot(BuildingSlot button)

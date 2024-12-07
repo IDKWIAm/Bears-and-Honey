@@ -7,6 +7,9 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
     [SerializeField] private int price;
     [SerializeField] private int maxBuiltStructures;
     [SerializeField] private float riseInPriceMult = 1f;
+    [SerializeField] private int riseInPriceIfZero = 100;
+
+    [SerializeField] private int page;
 
     [SerializeField] private GameObject buyButton;
     [SerializeField] private TextMeshProUGUI buildingNameText;
@@ -45,6 +48,7 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
     {
         UpdatePriceText();
         UpdateAmountText();
+        if (page > 1) transform.parent.gameObject.SetActive(false);
     }
 
     private void UpdateAmountText()
@@ -89,7 +93,8 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
         builtStructures++;
         UpdateAmountText();
         inventoryManager.SubtractCurrency(int.Parse(priceText.text));
-        price = (int)((float)price * riseInPriceMult);
+        if (price == 0) price += riseInPriceIfZero;
+        else price = (int)((float)price * riseInPriceMult);
         UpdatePriceText();
     }
 }
