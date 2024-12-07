@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.012121212, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 0.012, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 453588487013176611}
   m_Father: {fileID: 0}
@@ -91,6 +91,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPlacement: {fileID: 0}
   buildingsMenu: {fileID: 0}
+  menuButton: {fileID: 0}
+  buildingsButton: {fileID: 0}
+  openShopButton: {fileID: 0}
+  bearsButton: {fileID: 0}
+  watchButton: {fileID: 0}
   requestManager: {fileID: 0}
   persistenceManager: {fileID: 0}
   buildingPrefabs:
