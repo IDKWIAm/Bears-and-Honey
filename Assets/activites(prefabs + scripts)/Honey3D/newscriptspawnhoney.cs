@@ -12,6 +12,10 @@ public class newscriptspawnhoney : MonoBehaviour
     public int count = 1;
     public GameObject minigame;
 
+    public int completeReward;
+    public DraggableCamera draggableCamera;
+    public InventoryManager inventoryManager;
+
     void Update()
     {
         // Проверка наличия префаба и точек спавна
@@ -22,13 +26,17 @@ public class newscriptspawnhoney : MonoBehaviour
         }
         if (count == 0)
         {
+            if (inventoryManager != null)
+                inventoryManager.AddCurrency(completeReward);
+            if (draggableCamera != null)
+                draggableCamera.AllowMovement(true);
+
             minigame.gameObject.SetActive(false);
         }
 
         // Проверка на наличие дочерних объектов с тегом "honey" в Update
         if (!HasHoneyChildren())
         {
-            
             SpawnPrefabs();
 
         }

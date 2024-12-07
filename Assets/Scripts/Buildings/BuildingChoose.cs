@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class BuildingChoose : MonoBehaviour
 {
-    public GameObject songsList;
-
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
