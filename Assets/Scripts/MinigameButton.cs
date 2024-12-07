@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class MinigameButton : MonoBehaviour
 {
-    private BuildingChoose buildingChoose;
+    private MinigamesManager minigamesManager;
 
     private void Start()
     {
-        buildingChoose = GameObject.FindObjectOfType<BuildingChoose>();
+        minigamesManager = GameObject.FindObjectOfType<MinigamesManager>();
     }
 
     public void ActivateSongsList()
     {
-        buildingChoose.songsList.SetActive(true);
+        minigamesManager.songsList.SetActive(true);
+    }
+
+    public void ActivateHoneyMinigame()
+    {
+        minigamesManager.ActivateHoneyMinigame();
     }
 }

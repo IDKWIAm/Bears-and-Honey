@@ -5,6 +5,7 @@ namespace BearAI
 {
     public class BearBlackAI : MonoBehaviour
     {
+        [SerializeField] private bool isStatic;
         [SerializeField] private Transform fruitPoint;
         [SerializeField] private Transform cookingPoint;
 
@@ -26,16 +27,21 @@ namespace BearAI
 
         void Start()
         {
-            _navMeshAgent = GetComponent<NavMeshAgent>();
             _animator = GetComponent<Animator>();
+            _inventoryManager = GameObject.FindObjectOfType<InventoryManager>();
+
+            if (isStatic) return;
+
+            _navMeshAgent = GetComponent<NavMeshAgent>();
             if (findCookingPoint)
                 cookingPoint = GameObject.FindGameObjectWithTag("Cooking Point").transform;
-            _inventoryManager = GameObject.FindObjectOfType<InventoryManager>();
             _currentTarget = fruitPoint;
             MoveToCurrentTarget();
         }
         void Update()
         {
+            if (isStatic) return;
+
             CanculateRemainingDistance();
             if (_remainingDistance <= _navMeshAgent.stoppingDistance)
             {
@@ -79,6 +85,16 @@ namespace BearAI
 
             MoveToCurrentTarget();
         }
+
+        public void TriggerMakeDish(int chance = 100)
+        {
+            if (Random.Range(1, 100) <= chance)
+            {
+                print(_inventoryManager);
+                _inventoryManager?.MakeDish(dish);
+            }
+        }
+
         public void SwitchState()
         {
             isStanding = !isStanding;

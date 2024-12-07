@@ -2102,7 +2102,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1946840528844378607, guid: 348bbc75d9da70e4a9795c7ac76a6047,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270317939664657745}
   m_SourcePrefab: {fileID: 100100000, guid: 348bbc75d9da70e4a9795c7ac76a6047, type: 3}
 --- !u!1 &7081937870257596729 stripped
 GameObject:
@@ -2110,6 +2114,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8740512562489948374}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1270317939664657745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081937870257596729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c4d6e7b849b224694464152d8ea640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
+  fruitPoint: {fileID: 0}
+  cookingPoint: {fileID: 0}
+  findCookingPoint: 0
 --- !u!4 &7567112063032980355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1175230088571652949, guid: 348bbc75d9da70e4a9795c7ac76a6047,

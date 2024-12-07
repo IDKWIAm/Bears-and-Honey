@@ -13,8 +13,12 @@ public class DraggableCamera : MonoBehaviour
 
     private Vector3 lastDragPosition;
 
+    private bool isMovingAllowed = true;
+
     void Update()
     {
+        if (!isMovingAllowed) return;
+
         UpdateDrag();
         UpdateZoom();
     }
@@ -46,5 +50,10 @@ public class DraggableCamera : MonoBehaviour
 
         if (Camera.main.orthographicSize > zoomBorders.x && Camera.main.orthographicSize < zoomBorders.y)
             dragSpeed -= mouseScrollWheelSpeed * 0.25f;
+    }
+
+    public void AllowMovement(bool allow)
+    {
+        isMovingAllowed = allow;
     }
 }
