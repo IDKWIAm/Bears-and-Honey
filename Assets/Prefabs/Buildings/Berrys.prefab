@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dishNum: 2
   confirmButtons: {fileID: 4404747606737820146}
+  minigameButton: {fileID: 0}
   bear: {fileID: 5544334593838795812}
 --- !u!1001 &2331675357286094964
 PrefabInstance:
@@ -657,22 +658,22 @@ PrefabInstance:
     - target: {fileID: 51456995410253722, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_StoppingDistance
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}

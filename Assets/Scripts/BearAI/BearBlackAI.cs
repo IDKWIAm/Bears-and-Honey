@@ -58,11 +58,12 @@ namespace BearAI
                 isRunning = true;
                 _animator.SetBool("isRunning", isRunning);
             }
-
+            
+            /*
             if (isStanding == isRunning)
             {
                 SwitchTarget();
-            }
+            }*/
         }
 
         private void MoveToCurrentTarget()
