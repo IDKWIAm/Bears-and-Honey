@@ -655,11 +655,6 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 800
       objectReference: {fileID: 0}
-    - target: {fileID: 51456995410253722, guid: e35343bb52aa0764d80797400e944c06,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2454473571953592759, guid: e35343bb52aa0764d80797400e944c06,
         type: 3}
       propertyPath: m_LocalScale.x
