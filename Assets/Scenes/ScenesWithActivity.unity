@@ -1618,7 +1618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &331839169
 Transform:
   m_ObjectHideFlags: 0
@@ -2513,10 +2513,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 774022530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.638, y: 0.9196394}
-  m_AnchorMax: {x: 0.9892151, y: 0.98700005}
-  m_AnchoredPosition: {x: 2.7000122, y: -0.000015258789}
-  m_SizeDelta: {x: 6.002701, y: -3.592}
+  m_AnchorMin: {x: 0.63865054, y: 0.92179924}
+  m_AnchorMax: {x: 0.99600005, y: 0.9826804}
+  m_AnchoredPosition: {x: 0.2000122, y: 0.5}
+  m_SizeDelta: {x: -0.9972992, y: -0.59199905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &497745515
 MonoBehaviour:
@@ -2580,8 +2580,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3177,10 +3177,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 707533728}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.095}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.8261934, y: 1.64711}
-  m_SizeDelta: {x: 30.6277, y: 30.6277}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.82619476, y: 1.64711}
+  m_SizeDelta: {x: -27.3723, y: -27.3723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666553505
 MonoBehaviour:
@@ -3379,10 +3379,10 @@ RectTransform:
   - {fileID: 666553504}
   m_Father: {fileID: 774022530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.908}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 202.74}
-  m_SizeDelta: {x: 58.335, y: 58.335}
+  m_AnchorMin: {x: 0.4632708, y: 0.88218516}
+  m_AnchorMax: {x: 0.526, y: 1}
+  m_AnchoredPosition: {x: 1.5, y: -5}
+  m_SizeDelta: {x: 3.6239014, y: -3.3760986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707533729
 MonoBehaviour:
@@ -3919,7 +3919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &774022530
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4462,7 +4462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &934902777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4702,17 +4702,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943674559}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 774022530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.016784934, y: 0.9196394}
-  m_AnchorMax: {x: 0.3603548, y: 0.9826804}
-  m_AnchoredPosition: {x: 0.5413666, y: 0.9958954}
-  m_SizeDelta: {x: -0.37459946, y: -1.5916996}
+  m_AnchorMin: {x: 0.020000001, y: 0.92179924}
+  m_AnchorMax: {x: 0.35930094, y: 0.9826804}
+  m_AnchoredPosition: {x: 0.041503906, y: 0.49591064}
+  m_SizeDelta: {x: 0.62540054, y: -0.5916996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943674561
 MonoBehaviour:
@@ -4761,8 +4761,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4927,7 +4927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &970945303
 Transform:
   m_ObjectHideFlags: 0
@@ -5503,10 +5503,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 774022530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259.17188, y: 206.37}
-  m_SizeDelta: {x: 304.8763, y: 50.26}
+  m_AnchorMin: {x: 0, y: 0.89152056}
+  m_AnchorMax: {x: 0.37, y: 1}
+  m_AnchoredPosition: {x: 4.420044, y: 0.27746582}
+  m_SizeDelta: {x: -0.123687744, y: 0.2599945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043137107
 MonoBehaviour:
@@ -7090,10 +7090,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 774022530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255.17728, y: 206.78}
-  m_SizeDelta: {x: 312.6457, y: 50.26}
+  m_AnchorMin: {x: 0.62, y: 0.89152056}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.010009766, y: -0.13000488}
+  m_SizeDelta: {x: -0.35430908, y: 0.2599945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138948383
 MonoBehaviour:
@@ -9789,8 +9789,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1ab094fd446134694e0dcd2b7b859a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigamesManager: {fileID: 0}
   Virtual_cum_shortdistance: {fileID: 2029194093}
-  Virtual_cum_longdistance: {fileID: 1512098011}
+  Virtual_cum_longdistance: {fileID: 0}
   UI_MINIGAME: {fileID: 764251216}
   index_camera: 0
 --- !u!114 &1897797541
@@ -9805,6 +9806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe306b43fb3ec249b5ad14f9f3d7e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigamesManager: {fileID: 0}
   spawnPoints:
   - {fileID: 447532492}
   - {fileID: 1652901735}
@@ -9822,7 +9824,7 @@ MonoBehaviour:
   collectibleTag: berry
   parentObject: {fileID: 258613929}
   Virtual_cum_shortdistance: {fileID: 2029194093}
-  Virtual_cum_longdistance: {fileID: 1512098011}
+  Virtual_cum_longdistance: {fileID: 0}
   UI_MINIGAME: {fileID: 764251216}
   time: 1
 --- !u!1 &1903127140
@@ -11668,6 +11670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe306b43fb3ec249b5ad14f9f3d7e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigamesManager: {fileID: 0}
   spawnPoints:
   - {fileID: 1998198559}
   - {fileID: 586159722}
@@ -11685,7 +11688,7 @@ MonoBehaviour:
   collectibleTag: berry
   parentObject: {fileID: 174858188}
   Virtual_cum_shortdistance: {fileID: 2091506698}
-  Virtual_cum_longdistance: {fileID: 1512098011}
+  Virtual_cum_longdistance: {fileID: 0}
   UI_MINIGAME: {fileID: 1557925838}
   time: 120
 --- !u!114 &2126322992
@@ -11700,8 +11703,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1ab094fd446134694e0dcd2b7b859a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigamesManager: {fileID: 0}
   Virtual_cum_shortdistance: {fileID: 2091506698}
-  Virtual_cum_longdistance: {fileID: 1512098011}
+  Virtual_cum_longdistance: {fileID: 0}
   UI_MINIGAME: {fileID: 1557925838}
   index_camera: 0
 --- !u!136 &2126322993
