@@ -29,7 +29,7 @@ public class newscriptspawnhoney : MonoBehaviour
                 inventoryManager.AddCurrency(completeReward);
             if (draggableCamera != null)
                 draggableCamera.AllowMovement(true);
-
+            count = 1;
             minigame.gameObject.SetActive(false);
         }
 
