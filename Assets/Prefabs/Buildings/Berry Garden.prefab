@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 3376234137478844296}
   - component: {fileID: 4947832687350990407}
   m_Layer: 0
-  m_Name: Berrys
+  m_Name: Berry Garden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
