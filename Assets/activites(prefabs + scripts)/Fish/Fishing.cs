@@ -59,8 +59,8 @@ public class Fishing : MonoBehaviour
 
     private void OnSuccess()
     {
-        animator.SetTrigger("Good");
         fish.SetActive(true);
+        animator.SetTrigger("Good");
         Debug.Log("Улов успешен!");
         script1.isRegenerating = true;
         script1.ingame = false;
@@ -69,8 +69,8 @@ public class Fishing : MonoBehaviour
 
     private void OnFailure()
     {
-        animator.SetTrigger("Bad");
         fish.SetActive(false);
+        animator.SetTrigger("Bad");
         Debug.Log("Неудача!");
         script1.isRegenerating = true;
         script1.ingame = false;
