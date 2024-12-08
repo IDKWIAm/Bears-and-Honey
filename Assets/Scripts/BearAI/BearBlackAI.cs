@@ -109,7 +109,6 @@ namespace BearAI
         {
             if (Random.Range(1, 100) <= chance)
             {
-                print(_inventoryManager);
                 _inventoryManager?.MakeDish(dish);
             }
         }

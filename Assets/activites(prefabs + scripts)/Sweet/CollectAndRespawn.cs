@@ -7,12 +7,13 @@ using System;
 
 public class CollectAndRespawn : MonoBehaviour
 {
+    public MinigamesManager minigamesManager;
     public Transform[] spawnPoints;
     public GameObject prefab;
     public string collectibleTag;
     public Transform parentObject;
     public CinemachineVirtualCamera Virtual_cum_shortdistance;
-    public CinemachineVirtualCamera Virtual_cum_longdistance;
+    public Camera Virtual_cum_longdistance;
     public Canvas UI_MINIGAME;
     public float time = 0.0f;
     [NonSerialized] public int updateEnabled = 0;
@@ -25,6 +26,8 @@ public class CollectAndRespawn : MonoBehaviour
     private void Start()
     {
         cumera = GetComponent<cumera>();
+        minigamesManager = GameObject.FindObjectOfType<MinigamesManager>();
+        Virtual_cum_longdistance = Camera.main;
         int instanceID = gameObject.GetInstanceID();
         if (!collectedCounts.ContainsKey(instanceID))
         {
@@ -44,7 +47,7 @@ public class CollectAndRespawn : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Virtual_cum_shortdistance.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
             RaycastHit[] hits = Physics.RaycastAll(ray);
 
             foreach (RaycastHit hit in hits)
@@ -73,6 +76,7 @@ public class CollectAndRespawn : MonoBehaviour
             Virtual_cum_longdistance.gameObject.SetActive(true);
             cumera.enabled = true;
             updateEnabled = 0;
+            minigamesManager.FinishBerryMinigame(true);
 
             StartCoroutine(RespawnObjects());
         }
@@ -80,7 +84,7 @@ public class CollectAndRespawn : MonoBehaviour
 
     IEnumerator RespawnObjects()
     {
-        yield return new WaitForSeconds(120f);
+        yield return new WaitForSeconds(time);
         int instanceID = gameObject.GetInstanceID();
         List<Transform> availableSpawnPoints = spawnPoints.ToList();
         foreach (GameObject obj in collectedObjects)

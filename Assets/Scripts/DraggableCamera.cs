@@ -13,7 +13,7 @@ public class DraggableCamera : MonoBehaviour
 
     private Vector3 lastDragPosition;
 
-    private bool isMovingAllowed = true;
+    public bool isMovingAllowed { get; private set; } = true;
 
     void Update()
     {

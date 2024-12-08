@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 public class cumera : MonoBehaviour
 {
+    public MinigamesManager minigamesManager;
     public CinemachineVirtualCamera Virtual_cum_shortdistance;
-    public CinemachineVirtualCamera Virtual_cum_longdistance;
+    public Camera Virtual_cum_longdistance;
     public Canvas UI_MINIGAME;
     public int index_camera;
     private CollectAndRespawn CAR;
 
     void Start()
     {
-        CAR = GetComponent<CollectAndRespawn>();
+        minigamesManager = GameObject.FindObjectOfType<MinigamesManager>();
+        Virtual_cum_longdistance = Camera.main;
+        CAR = gameObject.GetComponent<CollectAndRespawn>();
         if (CAR == null)
         {
             Debug.LogError("Компонент CollectAndRespawn не найден на этом объекте!");
@@ -23,8 +24,9 @@ public class cumera : MonoBehaviour
 
     // Update is called once per frame
     
-    private void OnMouseDown()
+    public void ActivateGame()
     {
+        CAR = gameObject.GetComponent<CollectAndRespawn>();
         CAR.updateEnabled = 1;
         enabled = false;
         SwitchCamera();
@@ -43,5 +45,6 @@ public class cumera : MonoBehaviour
         Virtual_cum_shortdistance.gameObject.SetActive(false);
         UI_MINIGAME.gameObject.SetActive(false);
         Virtual_cum_longdistance.gameObject.SetActive(true);
+        minigamesManager.FinishBerryMinigame(false);
     }
 }
