@@ -20,7 +20,7 @@ public class Fishing : MonoBehaviour
     }
     public void Update()
     {
-        if (script1.attemptsRemaining == 0)
+        if (script1.attemptsRemaining == 0 && !script1.ingame)
         {
             Virtual_cum_shortdistance.gameObject.SetActive(false);
             UI_MINIGAME.gameObject.SetActive(false);
@@ -63,7 +63,6 @@ public class Fishing : MonoBehaviour
         animator.SetTrigger("Good");
         Debug.Log("Улов успешен!");
         script1.isRegenerating = true;
-        script1.ingame = false;
         Invoke("Zanovo", 2f);
     }
 
@@ -73,12 +72,12 @@ public class Fishing : MonoBehaviour
         animator.SetTrigger("Bad");
         Debug.Log("Неудача!");
         script1.isRegenerating = true;
-        script1.ingame = false;
         Invoke("Zanovo", 2f);
     }
     public void Zanovo()
     {
         script1.fishing.gameObject.SetActive(false);
+        script1.ingame = false;
         fish.SetActive(false);
     }
 }
