@@ -10,11 +10,8 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     [SerializeField] private DataPersistenceManager persistenceManager;
     [SerializeField] private WebRequestManager requestManager;
 
-    [SerializeField] private float dishesGapMult = 1;
-
     [SerializeField] private TextMeshProUGUI currencyText;
 
-    [SerializeField] private Transform dishDefaultPos;
     [SerializeField] private Transform parent;
 
     [SerializeField] private GameObject[] dishes;
@@ -133,12 +130,11 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     public void MakeDish(int dishNum)
     {
         dishNum = Mathf.Clamp(dishNum, 0, dishes.Length);
-        gap = new Vector3(dishes[0].GetComponent<RectTransform>().rect.width * dishesGapMult, 0, 0);
         GameObject dish;
         if (dishNum == 0)
-            dish = Instantiate(dishes[UnityEngine.Random.Range(0, dishes.Length)], dishDefaultPos.position + gap * storedDishesAmount, Quaternion.identity, parent);
+            dish = Instantiate(dishes[UnityEngine.Random.Range(0, dishes.Length)], parent);
         else 
-            dish = Instantiate(dishes[dishNum-1], dishDefaultPos.position + gap * storedDishesAmount, Quaternion.identity, parent);
+            dish = Instantiate(dishes[dishNum-1], parent);
 
         storedDishes.Add(dish);
         dish.GetComponent<Dish>().SetOrderNumber(storedDishes.Count - 1);

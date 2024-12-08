@@ -19,7 +19,9 @@ public class WebRequestManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            throw new Exception("No internet connection (" + request.error + ")");
+            Debug.Log("No internet connection. Request rejected.");
+            yield break;
+            //throw new Exception("No internet connection (" + request.error + ")");
         }
 
         string json = "{\"playersData\":" + request.downloadHandler.text + "}";
@@ -71,7 +73,9 @@ public class WebRequestManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            throw new Exception("No internet connection (" + request.error + ")");
+            Debug.Log("No internet connection. Request rejected.");
+            yield break;
+            //throw new Exception("No internet connection (" + request.error + ")");
         }
         /*
         PlayersDataStruct playersDataFromServer = JsonConvert.DeserializeObject<PlayersDataStruct>(request.downloadHandler.text);
@@ -111,7 +115,9 @@ public class WebRequestManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            throw new Exception("No internet connection (" + request.error + ")");
+            Debug.Log("No internet connection. Request rejected.");
+            yield break;
+            //throw new Exception("No internet connection (" + request.error + ")");
         }
         /*
         PlayersDataStruct playersDataFromServer = JsonConvert.DeserializeObject<PlayersDataStruct>(request.downloadHandler.text);
@@ -134,7 +140,9 @@ public class WebRequestManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            throw new Exception("No internet connection (" + request.error + ")");
+            Debug.Log("No internet connection. Request rejected.");
+            yield break;
+            //throw new Exception("No internet connection (" + request.error + ")");
         }
 
         Debug.Log("Delete Responce Code: " + request.responseCode);
@@ -167,7 +175,9 @@ public class WebRequestManager : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.ConnectionError)
         {
-            throw new Exception("No internet connection (" + request.error + ")");
+            Debug.Log("No internet connection. Request rejected.");
+            yield break;
+            //throw new Exception("No internet connection (" + request.error + ")");
         }
 
         Debug.Log("Log Responce Code: " + request.responseCode);

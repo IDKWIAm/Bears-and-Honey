@@ -75,6 +75,7 @@ public class SaveSlot : MonoBehaviour, IDataPersistence
     public void DeleteSave()
     {
         persistenceManager.DeleteGame(title.text, slotNum);
+        savedTitle = null;
         PlayerPrefs.DeleteKey("Loaded slot name");
         PlayerPrefs.DeleteKey("Loaded slot number");
         loadButton.SetActive(false);

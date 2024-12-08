@@ -33,7 +33,11 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
             {
                 if (valuePair.Value == buildingNameText.text)
                 {
-                    buyButton.SetActive(false);
+                    builtStructures++;
+                    UpdateAmountText();
+                    if (price == 0) price += riseInPriceIfZero;
+                    else price = (int)((float)price * riseInPriceMult);
+                    UpdatePriceText();
                 }
             }
         }

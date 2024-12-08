@@ -34,7 +34,7 @@ namespace BearAI
 
             _navMeshAgent = GetComponent<NavMeshAgent>();
             if (findCookingPoint)
-                cookingPoint = GameObject.FindGameObjectWithTag("Cooking Point").transform;
+                cookingPoint = FindClosestCookingPoint();
             _currentTarget = fruitPoint;
             MoveToCurrentTarget();
         }
@@ -58,11 +58,30 @@ namespace BearAI
                 isRunning = true;
                 _animator.SetBool("isRunning", isRunning);
             }
-
+            
+            /*
             if (isStanding == isRunning)
             {
                 SwitchTarget();
+            }*/
+        }
+
+        private Transform FindClosestCookingPoint()
+        {
+            GameObject[] cookingPoints = GameObject.FindGameObjectsWithTag("Cooking Point");
+            float minDis = Mathf.Infinity;
+            GameObject closestCookingPoint = null;
+            foreach (GameObject cookingPoint in cookingPoints)
+            {
+                float dis = Vector3.Distance(transform.position, cookingPoint.transform.position);
+                if (dis < minDis)
+                {
+                    minDis = dis;
+                    closestCookingPoint = cookingPoint;
+                }
             }
+            if (closestCookingPoint == null) return null;
+            return closestCookingPoint.transform;
         }
 
         private void MoveToCurrentTarget()
