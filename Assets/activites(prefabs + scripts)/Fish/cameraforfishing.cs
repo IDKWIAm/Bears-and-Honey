@@ -18,28 +18,33 @@ public class cameraforfishing : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (ingame == false)
+        if (ingame == false && attemptsRemaining > 0)
         {
             TryAttempt();
+            ingame = true;
         }
-        ingame = true;
+        
     }
     public void FixedUpdate()
     {
         if (timetime)
         {
             timeregen -= 1 * Time.deltaTime;
+            if (timeregen < 0)
+            {
+                timetime = false;
+                timeregen = 60;
+            }
         }
     }
 
     public void TryAttempt()
     {
-        if (attemptsRemaining > 0)
-        {
+
             attemptsRemaining--;
             Debug.Log("- попытка");
             SwitchCamera();
-        }
+
         if (attemptsRemaining < 5 && isRegenerating == true)
         {
             Debug.Log("идет восстановление");

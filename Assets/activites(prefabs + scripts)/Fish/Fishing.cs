@@ -26,6 +26,7 @@ public class Fishing : MonoBehaviour
             UI_MINIGAME.gameObject.SetActive(false);
             Virtual_cum_longdistance.gameObject.SetActive(true);
             script1.fishing.gameObject.SetActive(false);
+            script1.ingame = false;
         }
 
     }
@@ -79,6 +80,17 @@ public class Fishing : MonoBehaviour
         script1.fishing.gameObject.SetActive(false);
         script1.ingame = false;
         fish.SetActive(false);
+    }
+    public void forbutton()
+    {
+        script1.ingame = false;
+        script1.fishing.gameObject.SetActive(false);
+        script1.ingame = false;
+        fish.SetActive(false);
+        Virtual_cum_shortdistance.gameObject.SetActive(false);
+        UI_MINIGAME.gameObject.SetActive(false);
+        Virtual_cum_longdistance.gameObject.SetActive(true);
+        script1.ingame = false;
     }
 }
 
