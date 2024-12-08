@@ -18,7 +18,6 @@ public class newscriptspawnhoney : MonoBehaviour
 
     void Update()
     {
-        // Проверка наличия префаба и точек спавна
         if (prefab == null || spawnPoints == null || spawnPoints.Length == 0)
         {
             Debug.LogError("Префаб и/или точки спавна не заданы!");
@@ -34,7 +33,6 @@ public class newscriptspawnhoney : MonoBehaviour
             minigame.gameObject.SetActive(false);
         }
 
-        // Проверка на наличие дочерних объектов с тегом "honey" в Update
         if (!HasHoneyChildren())
         {
             SpawnPrefabs();
@@ -44,7 +42,6 @@ public class newscriptspawnhoney : MonoBehaviour
     }
 
 
-    // Проверка наличия дочерних объектов с тегом "honey"
     bool HasHoneyChildren()
     {
         foreach (Transform child in transform)
@@ -62,9 +59,8 @@ public class newscriptspawnhoney : MonoBehaviour
       
         int numObjects = UnityEngine.Random.Range(15, 26);
 
-        count += numObjects;
+        count = numObjects;
 
-        count--;
 
         
         List<Transform> availablePoints = spawnPoints.ToList();
