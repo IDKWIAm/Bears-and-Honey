@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingSlot : MonoBehaviour, IDataPersistence
 {
@@ -12,6 +13,8 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
     [SerializeField] private int page;
 
     [SerializeField] private GameObject buyButton;
+    [SerializeField] private GameObject covering;
+
     [SerializeField] private TextMeshProUGUI buildingNameText;
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI amountText;
@@ -53,6 +56,13 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
         UpdatePriceText();
         UpdateAmountText();
         if (page > 1) transform.parent.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (inventoryManager.currency < price)
+            covering.SetActive(true);
+        else covering.SetActive(false);
     }
 
     private void UpdateAmountText()

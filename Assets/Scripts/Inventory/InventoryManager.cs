@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private GameObject currencyPopupPrefab;
     [SerializeField] private GameObject shop;
     [SerializeField] private GameObject buildingsMenu;
     [SerializeField] private DataPersistenceManager persistenceManager;
@@ -32,6 +33,8 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
     private List<GameObject> storedDishes = new List<GameObject>();
 
     private bool loading;
+
+    private Transform mainCanvas;
 
     public void LoadData(GameData data)
     {
@@ -87,6 +90,7 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         if (shop != null) shop.SetActive(false);
         if (buildingsMenu != null) buildingsMenu.SetActive(false);
         UpdateBearsCountText();
+        mainCanvas = GameObject.FindGameObjectWithTag("MainCanvas").transform;
     }
 
     private void UpdateCurrencyText()
@@ -114,17 +118,19 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
         {
             persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
         }
-        else Debug.Log("Loaded slot number not found. Log not sent.");
+        else Debug.Log("Loaded slot number not found. Save is skipped.");
     }
 
     private void SendLog(Dictionary<string, string> resourcesChanged)
     {
+        /*
         if (PlayerPrefs.HasKey("Loaded slot number"))
         {
             StartCoroutine(requestManager.SendLog("Made new dish", 
                 Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"), resourcesChanged));
         }
-        else Debug.Log("Loaded slot number not found. Save is skipped.");
+        else Debug.Log("Loaded slot number not found. Log not sent.");
+        */
     }
 
     public void MakeDish(int dishNum)
@@ -186,6 +192,8 @@ public class InventoryManager : MonoBehaviour, IDataPersistence
 
     public void AddCurrency(int price)
     {
+        CurrencyPopup currencyPopup = Instantiate(currencyPopupPrefab, mainCanvas).GetComponent<CurrencyPopup>();
+        currencyPopup.SetParameters(price);
         currency += price;
         UpdateCurrencyText();
         Save();

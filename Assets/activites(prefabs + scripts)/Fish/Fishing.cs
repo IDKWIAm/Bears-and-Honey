@@ -60,7 +60,7 @@ public class Fishing : MonoBehaviour
 
     private void OnSuccess()
     {
-        minigamesManager.GiveRevardFishMinigame();
+        minigamesManager.GiveRewardFishMinigame();
         fish.SetActive(true);
         animator.SetTrigger("Good");
         Debug.Log("Улов успешен!");

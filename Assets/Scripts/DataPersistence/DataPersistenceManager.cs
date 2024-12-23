@@ -106,7 +106,10 @@ public class DataPersistenceManager : MonoBehaviour
             slot3DataHandler.Create(gameData);
         }
 
-        StartCoroutine(requestManager.SendPutRequest(Environment.MachineName + " " + saveName, gameData.resources.energyHoney, gameData.resources.hats, gameData.resources.dishes, gameData.resources.spotsData));
+        if (requestManager != null)
+            StartCoroutine(requestManager.SendPutRequest(Environment.MachineName + " " + saveName,
+                gameData.resources.energyHoney, gameData.resources.hats, gameData.resources.dishes, gameData.resources.spotsData));
+        else print("Request Manager is null");
     }
 
     public void DeleteGame(string saveName, int slotNumber)

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ShootRayFromSecondCamera : MonoBehaviour
 {
+    public Camera secondCamera;
 
     private newscriptspawnhoney newscriptspawnhoney;
     private void Start()
@@ -12,15 +13,8 @@ public class ShootRayFromSecondCamera : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            // Находим камеру с тегом "secondcamera"
-            Camera secondCamera = GameObject.FindGameObjectWithTag("secondcamera").GetComponent<Camera>();
-
             // Проверка на наличие камеры
-            if (secondCamera == null)
-            {
-                Debug.LogError("Камера с тегом \"secondcamera\" не найдена!");
-                return;
-            }
+            if (secondCamera == null) return;
 
             Ray ray = secondCamera.ScreenPointToRay(Input.mousePosition); // Создаем луч из позиции мыши
             RaycastHit hit;

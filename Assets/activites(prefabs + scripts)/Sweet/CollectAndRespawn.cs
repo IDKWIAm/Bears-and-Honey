@@ -10,6 +10,7 @@ public class CollectAndRespawn : MonoBehaviour
     public MinigamesManager minigamesManager;
     public Transform[] spawnPoints;
     public GameObject prefab;
+    public Transform parent;
     public string collectibleTag;
     public Transform parentObject;
     public CinemachineVirtualCamera Virtual_cum_shortdistance;
@@ -93,7 +94,7 @@ public class CollectAndRespawn : MonoBehaviour
             {
                 int randomIndex = UnityEngine.Random.Range(0, availableSpawnPoints.Count);
                 Transform spawnPoint = availableSpawnPoints[randomIndex];
-                GameObject newObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+                GameObject newObject = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation, parent);
                 newObject.transform.parent = parentObject;
                 availableSpawnPoints.RemoveAt(randomIndex);
             }

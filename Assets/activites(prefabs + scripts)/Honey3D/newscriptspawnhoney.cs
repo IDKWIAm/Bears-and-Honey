@@ -1,11 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.UI;
-using System;
 
 public class newscriptspawnhoney : MonoBehaviour
 {
+    public float honeyCooldown;
     public GameObject prefab;          // Префаб для клонирования
     public Transform[] spawnPoints;    // Массив точек для спавна
     public string honeyTag = "honey"; // Тег для проверки наличия дочерних объектов
@@ -14,10 +13,23 @@ public class newscriptspawnhoney : MonoBehaviour
 
     public int completeReward;
     public DraggableCamera draggableCamera;
-    public InventoryManager inventoryManager;
+    public MinigamesManager minigamesManager;
+
+    [HideInInspector] public float timer { get; private set; }
+
+    private void Start()
+    {
+        minigamesManager = GameObject.FindObjectOfType<MinigamesManager>();
+    }
 
     void Update()
     {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            return;
+        }
+
         if (prefab == null || spawnPoints == null || spawnPoints.Length == 0)
         {
             Debug.LogError("Префаб и/или точки спавна не заданы!");
@@ -25,11 +37,11 @@ public class newscriptspawnhoney : MonoBehaviour
         }
         if (count == 0)
         {
-            if (inventoryManager != null)
-                inventoryManager.AddCurrency(completeReward);
+            FinishMinigame(true);
             if (draggableCamera != null)
                 draggableCamera.AllowMovement(true);
             count = 1;
+            timer = 60;
             minigame.gameObject.SetActive(false);
         }
 
@@ -44,7 +56,7 @@ public class newscriptspawnhoney : MonoBehaviour
 
     bool HasHoneyChildren()
     {
-        foreach (Transform child in transform)
+        foreach (Transform child in transform.GetChild(0))
         {
             if (child.CompareTag(honeyTag))
             {
@@ -57,7 +69,7 @@ public class newscriptspawnhoney : MonoBehaviour
     void SpawnPrefabs()
     {
       
-        int numObjects = UnityEngine.Random.Range(15, 26);
+        int numObjects = UnityEngine.Random.Range(15, 25);
 
         count = numObjects;
 
@@ -75,11 +87,7 @@ public class newscriptspawnhoney : MonoBehaviour
                 Transform spawnPoint = availablePoints[randomIndex];
 
                 // Создание объекта
-                GameObject newObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-
-                // Установка родителя (префаб становится дочерним объектом)
-                newObject.transform.parent = transform;
-
+                GameObject newObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity, transform.GetChild(0));
 
                 // Удаление точки из списка доступных
                 availablePoints.RemoveAt(randomIndex);
@@ -93,6 +101,12 @@ public class newscriptspawnhoney : MonoBehaviour
             }
         }
 
+    }
+
+    public void FinishMinigame(bool giveReward)
+    {
+        if (minigamesManager != null)
+            minigamesManager.FinishHoneyMinigame(giveReward);
     }
 }
 

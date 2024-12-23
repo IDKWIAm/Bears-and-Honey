@@ -11,6 +11,8 @@ public class DraggableCamera : MonoBehaviour
 
     [SerializeField] Vector2 zoomBorders = new Vector2(Mathf.NegativeInfinity, Mathf.Infinity);
 
+    [SerializeField] GameObject bearsList;
+
     private Vector3 lastDragPosition;
 
     private Camera mainCamera;
@@ -25,6 +27,7 @@ public class DraggableCamera : MonoBehaviour
     void Update()
     {
         if (!isMovingAllowed || !mainCamera.gameObject.activeSelf) return;
+        if (bearsList != null && bearsList.activeSelf == true) return;
 
         UpdateDrag();
         UpdateZoom();

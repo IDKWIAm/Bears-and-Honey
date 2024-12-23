@@ -78,8 +78,10 @@ public class BuildingSpot : MonoBehaviour, IDataPersistence
             if (PlayerPrefs.HasKey("Loaded slot number"))
             {
                 persistenceManager.SaveGame(PlayerPrefs.GetString("Loaded slot name"), PlayerPrefs.GetInt("Loaded slot number"));
+                /*
                 StartCoroutine(requestManager.SendLog("Built new structure on " + gameObject.name, Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
                     new Dictionary<string, string>() { { "Structure added", currentBuilding.name.Substring(0, currentBuilding.name.Length - 7) } }));
+                */
             }
             else Debug.Log("Loaded slot number not found. Save is skipped.");
         }

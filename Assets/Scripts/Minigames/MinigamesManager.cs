@@ -9,34 +9,21 @@ public class MinigamesManager : MonoBehaviour
 
     [SerializeField] private DraggableCamera draggableCamera;
 
-    [SerializeField] private float honeyCooldown;
-    [SerializeField] private GameObject honeyMinigame;
-
     [SerializeField] private int berryCompleteReward = 100;
-
+    [SerializeField] private int honeyCompleteReward = 100;
     [SerializeField] private int fishCompleteReward = 100;
-
-    [HideInInspector] public float honeyMinigameTimer { get; private set; }
-    [HideInInspector] public float fishMinigameTimer { get; private set; }
     
-    private void Update()
-    {
-        if (honeyMinigameTimer > 0)
-            honeyMinigameTimer -= Time.deltaTime;
-
-        if (fishMinigameTimer > 0)
-            fishMinigameTimer -= Time.deltaTime;
-    }
-
     public void ActivateHoneyMinigame()
     {
         draggableCamera.AllowMovement(false);
-        honeyMinigame.SetActive(true);
+        canvas.SetActive(false);
     }
 
-    public void FinishHoneyMinigame()
+    public void FinishHoneyMinigame(bool giveReward = false)
     {
-        honeyMinigameTimer = honeyCooldown;
+        if (giveReward) inventoryManager.AddCurrency(honeyCompleteReward);
+        draggableCamera.AllowMovement(true);
+        canvas.SetActive(true);
     }
 
     public void ActivateBerryMinigame()
@@ -58,7 +45,7 @@ public class MinigamesManager : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    public void GiveRevardFishMinigame()
+    public void GiveRewardFishMinigame()
     {
         inventoryManager.AddCurrency(fishCompleteReward);
     }
@@ -67,10 +54,5 @@ public class MinigamesManager : MonoBehaviour
     {
         draggableCamera.AllowMovement(true);
         canvas.SetActive(true);
-    }
-
-    public void ResetHoneyTimer()
-    {
-        honeyMinigameTimer = honeyCooldown;
     }
 }

@@ -11,6 +11,7 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject shop;
 
     [SerializeField] private GameObject button;
+    [SerializeField] private GameObject covering;
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private InventoryManager inventoryManager;
     [SerializeField] private DataPersistenceManager persistenceManager;
@@ -54,6 +55,13 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
         priceText.text = price.ToString();
     }
 
+    private void Update()
+    {
+        if (inventoryManager.currency < price)
+            covering.SetActive(true);
+        else covering.SetActive(false);
+    }
+
     private void Save()
     {
         if (PlayerPrefs.HasKey("Loaded slot number"))
@@ -73,12 +81,14 @@ public class ShopSlot : MonoBehaviour, IDataPersistence
             inventoryManager.AddHat(hatName);
             button.SetActive(false);
             Save();
+            /*
             if (PlayerPrefs.HasKey("Loaded slot number"))
             {
                 StartCoroutine(requestManager.SendLog("Bought new hat", Environment.MachineName + " " + PlayerPrefs.GetString("Loaded slot name"),
                 new Dictionary<string, string>() { { "Hat added", hatName }, { "Energy Honey", "-" + priceText.text } }));
             }
             else Debug.Log("Loaded slot number not found. Log not sent.");
+            */
         }
     }
 }

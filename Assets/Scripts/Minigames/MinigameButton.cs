@@ -16,11 +16,7 @@ public class MinigameButton : MonoBehaviour
 
     public void ActivateHoneyMinigame()
     {
-        if (minigamesManager.honeyMinigameTimer <= 0)
-        {
-            minigamesManager.ActivateHoneyMinigame();
-            minigamesManager.ResetHoneyTimer();
-        }
+        minigamesManager.ActivateHoneyMinigame();
     }
 
     public void ActivateBerryMinigame()
