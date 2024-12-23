@@ -1,32 +1,32 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Animations;
 using Cinemachine;
-using Unity.VisualScripting;
 
 public class Fishing : MonoBehaviour
 {
+    public MinigamesManager minigamesManager;
     public GameObject fish;
     public Animator animator;
-    public cameraforfishing script1;
+    public cameraforfishing cameraForFishing;
     public CinemachineVirtualCamera Virtual_cum_shortdistance;
-    public CinemachineVirtualCamera Virtual_cum_longdistance;
+    public Camera Virtual_cum_longdistance;
     public Canvas UI_MINIGAME;
 
     private void Start()
     {
+        Virtual_cum_longdistance = Camera.main;
+        minigamesManager = GameObject.FindObjectOfType<MinigamesManager>();
         fish.SetActive(false);
     }
     public void Update()
     {
-        if (script1.attemptsRemaining == 0 && !script1.ingame)
+        if (cameraForFishing.attemptsRemaining == 0 && !cameraForFishing.ingame)
         {
             Virtual_cum_shortdistance.gameObject.SetActive(false);
             UI_MINIGAME.gameObject.SetActive(false);
             Virtual_cum_longdistance.gameObject.SetActive(true);
-            script1.fishing.gameObject.SetActive(false);
-            script1.ingame = false;
+            cameraForFishing.fishing.gameObject.SetActive(false);
+            cameraForFishing.ingame = false;
         }
 
     }
@@ -60,10 +60,11 @@ public class Fishing : MonoBehaviour
 
     private void OnSuccess()
     {
+        minigamesManager.GiveRevardFishMinigame();
         fish.SetActive(true);
         animator.SetTrigger("Good");
         Debug.Log("Улов успешен!");
-        script1.isRegenerating = true;
+        cameraForFishing.isRegenerating = true;
         Invoke("Zanovo", 2f);
     }
 
@@ -72,25 +73,24 @@ public class Fishing : MonoBehaviour
         fish.SetActive(false);
         animator.SetTrigger("Bad");
         Debug.Log("Неудача!");
-        script1.isRegenerating = true;
+        cameraForFishing.isRegenerating = true;
         Invoke("Zanovo", 2f);
     }
     public void Zanovo()
     {
-        script1.fishing.gameObject.SetActive(false);
-        script1.ingame = false;
+        cameraForFishing.fishing.gameObject.SetActive(false);
+        cameraForFishing.ingame = false;
         fish.SetActive(false);
     }
     public void forbutton()
     {
-        script1.ingame = false;
-        script1.fishing.gameObject.SetActive(false);
-        script1.ingame = false;
+        cameraForFishing.ingame = false;
+        cameraForFishing.fishing.gameObject.SetActive(false);
         fish.SetActive(false);
         Virtual_cum_shortdistance.gameObject.SetActive(false);
         UI_MINIGAME.gameObject.SetActive(false);
         Virtual_cum_longdistance.gameObject.SetActive(true);
-        script1.ingame = false;
+        minigamesManager.CloseFishMinigame();
     }
 }
 

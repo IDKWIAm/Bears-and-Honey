@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class textfish : MonoBehaviour
 {
-    public cameraforfishing CMF;
-    public TMP_Text textComponent;
-    public TMP_Text textComponent2;
-    public void FixedUpdate()
+    [SerializeField] private cameraforfishing CMF;
+    [SerializeField] private TMP_Text textComponent;
+    [SerializeField] private TMP_Text textComponent2;
+
+    public void Update()
     {
         textComponent.text = "Attempts left: " + CMF.attemptsRemaining;
         int timeregen2 = (int)CMF.timeregen;

@@ -13,11 +13,18 @@ public class DraggableCamera : MonoBehaviour
 
     private Vector3 lastDragPosition;
 
+    private Camera mainCamera;
+
     public bool isMovingAllowed { get; private set; } = true;
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
 
     void Update()
     {
-        if (!isMovingAllowed) return;
+        if (!isMovingAllowed || !mainCamera.gameObject.activeSelf) return;
 
         UpdateDrag();
         UpdateZoom();
@@ -44,11 +51,11 @@ public class DraggableCamera : MonoBehaviour
     private void UpdateZoom()
     {
         float mouseScrollWheelSpeed = Input.GetAxisRaw("Mouse ScrollWheel");
-        Camera.main.orthographicSize -= mouseScrollWheelSpeed * zoomStrength;
+        mainCamera.orthographicSize -= mouseScrollWheelSpeed * zoomStrength;
 
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, zoomBorders.x, zoomBorders.y);
+        mainCamera.orthographicSize = Mathf.Clamp(mainCamera.orthographicSize, zoomBorders.x, zoomBorders.y);
 
-        if (Camera.main.orthographicSize > zoomBorders.x && Camera.main.orthographicSize < zoomBorders.y)
+        if (mainCamera.orthographicSize > zoomBorders.x && mainCamera.orthographicSize < zoomBorders.y)
             dragSpeed -= mouseScrollWheelSpeed * 0.25f;
     }
 

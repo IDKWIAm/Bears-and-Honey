@@ -27,4 +27,9 @@ public class MinigameButton : MonoBehaviour
     {
         minigamesManager.ActivateBerryMinigame();
     }
+
+    public void ActivateFishMinigame()
+    {
+        minigamesManager.ActivateFishMinigame();
+    }
 }

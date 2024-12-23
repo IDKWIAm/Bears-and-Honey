@@ -14,8 +14,7 @@ public class MinigamesManager : MonoBehaviour
 
     [SerializeField] private int berryCompleteReward = 100;
 
-    [SerializeField] private float fishCooldown;
-    [SerializeField] private GameObject fishMinigame;
+    [SerializeField] private int fishCompleteReward = 100;
 
     [HideInInspector] public float honeyMinigameTimer { get; private set; }
     [HideInInspector] public float fishMinigameTimer { get; private set; }
@@ -56,12 +55,18 @@ public class MinigamesManager : MonoBehaviour
     public void ActivateFishMinigame()
     {
         draggableCamera.AllowMovement(false);
-        fishMinigame.SetActive(true);
+        canvas.SetActive(false);
     }
 
-    public void FinishFishMinigame()
+    public void GiveRevardFishMinigame()
     {
-        fishMinigameTimer = fishCooldown;
+        inventoryManager.AddCurrency(fishCompleteReward);
+    }
+
+    public void CloseFishMinigame()
+    {
+        draggableCamera.AllowMovement(true);
+        canvas.SetActive(true);
     }
 
     public void ResetHoneyTimer()

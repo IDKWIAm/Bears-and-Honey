@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18263827, g: 0.22835058, b: 0.30714703, a: 1}
+  m_IndirectSpecularColor: {r: 0.18263812, g: 0.2283502, b: 0.30714652, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14203,7 +14203,7 @@ PrefabInstance:
     - target: {fileID: 2405928181372501911, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.84
+      value: -2.75
       objectReference: {fileID: 0}
     - target: {fileID: 2405928181372501911, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
@@ -14213,7 +14213,7 @@ PrefabInstance:
     - target: {fileID: 2405928181372501911, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.37
+      value: -17.25
       objectReference: {fileID: 0}
     - target: {fileID: 2405928181372501911, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
@@ -14298,7 +14298,7 @@ PrefabInstance:
     - target: {fileID: 7518683032254525993, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: orthographic size
-      value: 10.08
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7853883862056481562, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
@@ -14353,52 +14353,52 @@ PrefabInstance:
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.38
+      value: -0.7500001
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0000009536743
+      value: 0.00000011920929
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9145646
+      value: 0.9396927
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.4041032
+      value: -0.3420201
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0066629513
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.015090118
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -47.643
+      value: -40
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 2.074
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860841514635386170, guid: c13fb942c1b99984aaba28916fdbb995,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -2.806
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30686,9 +30686,8 @@ MonoBehaviour:
   draggableCamera: {fileID: 1313913444}
   honeyCooldown: 120
   honeyMinigame: {fileID: 1871329584}
-  berryCompleteReward: 100
-  fishCooldown: 0
-  fishMinigame: {fileID: 0}
+  berryCompleteReward: 120
+  fishCompleteReward: 250
 --- !u!1 &1951934694
 GameObject:
   m_ObjectHideFlags: 0
