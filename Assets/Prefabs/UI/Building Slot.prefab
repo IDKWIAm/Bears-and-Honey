@@ -367,10 +367,11 @@ MonoBehaviour:
   page: 0
   buyButton: {fileID: 6115244654614479516}
   covering: {fileID: 4676680770273141247}
+  buildingsMenu: {fileID: 0}
+  buildingsBlocker: {fileID: 0}
   buildingNameText: {fileID: 6677853632212330998}
   priceText: {fileID: 2366747886801692562}
   amountText: {fileID: 7844976079428235359}
-  buildingsMenu: {fileID: 0}
   buildingPrefab: {fileID: 0}
   buildingPlacementManager: {fileID: 0}
   inventoryManager: {fileID: 0}
@@ -571,26 +572,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 3906394448091423351}
+        m_TargetAssemblyTypeName: BuildingSlot, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BuildingPlacement, Assembly-CSharp
-        m_MethodName: ChooseBuilding
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7450235962459032825, guid: 353d57b274fdd4f44a329988f9bce57c,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

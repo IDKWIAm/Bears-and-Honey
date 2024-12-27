@@ -20,7 +20,7 @@ namespace BearAI
         private float _remainingDistance;
 
         private bool isStanding = false;
-        private bool isRunning = false;
+        private bool isRunning = true;
         private bool switched;
 
         private int dish;
@@ -37,7 +37,9 @@ namespace BearAI
                 cookingPoint = FindClosestCookingPoint();
             _currentTarget = fruitPoint;
             MoveToCurrentTarget();
+            _animator.SetBool("isRunning", isRunning);
         }
+
         void Update()
         {
             if (isStatic) return;
@@ -52,18 +54,7 @@ namespace BearAI
                     TriggerAnimation();
                 }
             }
-            else
-            {
-                switched = false;
-                isRunning = true;
-                _animator.SetBool("isRunning", isRunning);
-            }
-            
-            /*
-            if (isStanding == isRunning)
-            {
-                SwitchTarget();
-            }*/
+            else switched = false;            
         }
 
         private Transform FindClosestCookingPoint()
@@ -88,6 +79,7 @@ namespace BearAI
         {
             if (!isStanding) _navMeshAgent.SetDestination(_currentTarget.position);
         }
+
         private void SwitchTarget()
         {
             SwitchState();
@@ -116,20 +108,17 @@ namespace BearAI
         public void SwitchState()
         {
             isStanding = !isStanding;
-            _animator.SetBool("isRunning", !isStanding);
+            isRunning = !isRunning;
+            _animator.SetBool("isRunning", isRunning);
         }
+
         private void TriggerAnimation()
         {
             if (_currentTarget == fruitPoint)
-            {
                 _animator.SetTrigger("Pick");
-                isRunning = false;
-            }
+
             if (_currentTarget == cookingPoint)
-            {
                 _animator.SetTrigger("Give");
-                isRunning = false;
-            }
         }
 
         private void CanculateRemainingDistance()

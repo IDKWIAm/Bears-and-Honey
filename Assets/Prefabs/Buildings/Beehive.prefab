@@ -1522,11 +1522,6 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 800
       objectReference: {fileID: 0}
-    - target: {fileID: 8192509091804787175, guid: f60770e61fcf69144af3b5b1f295bb21,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

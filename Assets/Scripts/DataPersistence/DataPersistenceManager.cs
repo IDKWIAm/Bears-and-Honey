@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class DataPersistenceManager : MonoBehaviour
 {
     [SerializeField] private bool saveOnQuit = true;
+    [SerializeField] private bool useEncryption;
 
     [SerializeField] private WebRequestManager requestManager;
 
@@ -31,9 +32,9 @@ public class DataPersistenceManager : MonoBehaviour
         }
         instance = this;
 
-        slot1DataHandler = new FileDataHandler(Application.persistentDataPath, slot1Name + saveFormat);
-        slot2DataHandler = new FileDataHandler(Application.persistentDataPath, slot2Name + saveFormat);
-        slot3DataHandler = new FileDataHandler(Application.persistentDataPath, slot3Name + saveFormat);
+        slot1DataHandler = new FileDataHandler(Application.persistentDataPath, slot1Name + saveFormat, useEncryption);
+        slot2DataHandler = new FileDataHandler(Application.persistentDataPath, slot2Name + saveFormat, useEncryption);
+        slot3DataHandler = new FileDataHandler(Application.persistentDataPath, slot3Name + saveFormat, useEncryption);
 
         dataPersistenceObjects = FindAllDataPersistenceObjects();
     }

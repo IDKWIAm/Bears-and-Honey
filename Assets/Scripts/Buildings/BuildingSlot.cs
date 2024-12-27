@@ -15,11 +15,12 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
     [SerializeField] private GameObject buyButton;
     [SerializeField] private GameObject covering;
 
+    [SerializeField] private GameObject buildingsMenu;
+    [SerializeField] private GameObject buildingsBlocker;
+
     [SerializeField] private TextMeshProUGUI buildingNameText;
     [SerializeField] private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI amountText;
-
-    [SerializeField] private GameObject buildingsMenu;
 
     [SerializeField] private GameObject buildingPrefab;
     [SerializeField] private BuildingPlacement buildingPlacementManager;
@@ -99,6 +100,7 @@ public class BuildingSlot : MonoBehaviour, IDataPersistence
             buildingPlacementManager.SetBuildingSlot(gameObject.GetComponent<BuildingSlot>());
             buildingPlacementManager.ChooseBuilding(buildingPrefab);
             buildingsMenu.SetActive(false);
+            buildingsBlocker.SetActive(false);
         }
     }
 

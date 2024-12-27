@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveOnQuit: 1
-  fileName: data.game
+  useEncryption: 1
+  requestManager: {fileID: 0}
