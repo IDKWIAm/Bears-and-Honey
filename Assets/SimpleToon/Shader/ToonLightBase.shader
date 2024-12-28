@@ -44,8 +44,7 @@ Shader "Lpk/LightModel/ToonLightBase"
             // #pragma shader_feature _ALPHATEST_ON
             // #pragma shader_feature _ALPHAPREMULTIPLY_ON
             #pragma multi_compile _ _SHADOWS_SOFT
-            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
-			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _MAIN_LIGHT_SHADOWS_SCREEN
             // -------------------------------------
             // Unity defined keywords
             #pragma multi_compile_fog
